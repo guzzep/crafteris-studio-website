@@ -1,0 +1,803 @@
+.page {
+  background-color: var(--background);
+  color: var(--mainText);
+}
+
+/* =========================
+   HERO
+   ========================= */
+
+.hero {
+  display: grid;
+  grid-template-columns: 43% 57%;
+
+  min-height: 560px;
+
+  max-width: 1400px;
+
+  margin: 0 auto;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 80px 55px;
+}
+
+.eyebrow {
+  color: var(--accent);
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+
+  margin-bottom: 14px;
+}
+
+.hero h1 {
+  font-family: serif;
+
+  font-size: 58px;
+  line-height: 1.05;
+
+  max-width: 600px;
+
+  margin-bottom: 24px;
+}
+
+.heroDescription {
+  font-size: 18px;
+  line-height: 1.7;
+
+  max-width: 600px;
+
+  margin-bottom: 32px;
+}
+
+.heroActions {
+  display: flex;
+  align-items: center;
+
+  gap: 24px;
+
+  flex-wrap: wrap;
+}
+
+.primaryButton {
+  display: inline-block;
+
+  width: fit-content;
+
+  background-color: var(--mainText);
+  color: var(--background);
+
+  padding: 12px 22px;
+
+  border-radius: 5px;
+
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+.secondaryButton {
+  font-weight: 700;
+
+  color: var(--mainText);
+
+  text-decoration: none;
+}
+
+.heroImageWrapper {
+  overflow: hidden;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+
+  min-height: 560px;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+/* =========================
+   INTRO
+   ========================= */
+
+.introSection {
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 110px 40px 70px;
+}
+
+.introHeading {
+  max-width: 760px;
+
+  margin-bottom: 50px;
+}
+
+.introHeading h2 {
+  font-family: serif;
+
+  font-size: 44px;
+  line-height: 1.15;
+}
+
+.benefitsGrid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 24px;
+}
+
+.benefitCard {
+  border-top: 1px solid var(--accent);
+
+  padding: 26px 8px 10px;
+}
+
+.benefitNumber {
+  display: block;
+
+  color: var(--accent);
+
+  font-size: 13px;
+  font-weight: 700;
+
+  margin-bottom: 18px;
+}
+
+.benefitCard h3 {
+  font-family: serif;
+
+  font-size: 25px;
+
+  margin-bottom: 12px;
+}
+
+.benefitCard p {
+  line-height: 1.65;
+}
+
+/* =========================
+   DIVIDER
+   ========================= */
+
+.sectionDivider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 14px;
+
+  width: 80%;
+  max-width: 1100px;
+
+  margin: 40px auto 90px;
+}
+
+.sectionDivider span:first-child,
+.sectionDivider span:last-child {
+  height: 1px;
+
+  background-color: var(--accent);
+
+  flex: 1;
+}
+
+.dividerDiamond {
+  color: var(--mainText);
+
+  font-size: 18px;
+}
+
+/* =========================
+   WORKSHOPS
+   ========================= */
+
+.workshopsSection {
+  padding: 0 40px 100px;
+}
+
+.sectionHeading {
+  max-width: 760px;
+
+  margin: 0 auto 40px;
+
+  text-align: center;
+}
+
+.sectionHeading h2 {
+  font-family: serif;
+
+  font-size: 44px;
+
+  margin-bottom: 14px;
+}
+
+.sectionHeading > p:last-child {
+  line-height: 1.7;
+}
+
+.filterBar {
+  display: flex;
+  justify-content: center;
+
+  gap: 10px;
+
+  flex-wrap: wrap;
+
+  margin-bottom: 45px;
+}
+
+.filterButton {
+  border: 1px solid
+    rgba(20, 35, 58, 0.25);
+
+  background: transparent;
+
+  color: var(--mainText);
+
+  padding: 9px 18px;
+
+  border-radius: 50px;
+
+  cursor: pointer;
+
+  font-size: 14px;
+}
+
+.filterButton:hover {
+  border-color: var(--accent);
+}
+
+.activeFilter {
+  background-color: var(--mainText);
+
+  color: var(--background);
+
+  border-color: var(--mainText);
+}
+
+.workshopsGrid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 28px;
+
+  max-width: 1200px;
+
+  margin: 0 auto;
+}
+
+.workshopCard {
+  background-color: white;
+
+  border: 1px solid
+    rgba(183, 146, 74, 0.22);
+
+  border-radius: 10px;
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.workshopImageWrapper {
+  position: relative;
+
+  overflow: hidden;
+}
+
+.workshopImage {
+  width: 100%;
+  height: 270px;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition: transform 0.4s ease;
+}
+
+.workshopCard:hover
+  .workshopImage {
+  transform: scale(1.025);
+}
+
+.noImage {
+  width: 100%;
+  height: 270px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #eee7d9,
+      #f8f4ec
+    );
+
+  color: var(--accent);
+
+  font-family: serif;
+  font-size: 28px;
+}
+
+.categoryBadge {
+  position: absolute;
+
+  top: 16px;
+  left: 16px;
+
+  background-color: var(--background);
+  color: var(--mainText);
+
+  padding: 7px 12px;
+
+  border-radius: 50px;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.workshopContent {
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
+
+  padding: 25px;
+}
+
+.workshopContent h3 {
+  font-family: serif;
+
+  font-size: 28px;
+
+  margin-bottom: 12px;
+}
+
+.workshopDescription {
+  line-height: 1.65;
+
+  margin-bottom: 24px;
+}
+
+.workshopDetails {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 10px;
+
+  padding: 18px 0;
+
+  margin-top: auto;
+
+  border-top: 1px solid
+    rgba(20, 35, 58, 0.12);
+
+  border-bottom: 1px solid
+    rgba(20, 35, 58, 0.12);
+}
+
+.workshopDetails div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.workshopDetails span {
+  font-size: 11px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.7px;
+
+  color: rgba(20, 35, 58, 0.65);
+}
+
+.workshopDetails strong {
+  font-size: 13px;
+}
+
+.workshopLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-top: 20px;
+
+  font-weight: 700;
+}
+
+.workshopLink span {
+  color: var(--accent);
+
+  font-size: 20px;
+}
+
+/* =========================
+   DATABASE STATES
+   ========================= */
+
+.loadingState,
+.errorState,
+.emptyState {
+  max-width: 700px;
+
+  min-height: 250px;
+
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 45px 25px;
+
+  background: white;
+
+  border: 1px solid
+    rgba(183, 146, 74, 0.22);
+
+  border-radius: 10px;
+}
+
+.loadingState {
+  gap: 14px;
+}
+
+.loadingState p {
+  opacity: 0.7;
+}
+
+.loadingSpinner {
+  width: 34px;
+  height: 34px;
+
+  border: 3px solid
+    rgba(183, 146, 74, 0.2);
+
+  border-top-color: var(--accent);
+
+  border-radius: 50%;
+
+  animation: spin 0.8s linear infinite;
+}
+
+.errorState h3,
+.emptyState h3 {
+  font-family: serif;
+
+  font-size: 30px;
+
+  margin-bottom: 10px;
+}
+
+.errorState p,
+.emptyState p {
+  max-width: 500px;
+
+  line-height: 1.65;
+
+  margin-bottom: 18px;
+}
+
+.errorState button,
+.emptyState button {
+  border: none;
+
+  background: var(--mainText);
+  color: var(--background);
+
+  padding: 11px 19px;
+
+  border-radius: 5px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================
+   HOW IT WORKS
+   ========================= */
+
+.howSection {
+  display: grid;
+
+  grid-template-columns: 55% 45%;
+
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 0 40px 110px;
+
+  align-items: center;
+}
+
+.howImageWrapper {
+  overflow: hidden;
+
+  border-radius: 8px;
+}
+
+.howImage {
+  display: block;
+
+  width: 100%;
+  height: 620px;
+
+  object-fit: cover;
+}
+
+.howContent {
+  padding-left: 65px;
+}
+
+.howContent h2 {
+  font-family: serif;
+
+  font-size: 44px;
+
+  margin-bottom: 36px;
+}
+
+.howStep {
+  display: grid;
+
+  grid-template-columns: 44px 1fr;
+
+  gap: 17px;
+
+  margin-bottom: 28px;
+}
+
+.howStep > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 38px;
+  height: 38px;
+
+  border: 1px solid var(--accent);
+
+  border-radius: 50%;
+
+  color: var(--accent);
+
+  font-weight: 700;
+}
+
+.howStep h3 {
+  font-family: serif;
+
+  font-size: 21px;
+
+  margin-bottom: 6px;
+}
+
+.howStep p {
+  line-height: 1.6;
+}
+
+/* =========================
+   GROUP CTA
+   ========================= */
+
+.groupCta {
+  background-color: white;
+
+  border-top: 1px solid
+    rgba(183, 146, 74, 0.22);
+}
+
+.groupCtaInner {
+  max-width: 850px;
+
+  margin: 0 auto;
+
+  text-align: center;
+
+  padding: 90px 40px;
+}
+
+.groupCta h2 {
+  font-family: serif;
+
+  font-size: 44px;
+
+  margin-bottom: 16px;
+}
+
+.groupCtaInner
+  > p:not(.eyebrow) {
+  line-height: 1.7;
+
+  margin-bottom: 28px;
+}
+
+.groupLink {
+  display: inline-block;
+
+  background-color: var(--accent);
+
+  color: var(--background);
+
+  padding: 12px 22px;
+
+  border-radius: 5px;
+
+  font-weight: 700;
+}
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 1000px) {
+  .hero {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .heroContent {
+    padding: 65px 35px;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .workshopsGrid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .howSection {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .howContent {
+    padding-left: 40px;
+  }
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 750px) {
+  .hero {
+    display: flex;
+
+    flex-direction: column;
+  }
+
+  .heroContent {
+    padding: 65px 22px 45px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .heroImage {
+    min-height: 0;
+
+    height: 360px;
+  }
+
+  .introSection {
+    padding: 75px 22px 50px;
+  }
+
+  .introHeading h2 {
+    font-size: 35px;
+  }
+
+  .benefitsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .sectionDivider {
+    width: 90%;
+
+    margin: 30px auto 65px;
+  }
+
+  .workshopsSection {
+    padding: 0 20px 75px;
+  }
+
+  .sectionHeading h2 {
+    font-size: 36px;
+  }
+
+  .workshopsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .howSection {
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 0 20px 80px;
+  }
+
+  .howImage {
+    height: 390px;
+  }
+
+  .howContent {
+    padding: 40px 0 0;
+  }
+
+  .howContent h2 {
+    font-size: 36px;
+  }
+
+  .groupCtaInner {
+    padding: 70px 20px;
+  }
+
+  .groupCta h2 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .heroActions {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .workshopImage,
+  .noImage {
+    height: 240px;
+  }
+
+  .workshopDetails {
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+  }
+}

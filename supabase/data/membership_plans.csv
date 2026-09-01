@@ -1,0 +1,2 @@
+id,name,slug,category,description,price,billing_label,included_hours,validity_months,hours_per_week,features,image_url,status,sort_order,created_at,updated_at
+bb8a2d66-6f90-4db7-be45-fea6c49b6075,Maker Light,maker-light,Maker Plan,null,208.00,per 6 month,20.00,6,4.00,[],https://jvfdolruhnatwyiijoyx.supabase.co/storage/v1/object/public/studio-media/memberships/fad6e671-e1b4-42f5-91d0-6524e6f0b0f1.png,published,0,2026-08-26 07:43:57.963425+00,2026-08-26 07:43:57.963425+00

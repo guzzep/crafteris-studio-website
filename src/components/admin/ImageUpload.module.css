@@ -1,0 +1,142 @@
+.wrapper {
+  width: 100%;
+}
+
+.uploadArea {
+  min-height: 180px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  padding: 25px;
+
+  border: 1px dashed #bfc7cf;
+  border-radius: 8px;
+
+  background: #fafbfc;
+  color: #64717f;
+
+  text-align: center;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.uploadArea:hover {
+  border-color: #b7924a;
+
+  background: #fdfbf7;
+}
+
+.uploadArea > svg {
+  color: #b7924a;
+}
+
+.uploadArea strong {
+  color: #14233a;
+
+  font-size: 13px;
+}
+
+.uploadArea span {
+  font-size: 11px;
+}
+
+.uploadArea input {
+  display: none;
+}
+
+.previewWrapper {
+  overflow: hidden;
+
+  border: 1px solid #e0e4e8;
+  border-radius: 8px;
+
+  background: white;
+}
+
+.preview {
+  width: 100%;
+  height: 280px;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+.previewActions {
+  display: flex;
+
+  gap: 9px;
+
+  padding: 12px;
+}
+
+.replaceButton,
+.removeButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  padding: 9px 12px;
+
+  border: 1px solid #dce1e6;
+  border-radius: 6px;
+
+  background: white;
+
+  font: inherit;
+  font-size: 11px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.replaceButton {
+  color: #14233a;
+}
+
+.replaceButton input {
+  display: none;
+}
+
+.replaceButton:hover {
+  border-color: #b7924a;
+}
+
+.removeButton {
+  color: #a04444;
+}
+
+.removeButton:hover {
+  border-color: #c57b7b;
+
+  background: #fff7f7;
+}
+
+.error {
+  margin-top: 8px;
+
+  color: #a04444;
+
+  font-size: 11px;
+}
+
+.spin {
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

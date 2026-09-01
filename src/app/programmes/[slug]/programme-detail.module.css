@@ -1,0 +1,568 @@
+.page {
+  background: #f5f0e6;
+  color: #14233a;
+}
+
+/* HERO */
+
+.hero {
+  display: grid;
+
+  grid-template-columns:
+    48% 52%;
+
+  max-width: 1400px;
+  min-height: 650px;
+
+  margin: 0 auto;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 70px 60px;
+}
+
+.backLink {
+  width: fit-content;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 7px;
+
+  margin-bottom: 40px;
+
+  color: #65717e;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.backLink:hover {
+  color: #b7924a;
+}
+
+.eyebrow {
+  margin-bottom: 12px;
+
+  color: #b7924a;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  max-width: 650px;
+
+  margin-bottom: 21px;
+
+  font-family: Georgia, "Times New Roman",
+    serif;
+
+  font-size: clamp(
+    47px,
+    5vw,
+    67px
+  );
+
+  font-weight: 500;
+  line-height: 1.02;
+}
+
+.heroDescription {
+  max-width: 590px;
+
+  margin-bottom: 29px;
+
+  color: #5e6976;
+
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.heroMeta {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 15px;
+
+  margin-bottom: 32px;
+}
+
+.heroMeta span {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 7px;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.heroMeta svg {
+  color: #b7924a;
+}
+
+.primaryButton {
+  width: fit-content;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 12px 19px;
+
+  border-radius: 5px;
+
+  background: #14233a;
+  color: white;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.primaryButton:hover {
+  background: #1e3454;
+}
+
+.heroImageWrapper {
+  overflow: hidden;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  min-height: 650px;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+.heroPlaceholder {
+  width: 100%;
+  height: 100%;
+  min-height: 650px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e3dac8,
+      #faf7ef
+    );
+
+  color: #b7924a;
+
+  font-family: Georgia, "Times New Roman",
+    serif;
+
+  font-size: 45px;
+}
+
+/* ABOUT */
+
+.about {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.8fr)
+    minmax(0, 1.2fr);
+
+  gap: 90px;
+
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  padding: 110px 40px 90px;
+}
+
+.aboutHeading h2 {
+  font-family: Georgia, "Times New Roman",
+    serif;
+
+  font-size: 43px;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.aboutContent {
+  display: flex;
+  align-items: center;
+}
+
+.aboutContent p {
+  white-space: pre-line;
+
+  color: #596674;
+
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+/* DIVIDER */
+
+.divider {
+  width: calc(100% - 80px);
+  max-width: 1100px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  margin: 0 auto 85px;
+}
+
+.divider > span:first-child,
+.divider > span:last-child {
+  height: 1px;
+
+  flex: 1;
+
+  background: rgba(183, 146, 74, 0.6);
+}
+
+.divider > span:nth-child(2) {
+  color: #b7924a;
+}
+
+/* SCHEDULE */
+
+.scheduleSection {
+  max-width: 1050px;
+
+  margin: 0 auto;
+
+  padding: 0 40px 110px;
+}
+
+.sectionHeading {
+  max-width: 680px;
+
+  margin-bottom: 40px;
+}
+
+.sectionHeading h2 {
+  margin-bottom: 11px;
+
+  font-family: Georgia, "Times New Roman",
+    serif;
+
+  font-size: 43px;
+  font-weight: 500;
+}
+
+.sectionHeading > p:last-child {
+  color: #687481;
+
+  line-height: 1.7;
+}
+
+.scheduleList {
+  border-top: 1px solid
+    rgba(20, 35, 58, 0.13);
+}
+
+.scheduleCard {
+  display: grid;
+
+  grid-template-columns:
+    90px minmax(0, 1fr);
+
+  align-items: center;
+
+  gap: 26px;
+
+  padding: 22px 5px;
+
+  border-bottom: 1px solid
+    rgba(20, 35, 58, 0.13);
+}
+
+.sessionNumber {
+  width: 66px;
+  height: 65px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 5px;
+
+  background: white;
+}
+
+.sessionNumber span {
+  color: #b7924a;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  text-transform: uppercase;
+}
+
+.sessionNumber strong {
+  margin-top: 3px;
+
+  font-family: Georgia, "Times New Roman",
+    serif;
+
+  font-size: 23px;
+}
+
+.sessionInfo h3 {
+  margin-bottom: 8px;
+
+  font-family: Georgia, "Times New Roman",
+    serif;
+
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.sessionInfo span {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 6px;
+
+  color: #687481;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.sessionInfo svg {
+  color: #b7924a;
+}
+
+.emptySchedule {
+  min-height: 300px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 45px;
+
+  border: 1px solid
+    rgba(20, 35, 58, 0.13);
+
+  border-radius: 8px;
+
+  background: white;
+
+  text-align: center;
+}
+
+.emptySchedule > svg {
+  margin-bottom: 13px;
+
+  color: #b7924a;
+}
+
+.emptySchedule h3 {
+  margin-bottom: 8px;
+
+  font-family: Georgia, "Times New Roman",
+    serif;
+
+  font-size: 26px;
+}
+
+.emptySchedule p {
+  max-width: 500px;
+
+  margin-bottom: 20px;
+
+  color: #687481;
+
+  line-height: 1.7;
+}
+
+/* INFO */
+
+.infoSection {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 25px;
+
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  padding: 0 40px 110px;
+}
+
+.infoCard {
+  padding: 28px 8px;
+
+  border-top: 1px solid #b7924a;
+}
+
+.infoCard > span {
+  display: block;
+
+  margin-bottom: 18px;
+
+  color: #b7924a;
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.infoCard h3 {
+  margin-bottom: 10px;
+
+  font-family: Georgia, "Times New Roman",
+    serif;
+
+  font-size: 23px;
+  font-weight: 500;
+}
+
+.infoCard p {
+  color: #687481;
+
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* CTA */
+
+.finalCta {
+  background: white;
+
+  border-top: 1px solid
+    rgba(20, 35, 58, 0.08);
+}
+
+.finalInner {
+  max-width: 820px;
+
+  margin: 0 auto;
+
+  padding: 95px 40px;
+
+  text-align: center;
+}
+
+.finalInner h2 {
+  margin-bottom: 14px;
+
+  font-family: Georgia, "Times New Roman",
+    serif;
+
+  font-size: 43px;
+  font-weight: 500;
+}
+
+.finalInner > p:not(.eyebrow) {
+  margin-bottom: 27px;
+
+  color: #687481;
+
+  line-height: 1.7;
+}
+
+.finalInner .primaryButton {
+  margin: 0 auto;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .heroContent {
+    padding: 55px 35px;
+  }
+
+  .about {
+    gap: 50px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .heroContent {
+    padding: 50px 22px 45px;
+  }
+
+  .backLink {
+    margin-bottom: 30px;
+  }
+
+  .heroImage,
+  .heroPlaceholder {
+    height: 390px;
+    min-height: 0;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+
+    gap: 28px;
+
+    padding: 75px 22px 65px;
+  }
+
+  .aboutHeading h2,
+  .sectionHeading h2,
+  .finalInner h2 {
+    font-size: 35px;
+  }
+
+  .divider {
+    width: calc(100% - 44px);
+
+    margin-bottom: 60px;
+  }
+
+  .scheduleSection {
+    padding: 0 22px 80px;
+  }
+
+  .scheduleCard {
+    grid-template-columns:
+      70px minmax(0, 1fr);
+
+    gap: 15px;
+  }
+
+  .infoSection {
+    grid-template-columns: 1fr;
+
+    padding: 0 22px 80px;
+  }
+
+  .finalInner {
+    padding: 75px 22px;
+  }
+}

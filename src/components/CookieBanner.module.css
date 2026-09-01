@@ -1,0 +1,384 @@
+.banner {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  z-index: 2000;
+
+  border-top: 1px solid #d9dee5;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 -8px 25px
+    rgba(20, 35, 58, 0.08);
+}
+
+.bannerInner {
+  width: 100%;
+  max-width: 920px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  padding: 14px 20px;
+}
+
+.bannerText {
+  max-width: 600px;
+
+  margin: 0;
+
+  color: #14233a;
+
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.bannerText a {
+  color: #073d91;
+
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.bannerActions {
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+}
+
+.bannerActions button {
+  min-height: 38px;
+
+  padding: 9px 14px;
+
+  border-radius: 7px;
+
+  font: inherit;
+  font-size: 11px;
+  font-weight: 800;
+
+  cursor: pointer;
+}
+
+.settingsButton {
+  border: none;
+
+  background: transparent;
+  color: #14233a;
+
+  text-decoration: underline;
+}
+
+.rejectButton {
+  border: 1px solid #bfd0ea;
+
+  background: #eef4fd;
+  color: #0b3975;
+}
+
+.acceptButton {
+  border: 1px solid #0b438d;
+
+  background: #0b438d;
+  color: #ffffff;
+}
+
+.acceptButton:hover {
+  background: #083873;
+}
+
+.rejectButton:hover {
+  background: #e4eefc;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+
+  z-index: 2100;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background:
+    rgba(9, 27, 51, 0.58);
+}
+
+.modal {
+  width: min(
+    430px,
+    100%
+  );
+
+  overflow: hidden;
+
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 24px 70px
+    rgba(0, 0, 0, 0.28);
+}
+
+.modalHeader {
+  padding: 18px 20px;
+
+  border-bottom:
+    1px solid #e3e7ec;
+}
+
+.modalHeader h2 {
+  margin: 0;
+
+  color: #14233a;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.modalBody {
+  padding: 18px 20px;
+}
+
+.modalIntro {
+  margin: 0 0 18px;
+
+  color: #23354d;
+
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.preferenceRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content:
+    space-between;
+
+  gap: 18px;
+
+  padding: 15px 0;
+
+  border-bottom:
+    1px solid #e6e9ed;
+}
+
+.preferenceRow strong {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #14233a;
+
+  font-size: 13px;
+}
+
+.preferenceRow p {
+  max-width: 280px;
+
+  margin: 0;
+
+  color: #5e6e82;
+
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.alwaysOn {
+  flex-shrink: 0;
+
+  margin-top: 2px;
+
+  padding: 4px 8px;
+
+  border-radius: 999px;
+
+  background: #e7f7eb;
+  color: #188142;
+
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.toggle {
+  width: 38px;
+  height: 22px;
+
+  flex-shrink: 0;
+
+  position: relative;
+
+  margin-top: 3px;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 999px;
+
+  background: #bbc5d0;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease;
+}
+
+.toggle span {
+  width: 16px;
+  height: 16px;
+
+  position: absolute;
+
+  top: 3px;
+  left: 3px;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  transition:
+    transform 0.2s ease;
+
+  box-shadow:
+    0 1px 4px
+    rgba(0, 0, 0, 0.18);
+}
+
+.toggleOn {
+  background: #0b438d;
+}
+
+.toggleOn span {
+  transform:
+    translateX(16px);
+}
+
+.policyLink {
+  display: inline-block;
+
+  margin-top: 13px;
+
+  color: #073d91;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  text-decoration: underline;
+}
+
+.modalFooter {
+  display: flex;
+  justify-content: flex-end;
+
+  gap: 9px;
+
+  padding: 14px 20px;
+
+  background: #0f2542;
+}
+
+.modalFooter button {
+  min-height: 38px;
+
+  padding: 9px 16px;
+
+  border-radius: 7px;
+
+  font: inherit;
+  font-size: 11px;
+  font-weight: 800;
+
+  cursor: pointer;
+}
+
+.cancelButton {
+  border: 1px solid #c8d5e7;
+
+  background: #f4f7fb;
+  color: #14315a;
+}
+
+.saveButton {
+  border: 1px solid #0b438d;
+
+  background: #0b438d;
+  color: #ffffff;
+}
+
+.saveButton:hover {
+  background: #083873;
+}
+
+@media (
+  max-width: 760px
+) {
+  .bannerInner {
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 12px;
+  }
+
+  .bannerActions {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+  .settingsButton {
+    grid-column:
+      1 / -1;
+  }
+
+  .bannerActions button {
+    width: 100%;
+  }
+}
+
+@media (
+  max-width: 480px
+) {
+  .overlay {
+    align-items: flex-end;
+
+    padding: 0;
+  }
+
+  .modal {
+    width: 100%;
+
+    border-radius:
+      14px 14px 0 0;
+  }
+
+  .modalFooter {
+    flex-direction: column-reverse;
+  }
+
+  .modalFooter button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,218 @@
+.sidebar {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  bottom: 0;
+
+  z-index: 100;
+
+  width: 270px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background: #14233a;
+  color: #ffffff;
+
+  padding: 24px 18px;
+
+  overflow-y: auto;
+}
+
+.top {
+  width: 100%;
+}
+
+.brand {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  padding: 4px 10px 27px;
+
+  border-bottom: 1px solid
+    rgba(255, 255, 255, 0.1);
+}
+
+.brand > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand a {
+  font-family: Georgia, "Times New Roman",
+    serif;
+
+  font-size: 28px;
+  font-weight: 700;
+
+  line-height: 1;
+}
+
+.brand span {
+  margin-top: 8px;
+
+  color: #b7924a;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+}
+
+.closeButton {
+  display: none;
+
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+
+  background: transparent;
+  color: white;
+
+  cursor: pointer;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+
+  padding-top: 24px;
+}
+
+.navItem {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  min-height: 45px;
+
+  padding: 0 13px;
+
+  border-radius: 7px;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 14px;
+  font-weight: 500;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.navItem:hover {
+  color: white;
+
+  background: rgba(
+    255,
+    255,
+    255,
+    0.07
+  );
+}
+
+.navItem svg {
+  flex-shrink: 0;
+}
+
+.active {
+  color: white;
+
+  background: rgba(
+    183,
+    146,
+    74,
+    0.17
+  );
+}
+
+.active::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 9px;
+  bottom: 9px;
+
+  width: 3px;
+
+  border-radius: 10px;
+
+  background: #b7924a;
+}
+
+.bottom {
+  padding-top: 22px;
+
+  border-top: 1px solid
+    rgba(255, 255, 255, 0.1);
+}
+
+.viewWebsite {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 10px;
+
+  padding: 11px 12px;
+
+  margin-bottom: 18px;
+
+  border-radius: 6px;
+
+  color: rgba(255, 255, 255, 0.8);
+
+  font-size: 13px;
+
+  transition: background 0.2s ease;
+}
+
+.viewWebsite:hover {
+  background: rgba(
+    255,
+    255,
+    255,
+    0.07
+  );
+
+  color: white;
+}
+
+.bottom p {
+  padding: 0 12px;
+
+  color: rgba(255, 255, 255, 0.35);
+
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+@media (max-width: 1050px) {
+  .sidebar {
+    transform: translateX(-100%);
+
+    transition: transform 0.25s ease;
+  }
+
+  .open {
+    transform: translateX(0);
+  }
+
+  .closeButton {
+    display: flex;
+  }
+}

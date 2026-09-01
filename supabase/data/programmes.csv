@@ -1,0 +1,2 @@
+id,title,slug,category,short_description,description,image_url,number_of_sessions,session_duration_minutes,level,base_price,status,is_featured,sort_order,created_at,updated_at
+a6b3ba31-4481-4099-b10b-483ad42f86bb,Pottery Faundation,pottery-faundation,Pottery,null,null,https://jvfdolruhnatwyiijoyx.supabase.co/storage/v1/object/public/studio-media/programmes/244179a6-6adb-49a1-9030-b27fd160b72b.png,6,120,Beginner friendly,250.00,published,false,0,2026-08-26 07:22:23.382359+00,2026-08-26 07:22:40.146363+00

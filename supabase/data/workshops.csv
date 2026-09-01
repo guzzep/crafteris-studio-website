@@ -1,0 +1,3 @@
+id,title,slug,category,short_description,description,image_url,duration_minutes,level,base_price,status,is_featured,sort_order,created_at,updated_at
+b5025ed3-9597-47d8-adf1-b9b66134d286,Fused Glass Workshop,fused-glass-workshop,Glass,null,null,/workshops/fused-glass.png,120,Beginner friendly,36.00,published,true,0,2026-08-25 10:56:02.750133+00,2026-08-25 11:12:43.349792+00
+3458a06e-24b5-427c-a29f-7ba9b3ce8197,Gelled Roses,gelled-roses,Glass,null,null,https://jvfdolruhnatwyiijoyx.supabase.co/storage/v1/object/public/studio-media/workshops/4184714a-b8a8-426c-be6e-3442c890e5d8.jpg,120,Intermediate,56.00,published,false,0,2026-08-25 11:32:53.144141+00,2026-08-25 11:32:53.144141+00

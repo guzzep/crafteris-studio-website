@@ -1,0 +1,736 @@
+.page {
+  width: 100%;
+  padding: 32px;
+}
+
+.pageHeader {
+  max-width: 1200px;
+  margin: 0 auto 28px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+
+  color: var(--accent);
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.pageHeader h1 {
+  margin: 0;
+
+  color: var(--mainText);
+
+  font-size: clamp(
+    32px,
+    4vw,
+    46px
+  );
+
+  line-height: 1.05;
+}
+
+.pageDescription {
+  max-width: 600px;
+
+  margin-top: 12px;
+
+  color: rgba(
+    20,
+    35,
+    58,
+    0.68
+  );
+
+  line-height: 1.6;
+}
+
+/* STATS */
+
+.statsGrid {
+  max-width: 1200px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      4,
+      minmax(
+        0,
+        1fr
+      )
+    );
+
+  gap: 16px;
+
+  margin: 0 auto 24px;
+}
+
+.statCard {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 20px;
+
+  background: #fff;
+
+  border: 1px solid
+    rgba(
+      20,
+      35,
+      58,
+      0.1
+    );
+
+  border-radius: 16px;
+}
+
+.statIcon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  background:
+    rgba(
+      183,
+      146,
+      74,
+      0.12
+    );
+
+  border-radius: 12px;
+
+  color: var(--accent);
+}
+
+.statCard > div:last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.statCard span {
+  color:
+    rgba(
+      20,
+      35,
+      58,
+      0.6
+    );
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.statCard strong {
+  margin-top: 2px;
+
+  color:
+    var(--mainText);
+
+  font-size: 24px;
+}
+
+/* MAIN CARD */
+
+.scheduleCard {
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  background: #fff;
+
+  border: 1px solid
+    rgba(
+      20,
+      35,
+      58,
+      0.1
+    );
+
+  border-radius: 20px;
+
+  overflow: hidden;
+}
+
+.toolbar {
+  display: flex;
+
+  justify-content:
+    space-between;
+
+  gap: 16px;
+
+  padding: 20px;
+
+  border-bottom:
+    1px solid
+    rgba(
+      20,
+      35,
+      58,
+      0.09
+    );
+}
+
+.searchBox {
+  width: 100%;
+  max-width: 420px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 0 14px;
+
+  border:
+    1px solid
+    rgba(
+      20,
+      35,
+      58,
+      0.14
+    );
+
+  border-radius: 11px;
+
+  background:
+    #fafafa;
+}
+
+.searchBox svg {
+  color:
+    rgba(
+      20,
+      35,
+      58,
+      0.5
+    );
+}
+
+.searchBox input {
+  width: 100%;
+
+  padding: 12px 0;
+
+  border: 0;
+  outline: 0;
+
+  background:
+    transparent;
+
+  color:
+    var(--mainText);
+
+  font: inherit;
+}
+
+.filters {
+  display: flex;
+
+  gap: 10px;
+}
+
+.filters select {
+  min-width: 140px;
+
+  padding:
+    11px 36px 11px 12px;
+
+  border:
+    1px solid
+    rgba(
+      20,
+      35,
+      58,
+      0.14
+    );
+
+  border-radius: 11px;
+
+  background: #fff;
+
+  color:
+    var(--mainText);
+
+  font: inherit;
+  font-size: 14px;
+}
+
+/* LIST */
+
+.scheduleList {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.sessionCard {
+  display: grid;
+
+  grid-template-columns:
+    220px 1fr;
+
+  gap: 22px;
+
+  padding: 24px;
+
+  border-bottom:
+    1px solid
+    rgba(
+      20,
+      35,
+      58,
+      0.08
+    );
+
+  transition:
+    background 0.18s ease;
+}
+
+.sessionCard:last-child {
+  border-bottom: 0;
+}
+
+.sessionCard:hover {
+  background:
+    rgba(
+      245,
+      240,
+      230,
+      0.35
+    );
+}
+
+.dateBlock {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+
+  padding-right: 20px;
+
+  border-right:
+    1px solid
+    rgba(
+      20,
+      35,
+      58,
+      0.1
+    );
+}
+
+.dateBlock strong {
+  color:
+    var(--mainText);
+
+  font-size: 15px;
+}
+
+.dateBlock span {
+  color:
+    rgba(
+      20,
+      35,
+      58,
+      0.62
+    );
+
+  font-size: 13px;
+}
+
+/* SESSION */
+
+.sessionMain {
+  min-width: 0;
+}
+
+.sessionTop {
+  display: flex;
+
+  align-items:
+    flex-start;
+
+  justify-content:
+    space-between;
+
+  gap: 20px;
+}
+
+.sessionTop h2 {
+  margin:
+    9px 0 0;
+
+  color:
+    var(--mainText);
+
+  font-size: 20px;
+}
+
+.badges {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+}
+
+.workshopBadge,
+.programmeBadge,
+.cancelledBadge,
+.pastBadge {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding:
+    5px 9px;
+
+  border-radius:
+    999px;
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.workshopBadge {
+  background:
+    rgba(
+      183,
+      146,
+      74,
+      0.14
+    );
+
+  color:
+    #8b692b;
+}
+
+.programmeBadge {
+  background:
+    rgba(
+      20,
+      35,
+      58,
+      0.09
+    );
+
+  color:
+    var(--mainText);
+}
+
+.cancelledBadge {
+  background:
+    rgba(
+      170,
+      45,
+      45,
+      0.1
+    );
+
+  color:
+    #a22d2d;
+}
+
+.pastBadge {
+  background:
+    rgba(
+      20,
+      35,
+      58,
+      0.06
+    );
+
+  color:
+    rgba(
+      20,
+      35,
+      58,
+      0.55
+    );
+}
+
+.sessionNumber {
+  margin:
+    6px 0 0;
+
+  color:
+    rgba(
+      20,
+      35,
+      58,
+      0.55
+    );
+
+  font-size: 13px;
+}
+
+.manageLink {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  flex-shrink: 0;
+
+  color:
+    var(--accent);
+
+  font-size: 13px;
+  font-weight: 800;
+
+  text-decoration: none;
+}
+
+.manageLink:hover {
+  text-decoration:
+    underline;
+}
+
+/* META */
+
+.metaRow {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 30px;
+
+  margin-top: 18px;
+
+  padding-top: 16px;
+
+  border-top:
+    1px solid
+    rgba(
+      20,
+      35,
+      58,
+      0.08
+    );
+}
+
+.metaRow > div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.metaRow span {
+  color:
+    rgba(
+      20,
+      35,
+      58,
+      0.52
+    );
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.metaRow strong {
+  color:
+    var(--mainText);
+
+  font-size: 14px;
+}
+
+/* STATES */
+
+.stateBox {
+  min-height: 280px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 30px;
+
+  color:
+    rgba(
+      20,
+      35,
+      58,
+      0.62
+    );
+
+  text-align: center;
+}
+
+.stateBox strong {
+  color:
+    var(--mainText);
+
+  font-size: 17px;
+}
+
+.stateBox p {
+  max-width: 420px;
+
+  margin: 0;
+
+  line-height: 1.6;
+}
+
+.errorBox {
+  margin: 20px;
+
+  padding: 15px 16px;
+
+  background:
+    rgba(
+      170,
+      45,
+      45,
+      0.08
+    );
+
+  border:
+    1px solid
+    rgba(
+      170,
+      45,
+      45,
+      0.17
+    );
+
+  border-radius: 12px;
+
+  color:
+    #9d2d2d;
+}
+
+.cancelled {
+  opacity: 0.68;
+}
+
+.past {
+  opacity: 0.7;
+}
+
+.spin {
+  animation:
+    spin 0.8s linear
+    infinite;
+}
+
+@keyframes spin {
+  to {
+    transform:
+      rotate(360deg);
+  }
+}
+
+/* RESPONSIVE */
+
+@media (
+  max-width: 1000px
+) {
+  .statsGrid {
+    grid-template-columns:
+      repeat(
+        2,
+        1fr
+      );
+  }
+
+  .sessionCard {
+    grid-template-columns:
+      180px 1fr;
+  }
+}
+
+@media (
+  max-width: 750px
+) {
+  .page {
+    padding: 22px 16px;
+  }
+
+  .toolbar {
+    flex-direction:
+      column;
+  }
+
+  .searchBox {
+    max-width: none;
+  }
+
+  .filters {
+    width: 100%;
+  }
+
+  .filters select {
+    width: 50%;
+  }
+
+  .sessionCard {
+    grid-template-columns:
+      1fr;
+  }
+
+  .dateBlock {
+    padding-right: 0;
+    padding-bottom: 14px;
+
+    border-right: 0;
+
+    border-bottom:
+      1px solid
+      rgba(
+        20,
+        35,
+        58,
+        0.08
+      );
+  }
+}
+
+@media (
+  max-width: 520px
+) {
+  .statsGrid {
+    grid-template-columns:
+      1fr;
+  }
+
+  .filters {
+    flex-direction:
+      column;
+  }
+
+  .filters select {
+    width: 100%;
+  }
+
+  .sessionTop {
+    flex-direction:
+      column;
+  }
+
+  .metaRow {
+    gap: 18px;
+  }
+}

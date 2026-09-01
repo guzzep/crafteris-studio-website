@@ -1,0 +1,395 @@
+.page {
+  color: var(--mainText);
+  background-color: var(--background);
+}
+
+/* =========================
+   HERO
+   ========================= */
+
+.hero {
+  padding: 110px 40px 90px;
+  text-align: center;
+}
+
+.heroInner {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  color: var(--accent);
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  margin-bottom: 14px;
+}
+
+.hero h1 {
+  font-family: serif;
+  font-size: 64px;
+  line-height: 1.05;
+  margin-bottom: 24px;
+}
+
+.heroDescription {
+  max-width: 720px;
+  margin: 0 auto;
+  font-size: 19px;
+  line-height: 1.7;
+}
+
+
+/* =========================
+   GENERAL SECTION HEADING
+   ========================= */
+
+.sectionHeading {
+  max-width: 720px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.sectionHeading h2 {
+  font-family: serif;
+  font-size: 42px;
+  margin-bottom: 14px;
+}
+
+.sectionHeading p {
+  line-height: 1.7;
+}
+
+
+/* =========================
+   EXPLORE OPTIONS
+   ========================= */
+
+.optionsSection {
+  padding: 40px 40px 80px;
+}
+
+.optionsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.optionCard {
+  background-color: white;
+  border: 1px solid rgba(183, 146, 74, 0.25);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.optionCard:last-child {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.optionImageWrapper {
+  overflow: hidden;
+}
+
+.optionImage {
+  display: block;
+  width: 100%;
+  height: 310px;
+  object-fit: cover;
+}
+
+.optionCard:last-child .optionImage {
+  height: 100%;
+  min-height: 330px;
+}
+
+.optionContent {
+  padding: 28px;
+}
+
+.bestFor {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 10px;
+}
+
+.optionContent h3 {
+  font-family: serif;
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+.optionDescription {
+  line-height: 1.65;
+  margin-bottom: 22px;
+}
+
+.optionLink {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  font-weight: 700;
+}
+
+.optionLink span {
+  color: var(--accent);
+  font-size: 20px;
+}
+
+
+/* =========================
+   DIVIDER
+   ========================= */
+
+.sectionDivider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  width: 80%;
+  max-width: 1100px;
+  margin: 50px auto 90px;
+}
+
+.sectionDivider span:first-child,
+.sectionDivider span:last-child {
+  height: 1px;
+  background-color: var(--accent);
+  flex: 1;
+}
+
+.dividerDiamond {
+  color: var(--mainText);
+  font-size: 18px;
+}
+
+
+/* =========================
+   WHAT'S ON
+   ========================= */
+
+.whatsOn {
+  padding: 0 40px 100px;
+}
+
+.upcomingGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.upcomingCard {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(183, 146, 74, 0.2);
+}
+
+.upcomingImage {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.upcomingContent {
+  padding: 22px;
+}
+
+.upcomingDate {
+  color: var(--accent);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.upcomingContent h3 {
+  font-family: serif;
+  font-size: 25px;
+  margin-bottom: 8px;
+}
+
+.upcomingContent > p:not(.upcomingDate) {
+  margin-bottom: 18px;
+}
+
+.upcomingContent a {
+  font-weight: 700;
+}
+
+.allEvents {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.allEvents a {
+  display: inline-block;
+  background-color: var(--mainText);
+  color: var(--background);
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-weight: 700;
+}
+
+
+/* =========================
+   FINAL CTA
+   ========================= */
+
+.finalCta {
+  padding: 90px 40px;
+  text-align: center;
+  border-top: 1px solid rgba(183, 146, 74, 0.25);
+}
+
+.finalCta > div {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.finalCta h2 {
+  font-family: serif;
+  font-size: 42px;
+  margin-bottom: 16px;
+}
+
+.finalCta > div > p:not(.eyebrow) {
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.finalActions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.primaryButton {
+  background-color: var(--mainText);
+  color: var(--background);
+  padding: 12px 22px;
+  border-radius: 5px;
+  font-weight: 700;
+}
+
+.secondaryButton {
+  color: var(--mainText);
+  font-weight: 700;
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 900px) {
+  .hero {
+    padding: 90px 30px 70px;
+  }
+
+  .hero h1 {
+    font-size: 52px;
+  }
+
+  .optionsSection,
+  .whatsOn {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .optionImage {
+    height: 260px;
+  }
+
+  .upcomingGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .upcomingCard:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 650px) {
+  .hero {
+    padding: 70px 20px 55px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .heroDescription {
+    font-size: 17px;
+  }
+
+  .sectionHeading h2 {
+    font-size: 34px;
+  }
+
+  .optionsSection {
+    padding: 30px 20px 60px;
+  }
+
+  .optionsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .optionCard:last-child {
+    grid-column: auto;
+    display: block;
+  }
+
+  .optionImage,
+  .optionCard:last-child .optionImage {
+    height: 250px;
+    min-height: 0;
+  }
+
+  .optionContent {
+    padding: 22px;
+  }
+
+  .sectionDivider {
+    width: 90%;
+    margin: 40px auto 65px;
+  }
+
+  .whatsOn {
+    padding: 0 20px 70px;
+  }
+
+  .upcomingGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .upcomingCard:last-child {
+    grid-column: auto;
+  }
+
+  .finalCta {
+    padding: 70px 20px;
+  }
+
+  .finalCta h2 {
+    font-size: 34px;
+  }
+
+  .finalActions {
+    flex-direction: column;
+  }
+}

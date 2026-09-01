@@ -1,0 +1,579 @@
+.page {
+  background-color: var(--background);
+  color: var(--mainText);
+}
+
+/* =========================
+   HERO
+   ========================= */
+
+.hero {
+  display: grid;
+  grid-template-columns: 43% 57%;
+  max-width: 1400px;
+  min-height: 560px;
+  margin: 0 auto;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 55px;
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.hero h1 {
+  font-family: serif;
+  font-size: 58px;
+  line-height: 1.05;
+  margin-bottom: 24px;
+}
+
+.heroDescription {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.heroActions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.primaryButton {
+  display: inline-block;
+  width: fit-content;
+  background-color: var(--mainText);
+  color: var(--background);
+  padding: 12px 22px;
+  border-radius: 5px;
+  font-weight: 700;
+}
+
+.secondaryButton {
+  font-weight: 700;
+}
+
+.heroImageWrapper {
+  overflow: hidden;
+}
+
+.heroImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 560px;
+  object-fit: cover;
+}
+
+/* =========================
+   INTRO
+   ========================= */
+
+.introSection {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 110px 40px 70px;
+}
+
+.introHeading {
+  max-width: 760px;
+  margin-bottom: 50px;
+}
+
+.introHeading h2 {
+  font-family: serif;
+  font-size: 44px;
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+
+.introHeading > p:last-child {
+  line-height: 1.7;
+}
+
+.visitInfoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.visitInfoCard {
+  border-top: 1px solid var(--accent);
+  padding: 26px 8px 10px;
+}
+
+.visitInfoCard > span {
+  display: block;
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.visitInfoCard h3 {
+  font-family: serif;
+  font-size: 25px;
+  margin-bottom: 12px;
+}
+
+.visitInfoCard p {
+  line-height: 1.65;
+}
+
+/* =========================
+   DIVIDER
+   ========================= */
+
+.sectionDivider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 80%;
+  max-width: 1100px;
+  margin: 40px auto 90px;
+}
+
+.sectionDivider span:first-child,
+.sectionDivider span:last-child {
+  height: 1px;
+  background-color: var(--accent);
+  flex: 1;
+}
+
+.dividerDiamond {
+  font-size: 18px;
+}
+
+/* =========================
+   PLAN VISIT
+   ========================= */
+
+.planSection {
+  display: grid;
+  grid-template-columns: 55% 45%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px 100px;
+  align-items: center;
+}
+
+.planImageWrapper {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.planImage {
+  width: 100%;
+  height: 570px;
+  object-fit: cover;
+  display: block;
+}
+
+.planContent {
+  padding-left: 65px;
+}
+
+.planContent > h2 {
+  font-family: serif;
+  font-size: 44px;
+  margin-bottom: 16px;
+}
+
+.planDescription {
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.addressBox {
+  padding: 24px 0;
+  margin-bottom: 28px;
+  border-top: 1px solid rgba(20, 35, 58, 0.14);
+  border-bottom: 1px solid rgba(20, 35, 58, 0.14);
+}
+
+.addressLabel {
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.addressBox h3 {
+  font-family: serif;
+  font-size: 25px;
+  margin-bottom: 4px;
+}
+
+.addressNote {
+  margin-top: 12px;
+  font-size: 13px;
+  line-height: 1.5;
+  opacity: 0.65;
+}
+
+.planButtons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* =========================
+   HOURS
+   ========================= */
+
+.hoursSection {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  gap: 80px;
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 0 40px 100px;
+}
+
+.hoursContent h2 {
+  font-family: serif;
+  font-size: 44px;
+  margin-bottom: 16px;
+}
+
+.hoursDescription {
+  line-height: 1.7;
+}
+
+.hoursTable {
+  border-top: 1px solid var(--accent);
+}
+
+.hoursRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(20, 35, 58, 0.12);
+}
+
+.hoursNote {
+  margin-top: 18px;
+  font-size: 13px;
+  line-height: 1.5;
+  opacity: 0.65;
+}
+
+/* =========================
+   TRAVEL
+   ========================= */
+
+.travelSection {
+  padding: 0 40px 100px;
+}
+
+.sectionHeading {
+  max-width: 760px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.sectionHeading h2 {
+  font-family: serif;
+  font-size: 44px;
+  margin-bottom: 14px;
+}
+
+.sectionHeading > p:last-child {
+  line-height: 1.7;
+}
+
+.travelGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.travelCard {
+  background-color: white;
+  border: 1px solid rgba(183, 146, 74, 0.22);
+  border-radius: 8px;
+  padding: 30px;
+}
+
+.travelCard h3 {
+  font-family: serif;
+  font-size: 25px;
+  margin-bottom: 12px;
+}
+
+.travelCard p {
+  line-height: 1.65;
+}
+
+/* =========================
+   STUDIO
+   ========================= */
+
+.studioSection {
+  display: grid;
+  grid-template-columns: 55% 45%;
+  align-items: center;
+  max-width: 1200px;
+  padding: 0 40px 100px;
+  margin: 0 auto;
+}
+
+.studioImageWrapper {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.studioImage {
+  display: block;
+  width: 100%;
+  height: 570px;
+  object-fit: cover;
+}
+
+.studioContent {
+  padding-left: 65px;
+}
+
+.studioContent h2 {
+  font-family: serif;
+  font-size: 44px;
+  margin-bottom: 18px;
+}
+
+.studioContent > p:not(.eyebrow) {
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.textLink {
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: 700;
+}
+
+/* =========================
+   ACCESSIBILITY
+   ========================= */
+
+.accessibilitySection {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  gap: 80px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 40px 100px;
+}
+
+.accessibilitySection h2 {
+  font-family: serif;
+  font-size: 42px;
+}
+
+.accessibilityText p {
+  line-height: 1.7;
+}
+
+/* =========================
+   CTA
+   ========================= */
+
+.finalCta {
+  background-color: white;
+  border-top: 1px solid rgba(183, 146, 74, 0.22);
+}
+
+.finalCtaInner {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 90px 40px;
+  text-align: center;
+}
+
+.finalCta h2 {
+  font-family: serif;
+  font-size: 44px;
+  margin-bottom: 16px;
+}
+
+.finalCtaInner > p:not(.eyebrow) {
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.finalActions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.finalSecondary {
+  font-weight: 700;
+}
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 1000px) {
+  .hero {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .heroContent {
+    padding: 65px 35px;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .planContent,
+  .studioContent {
+    padding-left: 40px;
+  }
+
+  .hoursSection,
+  .accessibilitySection {
+    gap: 50px;
+  }
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 750px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .heroContent {
+    padding: 65px 22px 45px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .heroImage {
+    height: 360px;
+    min-height: 0;
+  }
+
+  .introSection {
+    padding: 75px 22px 50px;
+  }
+
+  .introHeading h2 {
+    font-size: 36px;
+  }
+
+  .visitInfoGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .sectionDivider {
+    width: 90%;
+    margin: 30px auto 65px;
+  }
+
+  .planSection,
+  .studioSection {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px 75px;
+  }
+
+  .planImage,
+  .studioImage {
+    height: 390px;
+  }
+
+  .planContent,
+  .studioContent {
+    padding: 40px 0 0;
+  }
+
+  .planContent > h2,
+  .studioContent h2 {
+    font-size: 36px;
+  }
+
+  .hoursSection {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding: 0 20px 75px;
+  }
+
+  .hoursContent h2 {
+    font-size: 36px;
+  }
+
+  .travelSection {
+    padding: 0 20px 75px;
+  }
+
+  .sectionHeading h2 {
+    font-size: 36px;
+  }
+
+  .travelGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .accessibilitySection {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 0 20px 75px;
+  }
+
+  .accessibilitySection h2 {
+    font-size: 36px;
+  }
+
+  .finalCtaInner {
+    padding: 70px 20px;
+  }
+
+  .finalCta h2 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .heroActions,
+  .planButtons,
+  .finalActions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .finalActions {
+    align-items: center;
+  }
+}

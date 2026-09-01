@@ -1,0 +1,2 @@
+id,name,slug,category,description,price,image_url,stock_quantity,status,is_featured,sort_order,created_at,updated_at,stock
+a6c9f74e-0cb6-4f1d-919f-fd78935f1cb8,Dancing Glass Figures,dancing-glass-figures,Glass,Buy it now or never,45.00,https://jvfdolruhnatwyiijoyx.supabase.co/storage/v1/object/public/studio-media/products/994f9c62-1a43-41e4-abdf-e76fc5ce7c8f.png,null,published,false,0,2026-08-26 08:00:42.183745+00,2026-08-26 08:00:42.183745+00,3

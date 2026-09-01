@@ -1,0 +1,57 @@
+.shell {
+  min-height: 100vh;
+
+  display: flex;
+
+  background: #f6f7f9;
+  color: #14233a;
+}
+
+.main {
+  flex: 1;
+
+  min-width: 0;
+
+  margin-left: 270px;
+}
+
+.content {
+  width: 100%;
+
+  padding: 32px;
+}
+
+.overlay {
+  display: none;
+}
+
+@media (max-width: 1050px) {
+  .main {
+    margin-left: 0;
+  }
+
+  .content {
+    padding: 24px;
+  }
+
+  .overlay {
+    display: block;
+
+    position: fixed;
+    inset: 0;
+
+    z-index: 80;
+
+    border: none;
+
+    background: rgba(10, 19, 32, 0.5);
+
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 600px) {
+  .content {
+    padding: 18px;
+  }
+}
