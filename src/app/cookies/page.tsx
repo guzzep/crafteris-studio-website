@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Link from "next/link";
 import styles from "../support.module.css";
 
 export default function Page() {
@@ -16,207 +15,272 @@ export default function Page() {
             </p>
 
             <h1>
-              How Crafteris uses cookies.
+              How Crafteris Studio uses cookies.
             </h1>
 
             <p>
               This Cookie Policy explains how Crafteris
-              (&ldquo;Crafteris&rdquo;, &ldquo;we&rdquo;,
-              &ldquo;our&rdquo;, or &ldquo;us&rdquo;)
-              uses cookies and similar technologies on
-              our website and booking systems.
+              Studio uses cookies and similar
+              technologies on its website.
             </p>
           </div>
         </section>
 
         <div className={styles.content}>
           <section className={styles.card}>
-            <h2>Cookie preferences</h2>
+            <h2>1. What are cookies?</h2>
 
             <p>
-              When you first visit our website, you may
-              see a cookie banner where you can accept
-              optional cookies, reject non-essential
-              cookies, or open Cookie Settings to choose
-              which optional cookies we may use.
-            </p>
-
-            <p>
-              Your choice may be stored in your browser
-              so that we can remember your preferences
-              on future visits.
-            </p>
-          </section>
-
-          <section className={styles.card}>
-            <h2>What are cookies?</h2>
-
-            <p>
-              Cookies are small text files stored on
+              Cookies are small text files or similar
+              technologies stored on or accessed from
               your device when you visit a website.
-              They help the site work properly, remember
-              preferences and, only where permitted,
-              help us understand how the site is used.
+            </p>
+
+            <p>
+              They can be used to keep a website secure,
+              remember a session or preference, support
+              login and checkout, and understand how
+              visitors use a website.
             </p>
           </section>
 
           <section className={styles.card}>
             <h2>
-              Essential cookies (always active)
+              2. Cookie categories used by Crafteris
+              Studio
             </h2>
 
+            <h3>Necessary cookies</h3>
+
             <p>
-              These cookies are strictly necessary for
-              the website and booking system to function.
-              They cannot normally be switched off
-              because parts of the site may not work
-              correctly without them.
+              Necessary cookies are required for core
+              website functions and cannot be switched
+              off through the optional cookie-consent
+              controls.
             </p>
 
             <p>
-              Essential cookies and local storage may
-              be used for:
+              They may be used for security, session
+              management, member login, bookings,
+              checkout, fraud prevention and other
+              functionality necessary to provide the
+              service.
             </p>
 
-            <ul>
-              <li>
-                Keeping booking cart and session
-                information while you browse
-              </li>
-
-              <li>
-                Remembering admin or member login state
-                where applicable
-              </li>
-
-              <li>
-                Storing your cookie consent choice
-              </li>
-
-              <li>
-                Security and fraud prevention related
-                to payments and bookings
-              </li>
-            </ul>
-          </section>
-
-          <section className={styles.card}>
-            <h2>
-              Analytics cookies (optional)
-            </h2>
+            <h3>Analytics cookies</h3>
 
             <p>
-              Analytics cookies help us understand how
-              visitors use our website, for example
-              which pages are visited and how visitors
-              move through the site.
+              Analytics cookies are optional.
             </p>
 
             <p>
-              This information may be used in aggregate
-              to improve content, navigation and the
-              booking experience.
+              Crafteris Studio plans to use Google
+              Analytics to understand how visitors use
+              the website and booking experience.
             </p>
 
             <p>
-              Analytics tools such as Google Analytics
-              should only be loaded after the required
-              consent has been given. If you reject
-              non-essential cookies or disable analytics
-              through Cookie Settings, analytics
-              cookies should not be placed.
+              Analytics cookies are activated only
+              after you have consented to analytics
+              cookies.
             </p>
 
             <p>
-              More information about Google&apos;s
-              privacy practices is available at{" "}
-              <a
-                href="https://policies.google.com/privacy"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Google Privacy Policy
-              </a>
-              .
+              At launch, Crafteris Studio does not plan
+              to use Meta/Facebook Pixel or other
+              advertising or remarketing trackers.
             </p>
           </section>
 
           <section className={styles.card}>
-            <h2>How to manage cookies</h2>
+            <h2>3. Google Analytics</h2>
 
             <p>
-              You can change your cookie preferences
-              through Cookie Settings where this option
-              is available on the website.
+              If you consent, Google Analytics may
+              collect information such as pages visited,
+              time spent on pages, general browser and
+              device information, approximate location,
+              how you arrived at the website and
+              interactions with website features.
             </p>
 
             <p>
-              You can also clear or block cookies using
-              your browser settings. If you clear your
-              preferences, you may see the cookie banner
-              again on your next visit.
-            </p>
-
-            <p>
-              Blocking all cookies may affect how some
-              parts of the website or booking system
-              work.
+              Google Analytics is not loaded until
+              analytics consent has been given.
             </p>
           </section>
 
           <section className={styles.card}>
             <h2>
-              Marketing emails are separate from cookies
+              4. Third-party cookies and similar
+              technologies
             </h2>
 
             <p>
-              Choosing whether to receive marketing
-              emails about workshops, courses and offers
-              is handled separately when you make a
-              booking or subscribe to communications.
-              It is not controlled through the cookie
-              banner.
+              Some cookies or similar technologies may
+              be set by third-party service providers
+              that support Crafteris Studio, such as
+              payment, authentication, security or
+              analytics providers.
             </p>
 
-            <div className={styles.actions}>
-              <Link
-                href="/privacy"
-                className={styles.secondary}
-              >
-                Read Privacy Policy
-              </Link>
-            </div>
+            <p>
+              Examples may include Google for analytics
+              and Stripe for secure payment processing
+              and fraud prevention.
+            </p>
           </section>
 
           <section className={styles.card}>
-            <h2>Contact</h2>
+            <h2>5. Your cookie choices</h2>
 
             <p>
-              <strong>Crafteris</strong>
+              When optional analytics cookies are
+              available, you can choose to accept them,
+              reject them or manage your preferences.
             </p>
 
             <p>
-              Triq L-Ewwel Ta&apos; Mejju
+              Rejecting optional cookies will not
+              prevent you from browsing the website,
+              making a booking, using checkout or
+              accessing a member account.
+            </p>
+
+            <p>
+              Necessary cookies remain active because
+              they are required for core website
+              functions.
+            </p>
+          </section>
+
+          <section className={styles.card}>
+            <h2>6. How long we remember your choice</h2>
+
+            <p>
+              Crafteris Studio will normally remember
+              your cookie preferences for up to 6
+              months.
+            </p>
+
+            <p>
+              After that period, you may be asked to
+              make a new choice.
+            </p>
+          </section>
+
+          <section className={styles.card}>
+            <h2>7. Changing or withdrawing consent</h2>
+
+            <p>
+              You can change or withdraw your cookie
+              preferences through the Cookie Preferences
+              controls made available on the Crafteris
+              Studio website.
+            </p>
+
+            <p>
+              Withdrawing consent does not affect
+              processing that took place before consent
+              was withdrawn.
+            </p>
+          </section>
+
+          <section className={styles.card}>
+            <h2>8. Recording your preference</h2>
+
+            <p>
+              Crafteris Studio may store a record of
+              your cookie preference, including whether
+              optional analytics cookies were accepted
+              or rejected, the date and time of your
+              choice and the version of the consent
+              information that applied.
+            </p>
+          </section>
+
+          <section className={styles.card}>
+            <h2>9. Browser Do Not Track signals</h2>
+
+            <p>
+              Crafteris Studio does not currently rely
+              on browser &ldquo;Do Not Track&rdquo;
+              signals to manage cookie preferences.
+            </p>
+          </section>
+
+          <section className={styles.card}>
+            <h2>10. Live cookie table</h2>
+
+            <p>
+              The live cookie configuration should be
+              verified after implementation and updated
+              whenever the website&apos;s cookie
+              configuration changes materially.
+            </p>
+
+            <h3>Necessary technologies</h3>
+
+            <p>
+              Provider: Crafteris Studio / hosting /
+              authentication provider
+            </p>
+
+            <p>
+              Purpose: Essential security, session,
+              booking, checkout or login functionality.
+            </p>
+
+            <h3>Google Analytics</h3>
+
+            <p>
+              Cookies such as <strong>_ga</strong> and
+              related GA4 cookies may be used if Google
+              Analytics is enabled.
+            </p>
+
+            <p>
+              Category: Analytics
+            </p>
+          </section>
+
+          <section className={styles.card}>
+            <h2>
+              11. Updates to this Cookie Policy
+            </h2>
+
+            <p>
+              Crafteris Studio may update this Cookie
+              Policy when the website, cookie
+              configuration, analytics setup or
+              third-party services change.
+            </p>
+          </section>
+
+          <section className={styles.card}>
+            <h2>12. Contact</h2>
+
+            <p>
+              Crafteris Studio — Home to GlassXpressions
               <br />
-              Birkirkara, Malta
+              Joseph Schembri
+              <br />
+              1, Triq L-Ewwel Ta&apos; Mejju
+              <br />
+              Birkirkara BKR 1901
+              <br />
+              Malta
             </p>
 
             <p>
-              For questions about cookies or privacy,
-              please contact the studio.
+              Email:{" "}
+              <a href="mailto:info@crafterisstudio.com">
+                info@crafterisstudio.com
+              </a>
             </p>
 
-            <div className={styles.actions}>
-              <Link
-                href="/contact"
-                className={styles.primary}
-              >
-                Contact Crafteris
-              </Link>
-            </div>
-
-            <p>
-              <em>Last updated: June 2026</em>
+            <p className={styles.notice}>
+              Effective date: 6 September 2026
             </p>
           </section>
         </div>

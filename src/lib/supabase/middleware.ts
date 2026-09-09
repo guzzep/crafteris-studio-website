@@ -1,5 +1,8 @@
 import { createServerClient } from "@supabase/ssr";
-import { NextResponse, type NextRequest } from "next/server";
+import {
+  NextResponse,
+  type NextRequest,
+} from "next/server";
 
 export async function updateSession(
   request: NextRequest
@@ -20,7 +23,10 @@ export async function updateSession(
         setAll(cookiesToSet) {
           cookiesToSet.forEach(
             ({ name, value }) =>
-              request.cookies.set(name, value)
+              request.cookies.set(
+                name,
+                value
+              )
           );
 
           response = NextResponse.next({
@@ -28,7 +34,11 @@ export async function updateSession(
           });
 
           cookiesToSet.forEach(
-            ({ name, value, options }) =>
+            ({
+              name,
+              value,
+              options,
+            }) =>
               response.cookies.set(
                 name,
                 value,
@@ -44,64 +54,93 @@ export async function updateSession(
     data: { user },
   } = await supabase.auth.getUser();
 
-  const pathname = request.nextUrl.pathname;
+  const pathname =
+    request.nextUrl.pathname;
 
-  /*
-   * Login page is public.
-   */
-  if (pathname === "/admin/login") {
-    /*
-     * Already logged-in admins should not
-     * see the login page again.
-     */
-    if (user) {
-      const { data: profile } = await supabase
+  const publicAdminRoutes = [
+    "/admin/login",
+    "/admin/forgot-password",
+    "/admin/reset-password",
+  ];
+
+  if (
+    publicAdminRoutes.includes(
+      pathname
+    )
+  ) {
+    if (
+      pathname ===
+        "/admin/login" &&
+      user
+    ) {
+      const {
+        data: profile,
+      } = await supabase
         .from("profiles")
         .select("role")
         .eq("id", user.id)
         .single();
 
-      if (profile?.role === "admin") {
-        const url = request.nextUrl.clone();
-        url.pathname = "/admin";
+      if (
+        profile?.role ===
+        "admin"
+      ) {
+        const url =
+          request.nextUrl.clone();
 
-        return NextResponse.redirect(url);
+        url.pathname =
+          "/admin";
+
+        return NextResponse.redirect(
+          url
+        );
       }
     }
 
     return response;
   }
 
-  /*
-   * Everything else under /admin
-   * requires authentication.
-   */
-  if (pathname.startsWith("/admin")) {
+  if (
+    pathname.startsWith(
+      "/admin"
+    )
+  ) {
     if (!user) {
-      const url = request.nextUrl.clone();
+      const url =
+        request.nextUrl.clone();
 
-      url.pathname = "/admin/login";
+      url.pathname =
+        "/admin/login";
 
-      return NextResponse.redirect(url);
+      return NextResponse.redirect(
+        url
+      );
     }
 
-    /*
-     * User exists, now check the role.
-     */
-    const { data: profile } = await supabase
+    const {
+      data: profile,
+    } = await supabase
       .from("profiles")
       .select("role")
       .eq("id", user.id)
       .single();
 
-    if (!profile || profile.role !== "admin") {
+    if (
+      !profile ||
+      profile.role !==
+        "admin"
+    ) {
       await supabase.auth.signOut();
 
-      const url = request.nextUrl.clone();
+      const url =
+        request.nextUrl.clone();
 
-      url.pathname = "/admin/login";
+      url.pathname =
+        "/admin/login";
 
-      return NextResponse.redirect(url);
+      return NextResponse.redirect(
+        url
+      );
     }
   }
 

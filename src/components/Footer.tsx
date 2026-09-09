@@ -20,9 +20,7 @@ import {
   createClient,
 } from "@/lib/supabase/client";
 
-import CookieBanner, {
-  openCookieSettings,
-} from "./CookieBanner";
+import CookieBanner from "./CookieBanner";
 
 import styles from "./Footer.module.css";
 
@@ -214,9 +212,7 @@ export default function Footer() {
               >
                 {instagram && (
                   <a
-                    href={
-                      instagram
-                    }
+                    href={instagram}
                     target="_blank"
                     rel="noreferrer"
                     aria-label="Instagram"
@@ -230,9 +226,7 @@ export default function Footer() {
 
                 {facebook && (
                   <a
-                    href={
-                      facebook
-                    }
+                    href={facebook}
                     target="_blank"
                     rel="noreferrer"
                     aria-label="Facebook"
@@ -377,7 +371,25 @@ export default function Footer() {
             }
           >
             <Link href="/privacy">
-              Privacy Policy
+              Privacy
+            </Link>
+
+            <span>|</span>
+
+            <Link href="/booking-terms">
+              Booking Terms
+            </Link>
+
+            <span>|</span>
+
+            <Link href="/cancellation-refunds">
+              Cancellation &amp; Refunds
+            </Link>
+
+            <span>|</span>
+
+            <Link href="/membership-terms">
+              Membership Terms
             </Link>
 
             <span>|</span>
@@ -388,37 +400,9 @@ export default function Footer() {
 
             <span>|</span>
 
-            <Link href="/terms">
-              Terms &amp; Conditions
+            <Link href="/contact">
+              Contact
             </Link>
-
-            <span>|</span>
-
-            <Link href="/disclaimer">
-              Disclaimer
-            </Link>
-
-            <span>|</span>
-
-            <button
-              type="button"
-              onClick={
-                openCookieSettings
-              }
-              style={{
-                padding: 0,
-                border: "none",
-                background:
-                  "transparent",
-                color: "inherit",
-                font: "inherit",
-                cursor: "pointer",
-                textDecoration:
-                  "underline",
-              }}
-            >
-              Cookie Settings
-            </button>
           </div>
         </div>
       </footer>

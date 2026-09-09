@@ -1,7 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+
+import {
+  usePathname,
+} from "next/navigation";
+
 import {
   LayoutDashboard,
   PanelsTopLeft,
@@ -14,6 +18,7 @@ import {
   Mail,
   Images,
   Settings,
+  UserRound,
   X,
   ExternalLink,
 } from "lucide-react";
@@ -77,6 +82,11 @@ const navigation = [
     icon: Images,
   },
   {
+    label: "Profile",
+    href: "/admin/profile",
+    icon: UserRound,
+  },
+  {
     label: "Settings",
     href: "/admin/settings",
     icon: Settings,
@@ -87,34 +97,55 @@ export default function AdminSidebar({
   open,
   onClose,
 }: AdminSidebarProps) {
-  const pathname = usePathname();
+  const pathname =
+    usePathname();
 
-  function isActive(href: string) {
-    if (href === "/admin") {
-      return pathname === "/admin";
+  function isActive(
+    href: string
+  ) {
+    if (
+      href === "/admin"
+    ) {
+      return (
+        pathname === "/admin"
+      );
     }
 
-    return pathname.startsWith(href);
+    return pathname.startsWith(
+      href
+    );
   }
 
   return (
     <aside
       className={`${styles.sidebar} ${
-        open ? styles.open : ""
+        open
+          ? styles.open
+          : ""
       }`}
     >
-      <div className={styles.top}>
-        <div className={styles.brand}>
+      <div
+        className={styles.top}
+      >
+        <div
+          className={
+            styles.brand
+          }
+        >
           <div>
             <Link href="/admin">
               Crafteris
             </Link>
 
-            <span>Studio Management</span>
+            <span>
+              Studio Management
+            </span>
           </div>
 
           <button
-            className={styles.closeButton}
+            className={
+              styles.closeButton
+            }
             onClick={onClose}
             aria-label="Close navigation"
           >
@@ -122,39 +153,68 @@ export default function AdminSidebar({
           </button>
         </div>
 
-        <nav className={styles.navigation}>
-          {navigation.map((item) => {
-            const Icon = item.icon;
+        <nav
+          className={
+            styles.navigation
+          }
+        >
+          {navigation.map(
+            (item) => {
+              const Icon =
+                item.icon;
 
-            return (
-              <Link
-                key={item.href}
-                href={item.href}
-                onClick={onClose}
-                className={`${styles.navItem} ${
-                  isActive(item.href)
-                    ? styles.active
-                    : ""
-                }`}
-              >
-                <Icon size={19} />
+              return (
+                <Link
+                  key={
+                    item.href
+                  }
+                  href={
+                    item.href
+                  }
+                  onClick={
+                    onClose
+                  }
+                  className={`${styles.navItem} ${
+                    isActive(
+                      item.href
+                    )
+                      ? styles.active
+                      : ""
+                  }`}
+                >
+                  <Icon
+                    size={19}
+                  />
 
-                <span>{item.label}</span>
-              </Link>
-            );
-          })}
+                  <span>
+                    {item.label}
+                  </span>
+                </Link>
+              );
+            }
+          )}
         </nav>
       </div>
 
-      <div className={styles.bottom}>
+      <div
+        className={
+          styles.bottom
+        }
+      >
         <Link
           href="/"
           target="_blank"
-          className={styles.viewWebsite}
+          className={
+            styles.viewWebsite
+          }
         >
-          <span>View website</span>
+          <span>
+            View website
+          </span>
 
-          <ExternalLink size={17} />
+          <ExternalLink
+            size={17}
+          />
         </Link>
 
         <p>
