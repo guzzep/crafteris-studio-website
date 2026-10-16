@@ -161,7 +161,7 @@ export default function Header() {
             href="/visit"
             onClick={closeMenu}
           >
-            Visit
+            Visit &amp; Contact
           </Link>
         </nav>
 

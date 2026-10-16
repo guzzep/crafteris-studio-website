@@ -279,7 +279,7 @@ export default function Footer() {
             </Link>
 
             <Link href="/visit">
-              Visit
+              Visit &amp; Contact
             </Link>
           </div>
 
