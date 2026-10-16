@@ -118,7 +118,7 @@ export default function Footer() {
     settings.address || "";
 
   const instagram =
-    settings.instagram_url || "";
+    settings.instagram_url || "https://www.instagram.com/glassxpressions/";
 
   const facebook =
     settings.facebook_url || "https://www.facebook.com/glassxpressionsmalta/";

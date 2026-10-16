@@ -25,7 +25,7 @@ export default function Header() {
   const [siteName, setSiteName] =
     useState("Crafteris");
 
-  const [socials, setSocials] = useState({ facebook_url: "https://www.facebook.com/glassxpressionsmalta/", instagram_url: "" });
+  const [socials, setSocials] = useState({ facebook_url: "https://www.facebook.com/glassxpressionsmalta/", instagram_url: "https://www.instagram.com/glassxpressions/" });
 
   useEffect(() => {
     let active = true;
@@ -53,7 +53,7 @@ export default function Header() {
         return;
       }
 
-      if (data) setSocials({ facebook_url: data.facebook_url || "https://www.facebook.com/glassxpressionsmalta/", instagram_url: data.instagram_url || "" });
+      if (data) setSocials({ facebook_url: data.facebook_url || "https://www.facebook.com/glassxpressionsmalta/", instagram_url: data.instagram_url || "https://www.instagram.com/glassxpressions/" });
 
       if (
         data?.site_name &&
