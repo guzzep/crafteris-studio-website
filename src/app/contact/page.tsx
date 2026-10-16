@@ -164,7 +164,7 @@ const fallbackContactDetails: ContentItem[] = [
 
     title: "Studio",
 
-    text: "Malta",
+    text: "Triq L-Ewwel Ta Mejju, Birkirkara, Malta",
 
   },
 
@@ -494,7 +494,7 @@ export default function ContactPage() {
       text:
         settings?.address ||
         cmsContactDetails[1]?.text ||
-        "Malta",
+        "Triq L-Ewwel Ta Mejju, Birkirkara, Malta",
     },
   ];
 
@@ -1108,9 +1108,7 @@ export default function ContactPage() {
 
                           <strong>
 
-                            {item.text ||
-
-                              ""}
+                            {index === 0 && item.text?.includes("@") ? <a href={"mailto:" + item.text}>{item.text}</a> : index === 1 && item.text && /[0-9]/.test(item.text) ? <a href={"tel:" + item.text.replace(/[^+0-9]/g, "")}>{item.text}</a> : index === 2 ? <a href={"https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent("GlassXpressions " + item.text)} target="_blank" rel="noopener noreferrer">{item.text} ↗</a> : item.text || ""}
 
                           </strong>
 
@@ -1554,6 +1552,9 @@ export default function ContactPage() {
 
                     >
 
+                      <option value="Shop and materials">Shop &amp; materials</option>
+                      <option value="Home Maker membership">Home Maker membership</option>
+                      <option value="Firing and kiln hire">Firing &amp; kiln hire</option>
                       <option value="General enquiry">
 
                         General enquiry

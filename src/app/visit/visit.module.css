@@ -577,3 +577,4 @@
     align-items: center;
   }
 }
+.visitEssentials{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px;max-width:1200px;margin:40px auto 0;padding:30px;background:#f1e6ce;border-radius:12px;color:var(--mainText)}.visitEssentials h2,.visitEssentials h3{font:bold 25px serif;margin-bottom:12px}.visitEssentials p{line-height:1.7;margin-bottom:14px}.visitEssentials a{font-weight:600;text-decoration:underline;text-underline-offset:4px}@media(max-width:750px){.visitEssentials{grid-template-columns:1fr;margin:25px 20px 0;padding:24px}}
