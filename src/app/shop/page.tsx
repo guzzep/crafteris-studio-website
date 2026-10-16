@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ShopOverview from "./ShopOverview";
 
 import {
   ArrowRight,
@@ -351,12 +352,12 @@ export default async function ShopPage() {
                   }
                 >
                   {hero?.eyebrow ||
-                    "STUDIO SHOP"}
+                    "THE CRAFTERIS SHOP · HOME TO GLASSXPRESSIONS"}
                 </p>
 
                 <h1>
                   {hero?.title ||
-                    "Handmade pieces worth keeping."}
+                    "Your next idea starts here."}
                 </h1>
 
                 <p
@@ -366,7 +367,7 @@ export default async function ShopPage() {
                 >
                   {hero?.body ||
                     hero?.subtitle ||
-                    "Discover pottery, glass and creative objects made at the studio."}
+                    "Explore stained glass, mosaic, clay, glazes, bisque and creative supplies. Open to everyone — no membership needed to shop."}
                 </p>
 
                 <p className={styles.heroText}><strong>200+ bisque designs to choose from.</strong> Find your favourite ready-to-paint mug, bowl, plate or decorative piece.</p>
@@ -444,12 +445,12 @@ export default async function ShopPage() {
                   }
                 >
                   {intro?.eyebrow ||
-                    "MADE AT THE STUDIO"}
+                    "MATERIALS, TOOLS & INSPIRATION"}
                 </p>
 
                 <h2>
                   {intro?.title ||
-                    "Small-batch pieces with their own character."}
+                    "Find what you need for what you love to make."}
                 </h2>
               </div>
 
@@ -461,7 +462,7 @@ export default async function ShopPage() {
                 <p>
                   {intro?.body ||
                     intro?.subtitle ||
-                    "Our shop brings together handmade pottery, glass pieces, decorative objects and occasional one-off studio creations."}
+                    "Discover supplies for glass, mosaic and pottery alongside handmade studio pieces. Visit us in Birkirkara or contact us to check current colours, stock and prices."}
                 </p>
               </div>
             </section>
@@ -475,6 +476,8 @@ export default async function ShopPage() {
             />
           </>
         )}
+
+        <div style={{ order: getSectionOrder("intro") + 2 }}><ShopOverview /></div>
 
         {/* PRODUCTS */}
 
