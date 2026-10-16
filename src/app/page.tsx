@@ -52,86 +52,18 @@ type PageSection = {
   sort_order: number;
 };
 
-type EventItem = {
-  title: string;
-  date: string;
-  duration: string;
-  price: string;
-  availability: string;
-  image: string;
-};
-
-const fallbackEvents: EventItem[] = [
-  {
-    title: "Fused Glass Workshop",
-    date: "Sat 24 Aug",
-    duration: "2 hours",
-    price: "€28",
-    availability: "Available",
-    image:
-      "/what-is-on-next/glassblowing-card.png",
-  },
-  {
-    title: "Pottery Taster Session",
-    date: "Tue 27 Aug",
-    duration: "2.5 hours",
-    price: "€35",
-    availability: "Filling up",
-    image:
-      "/what-is-on-next/pottery-card.png",
-  },
-  {
-    title: "Paint Your Own Pottery",
-    date: "Thu 29 Aug",
-    duration: "90 minutes",
-    price: "€18",
-    availability: "Last places",
-    image:
-      "/what-is-on-next/pyop-card.png",
-  },
-];
-
 const fallbackWays: ContentItem[] = [
-  {
-    title: "Workshops",
-    image_url:
-      "/cards/workshops.png",
-    button_label: "Workshops",
-    button_url: "/workshops",
-  },
-  {
-    title:
-      "Programmes / Courses",
-    image_url:
-      "/cards/programmes-courses.png",
-    button_label:
-      "Programmes / Courses",
-    button_url: "/programmes",
-  },
-  {
-    title: "Membership",
-    image_url:
-      "/cards/membership.png",
-    button_label: "Membership",
-    button_url: "/membership",
-  },
-  {
-    title:
-      "Paint Your Own Pottery",
-    image_url:
-      "/cards/paint-your-own-pottery.png",
-    button_label:
-      "Paint Your Own Pottery",
-    button_url:
-      "/paint-your-own-pottery",
-  },
+  { title: "Paint Your Own Pottery", image_url: "/cards/paint-your-own-pottery.png", button_label: "Paint Your Own Pottery", button_url: "/paint-your-own-pottery" },
+  { title: "Glass Workshops", image_url: "/workshops/fused-glass.png", button_label: "Glass Workshops", button_url: "/workshops" },
+  { title: "Courses", image_url: "/cards/programmes-courses.png", button_label: "Courses", button_url: "/programmes" },
+  { title: "Groups & Team Building", image_url: "/team-building/team-building.jpg", button_label: "Groups & Team Building", button_url: "/team-building" },
 ];
 
 const fallbackPyopItems: ContentItem[] = [
   {
     title: "Choose",
     text:
-      "Browse our collection of handmade pottery and pick the piece that speaks to you.",
+      "Choose a mug, bowl, plate or decorative piece from our ready-to-paint pottery shelves.",
     image_url:
       "/pick-a-piece/choose-pottery.png",
   },
@@ -241,21 +173,6 @@ export default function Home() {
   const [sections, setSections] =
     useState<PageSection[]>([]);
 
-  const [events] =
-    useState<EventItem[]>(
-      fallbackEvents
-    );
-
-  const [direction, setDirection] =
-    useState<
-      "next" | "previous"
-    >("next");
-
-  const [
-    currentIndex,
-    setCurrentIndex,
-  ] = useState(0);
-
   useEffect(() => {
     async function loadContent() {
       const {
@@ -318,8 +235,7 @@ export default function Home() {
       "ways_to_make"
     );
 
-  const whatsOn =
-    getSection("whats_on");
+
 
   const pyop =
     getSection("pyop");
@@ -335,17 +251,9 @@ export default function Home() {
   const membership =
     getSection("membership");
 
-  const waysItems =
-    getItems(
-      ways,
-      fallbackWays
-    );
+  const waysItems = fallbackWays;
 
-  const pyopItems =
-    getItems(
-      pyop,
-      fallbackPyopItems
-    );
+  const pyopItems = fallbackPyopItems;
 
   const materialItems =
     getItems(
@@ -385,28 +293,6 @@ export default function Home() {
     return index >= 0
       ? index * 2
       : 999;
-  }
-
-  const currentEvent =
-    events[currentIndex];
-
-  function nextEvent() {
-    setDirection("next");
-
-    setCurrentIndex(
-      (currentIndex + 1) %
-        events.length
-    );
-  }
-
-  function previousEvent() {
-    setDirection("previous");
-
-    setCurrentIndex(
-      currentIndex === 0
-        ? events.length - 1
-        : currentIndex - 1
-    );
   }
 
   return (
@@ -458,8 +344,7 @@ export default function Home() {
                 </h1>
 
                 <p>
-                  {hero?.subtitle ||
-                    "Pottery, glass and creative experiences in Malta."}
+                  Pottery painting, glass workshops and creative experiences in Birkirkara, Malta.
                 </p>
 
                 {hero?.body && (
@@ -472,42 +357,9 @@ export default function Home() {
                   GlassXpressions has a new home at Crafteris—the same glass studio you know, with more ways to create.
                 </p>
 
-                <div
-                  className={
-                    styles.heroButtons
-                  }
-                >
-                  {(hero?.button_label ||
-                    !hero) && (
-                    <Link
-                      href={
-                        hero?.button_url ||
-                        "/explore"
-                      }
-                      className={
-                        styles.ExploreButton
-                      }
-                    >
-                      {hero?.button_label ||
-                        "Explore experiences"}
-                    </Link>
-                  )}
-
-                  {(hero?.secondary_button_label ||
-                    !hero) && (
-                    <Link
-                      href={
-                        hero?.secondary_button_url ||
-                        "/visit"
-                      }
-                      className={
-                        styles.VisitButton
-                      }
-                    >
-                      {hero?.secondary_button_label ||
-                        "Visit the studio"}
-                    </Link>
-                  )}
+                <div className={styles.heroButtons}>
+                  <Link href="/workshops" className={styles.ExploreButton}>Browse workshops</Link>
+                  <Link href="/paint-your-own-pottery" className={styles.VisitButton}>Paint your own pottery</Link>
                 </div>
               </div>
 
@@ -644,162 +496,6 @@ export default function Home() {
           </>
         )}
 
-        {/* WHAT'S ON NEXT */}
-
-        {isVisible(
-          "whats_on"
-        ) && (
-          <>
-            <section
-              className={
-                styles.whatsOnNext
-              }
-              style={{
-                order:
-                  getSectionOrder(
-                    "whats_on"
-                  ),
-              }}
-            >
-              <h2
-                className={
-                  styles.whatsOnNextTitle
-                }
-              >
-                {whatsOn?.title ||
-                  "What’s on next"}
-              </h2>
-
-              <p
-                className={
-                  styles.whatsOnNextDescription
-                }
-              >
-                {whatsOn?.body ||
-                  whatsOn?.subtitle ||
-                  "Planning to visit Crafteris? Check out our upcoming events and workshops, and book your spot today."}
-              </p>
-
-              <div
-                className={
-                  styles.whatsOnNextContainer
-                }
-              >
-                <div
-                  key={
-                    currentIndex
-                  }
-                  className={`${styles.whatsOnNextCard} ${
-                    direction ===
-                    "next"
-                      ? styles.slideFromRight
-                      : styles.slideFromLeft
-                  }`}
-                >
-                  <img
-                    src={
-                      currentEvent.image
-                    }
-                    alt={
-                      currentEvent.title
-                    }
-                    className={
-                      styles.whatsOnNextImage
-                    }
-                  />
-
-                  <div
-                    className={
-                      styles.cardInfo
-                    }
-                  >
-                    <h3>
-                      {
-                        currentEvent.title
-                      }
-                    </h3>
-
-                    <p>
-                      {
-                        currentEvent.date
-                      }
-                    </p>
-
-                    <p>
-                      {
-                        currentEvent.duration
-                      }
-                    </p>
-
-                    <p>
-                      {
-                        currentEvent.price
-                      }
-                    </p>
-
-                    <p>
-                      {
-                        currentEvent.availability
-                      }
-                    </p>
-
-                    <Link
-                      href={
-                        whatsOn?.button_url ||
-                        "/whats-on"
-                      }
-                      className={
-                        styles.whatsOnNextLink
-                      }
-                    >
-                      {whatsOn?.button_label ||
-                        "View details"}{" "}
-                      →
-                    </Link>
-                  </div>
-                </div>
-
-                <div
-                  className={
-                    styles.sliderControls
-                  }
-                >
-                  <button
-                    onClick={
-                      previousEvent
-                    }
-                  >
-                    ← Previous
-                  </button>
-
-                  <span>
-                    {currentIndex +
-                      1}{" "}
-                    /{" "}
-                    {events.length}
-                  </span>
-
-                  <button
-                    onClick={
-                      nextEvent
-                    }
-                  >
-                    Next →
-                  </button>
-                </div>
-              </div>
-            </section>
-
-            <SectionDivider
-              order={
-                getSectionOrder(
-                  "whats_on"
-                ) + 1
-              }
-            />
-          </>
-        )}
-
         {/* PICK A PIECE */}
 
         {isVisible("pyop") && (
@@ -824,15 +520,8 @@ export default function Home() {
                   "Pick a piece. Make it yours."}
               </h2>
 
-              <p
-                className={
-                  styles.pickAPieceDescription
-                }
-              >
-                {pyop?.body ||
-                  pyop?.subtitle ||
-                  "From our shelves to your story—handmade, hand-painted, and one of a kind."}
-              </p>
+              <p className={styles.pickAPieceDescription}>Choose your piece, paint it your way, and leave the glazing and firing to us.</p>
+              <Link href="/paint-your-own-pottery" className={styles.pyopDetails}>How pottery painting works →</Link>
 
               <div
                 className={

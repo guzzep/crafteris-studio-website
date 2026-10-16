@@ -108,7 +108,7 @@ export default function Header() {
             href="/programmes"
             onClick={closeMenu}
           >
-            Programmes / Courses
+            Courses
           </Link>
 
           <Link

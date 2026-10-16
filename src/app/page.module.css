@@ -1034,3 +1034,23 @@
   line-height: 1.6;
   color: var(--mainText);
 }
+
+/* A compact introduction keeps the activities within easy reach. */
+.hero { margin-bottom: 0; min-height: 450px; }
+.heroText { padding: 48px 32px; }
+.heroButtons { margin-top: 26px; flex-direction: row; flex-wrap: wrap; }
+.ExploreButton { color: var(--background); text-decoration: none; }
+.sectionDivider { margin: 40px auto; }
+.cardTitle { margin-bottom: 30px; }
+.pickAPieceContainer { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; height: auto; margin: 30px auto 0; }
+.pickAPieceLines { display: none; }
+.pickAPieceCard1, .pickAPieceCard2, .pickAPieceCard3 { position: static; width: auto; }
+.pickAPieceDescription { margin: 12px auto 16px; max-width: 650px; line-height: 1.6; }
+.pyopDetails { display: block; width: fit-content; margin: 0 auto; color: var(--mainText); text-underline-offset: 4px; }
+@media (max-width: 768px) {
+  .heroText { padding: 36px 24px; }
+  .hero { min-height: auto; }
+  .pickAPieceContainer { grid-template-columns: 1fr; gap: 24px; }
+  .pickAPieceCard1, .pickAPieceCard2, .pickAPieceCard3 { margin-bottom: 0; }
+  .sectionDivider { margin: 30px auto; }
+}

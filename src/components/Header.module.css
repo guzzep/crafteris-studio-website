@@ -22,7 +22,7 @@
   flex-shrink: 0;
   line-height: 1.1;
   font-family: serif;
-  font-size: 32px;
+  font-size: 38px;
   font-weight: bold;
   color: var(--mainText);
   text-decoration: none;
@@ -63,13 +63,13 @@
   border: none;
   background: transparent;
   color: var(--mainText);
-  font-size: 28px;
+  font-size: 32px;
   cursor: pointer;
   width: 44px;
   height: 44px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
   .header {
     padding: 14px 20px;
   }
@@ -130,7 +130,7 @@
   flex-direction: column;
   flex-shrink: 0;
   line-height: 1.1;
-    font-size: 26px;
+    font-size: 30px;
   }
 
   .bookNow {
@@ -145,14 +145,18 @@
 .brandTagline {
   margin-top: 5px;
   font-family: Arial, sans-serif;
-  font-size: 12px;
-  font-weight: 400;
+  font-size: 16px;
+  font-weight: 600;
   line-height: 1.4;
   color: var(--mainText);
 }
 
 @media (max-width: 380px) {
-  .logo { font-size: 22px; }
+  .logo { font-size: 24px; }
   .headerActions { gap: 4px; }
   .bookNow { padding: 9px 10px; }
+}
+
+@media (max-width: 520px) {
+  .brandTagline { font-size: 13px; }
 }
