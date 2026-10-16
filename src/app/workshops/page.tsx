@@ -17,6 +17,11 @@ export default function WorkshopsPage() {
   const [workshops,setWorkshops] = useState<CatalogueWorkshop[]>(workshopCatalogue);
   const [filter,setFilter] = useState("All");
   useEffect(() => {
+    const category = new URLSearchParams(window.location.search).get("category");
+    const matching = filters.find(name => name.toLowerCase() === category?.toLowerCase());
+    if (matching) setFilter(matching);
+  }, []);
+  useEffect(() => {
     let active = true;
     void supabase.from("workshops").select("id,title,slug,category,short_description,description,image_url,duration_minutes,level,base_price,status,sort_order").eq("status","published").order("sort_order").then(({data,error}) => {
       if (!active || error || !data) return;
