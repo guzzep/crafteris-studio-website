@@ -53,3 +53,12 @@
 @media(max-width:1000px) { .heroCopy { padding:35px 25px; } .planGrid { gap:16px; } .planCard { padding:22px; } .planIntro { min-height:85px; } .access { min-height:150px; } .journal { margin-left:25px; margin-right:25px; } }
 @media(max-width:800px) { .planGrid,.materialGrid { grid-template-columns:1fr; } .planIntro,.access { min-height:0; } .benefits,.homeMaker { grid-template-columns:1fr; gap:28px; } .packGrid,.crafts { gap:16px; } .packGrid article,.crafts a { padding:20px; } }
 @media(max-width:600px) { .hero,.crafts,.packGrid { grid-template-columns:1fr; } .heroPhoto { min-height:0; height:300px; border-radius:0; } .introduction,.plans,.flexible,.materials,.rules { padding:40px 24px; } .benefits,.homeMaker { padding:10px 24px 35px; } .benefits img,.homeMaker img { height:300px; } .journal { padding:25px; } }
+
+.homeMaker { max-width:1220px; margin:10px auto 45px; padding:38px; border:2px solid var(--accent); border-radius:12px; background:#b7924a12; scroll-margin-top:24px; }
+.homeMakerFacts { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin:24px 0; }
+.homeMakerFacts div { display:flex; flex-direction:column; gap:8px; padding:18px 12px; border-radius:7px; background:var(--background); }
+.homeMakerFacts strong { font:bold 34px serif; }
+.homeMakerFacts span { font-size:14px; line-height:1.5; }
+.homeMaker h3 { margin-top:24px; }
+@media(max-width:1000px) { .homeMaker { margin-left:25px; margin-right:25px; } }
+@media(max-width:600px) { .homeMaker { padding:25px; } .homeMakerFacts { grid-template-columns:1fr; } }
