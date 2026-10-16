@@ -369,6 +369,8 @@ export default async function ShopPage() {
                     "Discover pottery, glass and creative objects made at the studio."}
                 </p>
 
+                <p className={styles.heroText}><strong>200+ bisque designs to choose from.</strong> Find your favourite ready-to-paint mug, bowl, plate or decorative piece.</p>
+
                 {(hero?.button_label ||
                   !hero) && (
                   <Link

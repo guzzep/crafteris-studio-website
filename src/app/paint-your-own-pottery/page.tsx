@@ -372,6 +372,8 @@ export default async function PaintYourOwnPotteryPage() {
                   "Choose from our pottery shelves, decorate your piece however you like, and leave the glazing and firing to us."}
               </p>
 
+                <p className={styles.heroDescription}><strong>200+ bisque designs to choose from.</strong> Find your favourite ready-to-paint mug, bowl, plate or decorative piece.</p>
+
               <div
                 className={
                   styles.heroActions

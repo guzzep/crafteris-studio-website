@@ -7,7 +7,7 @@ import { createClient } from "@/lib/supabase/client";
 import styles from "./page.module.css";
 
 const offerings = [
-  { title: "Paint Your Own Pottery", text: "Choose a ready-to-paint piece, decorate it your way, and we glaze and fire it for you.", image: "/cards/paint-your-own-pottery.png", href: "/paint-your-own-pottery" },
+  { title: "Paint Your Own Pottery", text: "Choose from 200+ bisque designs, paint your piece your way, and we glaze and fire it for you.", image: "/cards/paint-your-own-pottery.png", href: "/paint-your-own-pottery" },
   { title: "Glass", text: "Discover fused glass and stained glass with GlassXpressions, at home in Crafteris.", image: "/workshops/fused-glass.png", href: "/glass" },
   { title: "Pottery", text: "Get your hands into clay with hand building and wheel throwing.", image: "/programmes/wheel-throwing.png", href: "/pottery" },
   { title: "Mosaic", text: "Explore colour, shape and pattern, one piece at a time.", image: "", href: "/mosaic" },
@@ -15,7 +15,7 @@ const offerings = [
   { title: "Courses", text: "Build your skills through structured learning and guided projects.", image: "/cards/programmes-courses.png", href: "/programmes" },
   { title: "Team Building & Groups", text: "Bring colleagues, friends, schools or private groups together through making.", image: "/team-building/team-building.jpg", href: "/team-building" },
   { title: "Studio Membership", text: "One studio membership. Time, space and facilities to keep creating and develop your projects.", image: "/membership-page/membership-hero.png", href: "/membership" },
-  { title: "Shop", text: "Stained glass, mosaic, clay bodies, pottery glazes, colours, tools and creative supplies.", image: "/shop/studio-shelves.png", href: "/shop" },
+  { title: "Shop", text: "200+ bisque designs, stained glass, mosaic, clay bodies, pottery glazes, colours, tools and supplies.", image: "/shop/studio-shelves.png", href: "/shop" },
 ];
 
 export default function Home() {
@@ -54,7 +54,7 @@ export default function Home() {
       <section className={styles.shopFeature} aria-labelledby="shop-heading">
         <p className={styles.eyebrow}>Materials for makers</p><h2 id="shop-heading">A world of colour on our shelves.</h2>
         <div className={styles.shopFacts}><p><strong>200+</strong>colours of stained glass</p><p><strong>180</strong>mosaic shapes and colours</p><p><strong>180+</strong>pottery glazes and colours</p></div>
-        <p>Plus clay bodies, tools and supplies for your next creative project.</p><Link href="/shop">Explore the shop →</Link>
+        <p>Plus 200+ bisque designs to choose from, clay bodies, tools and supplies for your next creative project.</p><Link href="/shop">Explore the shop →</Link>
       </section>
     </main><Footer />
   </div>;
