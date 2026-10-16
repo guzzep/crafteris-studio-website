@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { workshopCatalogue } from "@/lib/workshop-catalogue";
+import CatalogueWorkshopDetail from "@/components/CatalogueWorkshopDetail";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -206,9 +208,8 @@ export async function generateMetadata({
   const result = await getWorkshop(slug);
 
   if (!result) {
-    return {
-      title: "Workshop | Crafteris",
-    };
+    const imported = workshopCatalogue.find(item => item.slug === slug);
+    return { title: imported ? `${imported.title} | Crafteris` : "Workshop | Crafteris", description: imported?.short_description || undefined };
   }
 
   const { workshop } = result;
@@ -230,6 +231,8 @@ export default async function WorkshopPage({
   const result = await getWorkshop(slug);
 
   if (!result) {
+    const imported = workshopCatalogue.find(item => item.slug === slug);
+    if (imported) return <CatalogueWorkshopDetail workshop={imported} />;
     notFound();
   }
 
