@@ -64,24 +64,6 @@ type SiteSettings = {
   opening_hours: OpeningHoursSettings | null;
 };
 
-const fallbackVisitInfo: ContentItem[] = [
-  {
-    title: "Come for a workshop",
-    text:
-      "Try pottery painting, glass, hand-building or mosaic in a guided creative session.",
-  },
-  {
-    title: "Visit the studio",
-    text:
-      "Browse glass, mosaic, clay, glazes and 200+ bisque designs. You don’t need a membership to shop.",
-  },
-  {
-    title: "Return as a maker",
-    text:
-      "Courses and memberships give you more ways to make Crafteris part of your creative routine.",
-  },
-];
-
 const fallbackHours: ContentItem[] = [
   { title: "Planning a visit?", text: "Contact us to confirm current opening hours." },
 ];
@@ -218,12 +200,6 @@ export default async function VisitPage() {
       "hero"
     );
 
-  const intro =
-    getSection(
-      sections,
-      "intro"
-    );
-
   const planVisit =
     getSection(
       sections,
@@ -260,11 +236,7 @@ export default async function VisitPage() {
       "final_cta"
     );
 
-  const visitInfoItems =
-    getItems(
-      intro,
-      fallbackVisitInfo
-    );
+
 
   const cmsOpeningHourItems =
     getItems(
@@ -507,102 +479,6 @@ export default async function VisitPage() {
               />
             </div>
           </section>
-        )}
-
-        {/* EXPERIENCE */}
-
-        {isVisible(intro) && (
-          <>
-            <section
-            style={{
-              order:
-                getSectionOrder(
-                  "intro"
-                ),
-            }}
-              className={
-                styles.introSection
-              }
-            >
-              <div
-                className={
-                  styles.introHeading
-                }
-              >
-                <p
-                  className={
-                    styles.eyebrow
-                  }
-                >
-                  {intro?.eyebrow ||
-                    "Inside Crafteris"}
-                </p>
-
-                <h2>
-                  {intro?.title ||
-                    "A working studio, not just somewhere to visit."}
-                </h2>
-
-                <p>
-                  {intro?.body ||
-                    intro?.subtitle ||
-                    "Crafteris brings pottery and glass together under one roof. Depending on the day, you might find workshops taking place, members working independently or new pieces being finished in the studio."}
-                </p>
-              </div>
-
-              <div
-                className={
-                  styles.visitInfoGrid
-                }
-              >
-                {visitInfoItems.map(
-                  (
-                    item,
-                    index
-                  ) => (
-                    <article
-                      className={
-                        styles.visitInfoCard
-                      }
-                      key={`${item.title}-${index}`}
-                    >
-                      <span>
-                        {String(
-                          index + 1
-                        ).padStart(
-                          2,
-                          "0"
-                        )}
-                      </span>
-
-                      <h3>
-                        {item.title ||
-                          `Visit option ${
-                            index + 1
-                          }`}
-                      </h3>
-
-                      {item.text && (
-                        <p>
-                          {
-                            item.text
-                          }
-                        </p>
-                      )}
-                    </article>
-                  )
-                )}
-              </div>
-            </section>
-
-            <SectionDivider
-              order={
-                getSectionOrder(
-                  "intro"
-                ) + 1
-              }
-            />
-          </>
         )}
 
         {/* PLAN YOUR VISIT */}
