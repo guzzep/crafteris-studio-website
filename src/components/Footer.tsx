@@ -121,7 +121,7 @@ export default function Footer() {
     settings.instagram_url || "";
 
   const facebook =
-    settings.facebook_url || "";
+    settings.facebook_url || "https://www.facebook.com/glassxpressionsmalta/";
 
   return (
     <>
