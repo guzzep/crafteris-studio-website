@@ -36,3 +36,5 @@
 
 .glassLogo { display:block; width:260px; max-width:100%; height:auto; margin-top:18px; border-radius:4px; }
 .offerings h2 { scroll-margin-top:24px; }
+
+.membershipHighlight { border:2px solid var(--accent); box-shadow:0 0 0 3px #b7924a12; }
