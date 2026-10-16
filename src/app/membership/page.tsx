@@ -597,15 +597,7 @@ export default async function MembershipPage() {
                             </div>
                           )}
 
-                          <span
-                            className={
-                              styles.categoryBadge
-                            }
-                          >
-                            {
-                              membership.category
-                            }
-                          </span>
+
                         </div>
 
                         <div
