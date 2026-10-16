@@ -62,3 +62,15 @@
 .shop p+p { margin-top:16px; }
 @media(max-width:900px) { .priceLayout,.homeMaker { grid-template-columns:1fr; } .homeMaker img { height:320px; } .tools { grid-template-columns:1fr; } .journal { margin-left:24px; margin-right:24px; } }
 @media(max-width:600px) { .homeMaker { padding:0 24px 30px; } .journal { padding:25px; } }
+
+.nonMember { max-width:1180px; padding:36px; margin:10px auto 20px; border:1px solid #b7924a55; border-radius:10px; background:white; }
+.firingGrid { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin:24px 0; }
+.firingGrid article { padding:24px; background:#b7924a0f; border-radius:8px; }
+.firingGrid strong { display:block; font:bold 40px serif; margin-bottom:12px; }
+.firingGrid strong span { font:normal 18px sans-serif; }
+.clayPolicy { margin-top:28px; padding-top:24px; border-top:1px solid #b7924a55; }
+.clayPolicy h3:not(:first-child) { margin-top:24px; }
+.clayPolicy p+p { margin-top:14px; }
+.clayPolicy .button { margin-top:20px; }
+@media(max-width:900px) { .nonMember { margin-left:24px; margin-right:24px; } }
+@media(max-width:600px) { .nonMember { padding:25px; } .firingGrid { grid-template-columns:1fr; } }
