@@ -79,7 +79,8 @@ export default function Header() {
           className={styles.logo}
           onClick={closeMenu}
         >
-          {siteName}
+          <span>{siteName}</span>
+          <span className={styles.brandTagline}>Home of GlassXpressions</span>
         </Link>
 
         <nav

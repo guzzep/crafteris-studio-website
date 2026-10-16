@@ -1027,3 +1027,10 @@
     margin: 50px auto;
   }
 }
+.glassxpressionsIntro {
+  max-width: 440px;
+  margin: 20px 0 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--mainText);
+}

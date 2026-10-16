@@ -17,6 +17,10 @@
 }
 
 .logo {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  line-height: 1.1;
   font-family: serif;
   font-size: 32px;
   font-weight: bold;
@@ -71,6 +75,10 @@
   }
 
   .logo {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  line-height: 1.1;
     font-size: 28px;
   }
 
@@ -118,6 +126,10 @@
   }
 
   .logo {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  line-height: 1.1;
     font-size: 26px;
   }
 
@@ -129,4 +141,18 @@
   .menuButton {
     font-size: 25px;
   }
+}
+.brandTagline {
+  margin-top: 5px;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--mainText);
+}
+
+@media (max-width: 380px) {
+  .logo { font-size: 22px; }
+  .headerActions { gap: 4px; }
+  .bookNow { padding: 9px 10px; }
 }

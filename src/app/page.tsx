@@ -468,6 +468,10 @@ export default function Home() {
                   </p>
                 )}
 
+                <p className={styles.glassxpressionsIntro}>
+                  GlassXpressions has a new home at Crafteris—the same glass studio you know, with more ways to create.
+                </p>
+
                 <div
                   className={
                     styles.heroButtons
