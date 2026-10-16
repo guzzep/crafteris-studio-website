@@ -3,16 +3,16 @@
 .heroCopy { padding:50px 40px; align-self:center; }
 .eyebrow { text-transform:uppercase; font-size:12px; font-weight:700; letter-spacing:1.4px; color:#80642d; margin-bottom:15px; }
 .hero h1 { font:bold clamp(36px,4vw,54px)/1.1 serif; margin-bottom:24px; }
-.page p { line-height:1.75; }
+.page main p { line-height:1.75; }
 .heroCopy > p:not(.eyebrow) { font-size:18px; }
 .logo { display:block; width:260px; max-width:100%; height:auto; margin:24px 0; }
 .heroPhoto { width:100%; height:100%; min-height:500px; max-height:650px; object-fit:cover; border-radius:12px; }
 .actions { display:flex; flex-wrap:wrap; align-items:center; gap:20px; margin-top:24px; }
-.page a { color:var(--mainText); text-underline-offset:4px; }
+.page main a { color:var(--mainText); text-underline-offset:4px; }
 .button { display:inline-block; padding:14px 22px; background:var(--mainText); color:var(--background) !important; border-radius:5px; text-decoration:none; font-weight:600; width:fit-content; }
-.page a:focus-visible { outline:3px solid var(--accent); outline-offset:4px; }
-.page h2 { font:bold clamp(30px,3vw,40px)/1.15 serif; margin-bottom:20px; }
-.page h3 { font:bold 25px serif; margin-bottom:15px; }
+.page main a:focus-visible { outline:3px solid var(--accent); outline-offset:4px; }
+.page main h2 { font:bold clamp(30px,3vw,40px)/1.15 serif; margin-bottom:20px; }
+.page main h3 { font:bold 25px serif; margin-bottom:15px; }
 .techniques { max-width:1240px; margin:auto; padding:60px 30px 20px; display:grid; grid-template-columns:1fr 1fr; gap:30px; }
 .techniques article { background:white; border:1px solid #b7924a35; border-radius:10px; overflow:hidden; }
 .techniques img { width:100%; height:280px; object-fit:cover; }
