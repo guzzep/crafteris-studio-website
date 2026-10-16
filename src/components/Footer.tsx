@@ -9,16 +9,16 @@ import {
 import Link from "next/link";
 
 import {
-  Link2,
   Mail,
   MapPin,
   Phone,
-  Share2,
 } from "lucide-react";
 
 import {
   createClient,
 } from "@/lib/supabase/client";
+
+import { Facebook, Instagram } from "./SocialIcons";
 
 import CookieBanner from "./CookieBanner";
 
@@ -218,7 +218,7 @@ export default function Footer() {
                     aria-label="Instagram"
                     title="Instagram"
                   >
-                    <Share2
+                    <Instagram
                       size={18}
                     />
                   </a>
@@ -232,7 +232,7 @@ export default function Footer() {
                     aria-label="Facebook"
                     title="Facebook"
                   >
-                    <Link2
+                    <Facebook
                       size={18}
                     />
                   </a>

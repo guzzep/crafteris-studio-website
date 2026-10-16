@@ -160,3 +160,7 @@
 @media (max-width: 520px) {
   .brandTagline { font-size: 13px; }
 }
+
+.socialLinks { display:flex; align-items:center; gap:6px; }
+.socialLinks a { display:flex; align-items:center; justify-content:center; width:34px; height:40px; color:var(--mainText); }
+@media(max-width:600px) { .headerInner { flex-wrap:wrap; gap:12px; } .headerActions { margin-left:auto; } }

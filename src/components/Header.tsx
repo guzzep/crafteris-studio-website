@@ -7,6 +7,7 @@ import {
 } from "react";
 
 import Link from "next/link";
+import { Facebook, Instagram } from "./SocialIcons";
 
 import { createClient } from "@/lib/supabase/client";
 
@@ -24,6 +25,8 @@ export default function Header() {
   const [siteName, setSiteName] =
     useState("Crafteris");
 
+  const [socials, setSocials] = useState({ facebook_url: "", instagram_url: "" });
+
   useEffect(() => {
     let active = true;
 
@@ -33,7 +36,7 @@ export default function Header() {
         error,
       } = await supabase
         .from("site_settings")
-        .select("site_name")
+        .select("site_name, facebook_url, instagram_url")
         .limit(1)
         .maybeSingle();
 
@@ -49,6 +52,8 @@ export default function Header() {
 
         return;
       }
+
+      if (data) setSocials({ facebook_url: data.facebook_url || "", instagram_url: data.instagram_url || "" });
 
       if (
         data?.site_name &&
@@ -141,6 +146,10 @@ export default function Header() {
         </nav>
 
         <div className={styles.headerActions}>
+          <div className={styles.socialLinks}>
+            {socials.facebook_url && /^https?:\/\//i.test(socials.facebook_url) && <a href={socials.facebook_url} target="_blank" rel="noopener noreferrer" aria-label="Crafteris on Facebook"><Facebook size={20} /></a>}
+            {socials.instagram_url && /^https?:\/\//i.test(socials.instagram_url) && <a href={socials.instagram_url} target="_blank" rel="noopener noreferrer" aria-label="Crafteris on Instagram"><Instagram size={20} /></a>}
+          </div>
           <Link
             href="/whats-on"
             className={styles.bookNow}

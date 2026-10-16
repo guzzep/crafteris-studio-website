@@ -35,9 +35,10 @@ export default function Home() {
         <div className={styles.homeHeroCopy}>
           <p className={styles.eyebrow}>Your creative studio in Birkirkara, Malta</p>
           <h1>Make something worth keeping.</h1>
-          <p className={styles.heroLead}>Pottery painting, glass, pottery and mosaic. Workshops, courses and space to create.</p>
+          <p className={styles.heroLead}>Glass, pottery, mosaic and pottery painting—a creative studio in Birkirkara, Malta. Join a workshop or course, create independently, or find materials for your next project.</p>
           <p className={styles.brandIntro}><strong>Home of GlassXpressions.</strong> The same glass studio you know, with more ways to create.</p>
-          <div className={styles.homeActions}><Link href="/workshops">Browse workshops</Link><Link href="/paint-your-own-pottery">Paint your own pottery</Link></div>
+          <img className={styles.glassLogo} src="/glassxpressions-logo.jpg" alt="GlassXpressions Creative Studio" />
+          <div className={styles.homeActions}><Link href="#offerings-heading">Explore the studio</Link><Link href="/workshops">Browse workshops</Link></div>
         </div>
         <img className={styles.homeHeroPhoto} src={heroImage} alt="Colourful creative work at Crafteris" />
       </section>

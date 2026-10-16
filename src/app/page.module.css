@@ -33,3 +33,6 @@
 @media(max-width:900px) { .homeHero { grid-template-columns:1fr 1fr; } .homeHeroCopy { padding:36px 24px; } .offeringGrid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
 @media(max-width:600px) { .homeHero { grid-template-columns:1fr; } .homeHeroPhoto { min-height:0; height:280px; } .offerings { padding:40px 20px; } .offeringGrid { grid-template-columns:1fr; gap:22px; } .shopFacts { grid-template-columns:1fr; gap:20px; } }
 @media(prefers-reduced-motion:reduce) { .offeringCard { transition:none; } }
+
+.glassLogo { display:block; width:260px; max-width:100%; height:auto; margin-top:18px; border-radius:4px; }
+.offerings h2 { scroll-margin-top:24px; }
