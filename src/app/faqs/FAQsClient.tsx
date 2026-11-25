@@ -64,7 +64,7 @@ const fallbackGroups: FAQGroup[] = [
         title:
           "What should I wear to a workshop?",
         text:
-          "Wear comfortable clothes that you do not mind getting a little messy. Clay, paint and studio materials can occasionally mark clothing.",
+          "Wear comfortable clothes that you do not mind getting a little messy. Clay, paint and studio materials can occasionally mark clothing. Closed-toe footwear is mandatory in the studio because we work with glass. Flip-flops, sandals and other open footwear are not permitted.",
       },
       {
         title:
@@ -317,7 +317,7 @@ export default function FAQsClient({
           }
 
           const items =
-            (fallbackGroup.key === "membership" || fallbackGroup.key === "pyop") ? fallbackGroup.items : Array.isArray(
+            (fallbackGroup.key === "membership" || fallbackGroup.key === "pyop" || fallbackGroup.key === "workshops_courses") ? fallbackGroup.items : Array.isArray(
               section?.content
                 ?.items
             ) &&
