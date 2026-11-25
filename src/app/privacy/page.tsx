@@ -515,7 +515,7 @@ export default function Page() {
               <br />
               Crafteris Studio — Home to GlassXpressions
               <br />
-              314, Fleur-de-Lis Road
+              314, Fleur de Lys Road
               <br />
               Birkirkara, BKR 9067
               <br />
