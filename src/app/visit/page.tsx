@@ -64,9 +64,6 @@ type SiteSettings = {
   opening_hours: OpeningHoursSettings | null;
 };
 
-const fallbackHours: ContentItem[] = [
-  { title: "Planning a visit?", text: "Contact us to confirm current opening hours." },
-];
 
 const fallbackTravel: ContentItem[] = [
   {
@@ -238,58 +235,11 @@ export default async function VisitPage() {
 
 
 
-  const cmsOpeningHourItems =
-    getItems(
-      openingHours,
-      fallbackHours
-    );
-
-  const settingsHours =
-    settings?.opening_hours;
-
-  const configuredHours: ContentItem[] = [
-    {
-      title: "Monday",
-      text: settingsHours?.monday ?? "",
-    },
-    {
-      title: "Tuesday",
-      text: settingsHours?.tuesday ?? "",
-    },
-    {
-      title: "Wednesday",
-      text: settingsHours?.wednesday ?? "",
-    },
-    {
-      title: "Thursday",
-      text: settingsHours?.thursday ?? "",
-    },
-    {
-      title: "Friday",
-      text: settingsHours?.friday ?? "",
-    },
-    {
-      title: "Saturday",
-      text: settingsHours?.saturday ?? "",
-    },
-    {
-      title: "Sunday",
-      text: settingsHours?.sunday ?? "",
-    },
+  const openingHourItems: ContentItem[] = [
+    { title: "Monday–Friday", text: "09:00–20:00" },
+    { title: "Saturday", text: "09:00–17:00" },
+    { title: "Sunday", text: "Closed" },
   ];
-
-  const hasSettingsHours =
-    configuredHours.some(
-      (item) =>
-        Boolean(
-          item.text?.trim()
-        )
-    );
-
-  const openingHourItems =
-    hasSettingsHours
-      ? configuredHours
-      : cmsOpeningHourItems;
 
   const travelItems =
     getItems(
@@ -308,9 +258,7 @@ export default async function VisitPage() {
   const directionsUrl = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent("GlassXpressions " + studioAddress);
 
   const openingHoursNote =
-    settingsHours?.note?.trim() ||
-    openingHours?.content?.note ||
-    "Check opening hours before making a special journey.";
+    "Planned opening hours from 1 January 2027. Check with us before making a special journey.";
 
   const studioParagraphs =
     (
