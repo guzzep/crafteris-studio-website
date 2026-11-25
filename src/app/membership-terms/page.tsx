@@ -309,7 +309,7 @@ export default function Page() {
             <p>Telephone: <a href="tel:+35677981366">+356 7798 1366</a></p>
 
             <p>
-              Address: 314, Fleur-de-Lis Road,
+              Address: 314, Fleur de Lys Road,
               Birkirkara, BKR 9067, Malta
             </p>
 
