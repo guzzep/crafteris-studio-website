@@ -574,3 +574,6 @@
     padding: 75px 22px;
   }
 }
+.cardActions{display:grid;grid-template-columns:1fr 1fr;gap:10px;width:100%;}.cardActions>a,.comingSoon{display:flex;align-items:center;justify-content:center;text-align:center;min-height:44px;padding:10px 8px;border-radius:5px;font-size:14px;font-weight:700;line-height:1.35;text-decoration:none}.exploreButton{border:1px solid #14233a;color:#14233a;background:transparent}.bookButton{border:1px solid #14233a;background:#14233a;color:#fff}.exploreButton:hover{background:#b7924a12}.bookButton:hover{background:#283c56}.comingSoon{background:#f1eee7;color:#595959}.cardActions>a:focus-visible{outline:3px solid #b7924a;outline-offset:3px}@media(max-width:350px){.cardActions{grid-template-columns:1fr}}
+
+.cardFooter{flex-direction:column;align-items:stretch;gap:14px}
