@@ -182,7 +182,7 @@ const fallbackGroups: FAQGroup[] = [
         title:
           "Where is Crafteris located?",
         text:
-          "Crafteris is based in Malta. The final confirmed studio address and travel information will be shown on the Visit page before public launch.",
+          "Crafteris Studio – Home to GlassXpressions is located at 314, Fleur de Lys Road, Birkirkara, BKR 9067, Malta. Visit our Visit & Contact page for directions to the studio, opening hours and travel information.",
       },
       {
         title:
@@ -317,7 +317,7 @@ export default function FAQsClient({
           }
 
           const items =
-            (fallbackGroup.key === "membership" || fallbackGroup.key === "pyop" || fallbackGroup.key === "workshops_courses") ? fallbackGroup.items : Array.isArray(
+            (fallbackGroup.key === "membership" || fallbackGroup.key === "pyop" || fallbackGroup.key === "workshops_courses" || fallbackGroup.key === "bookings_visits") ? fallbackGroup.items : Array.isArray(
               section?.content
                 ?.items
             ) &&
