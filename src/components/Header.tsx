@@ -141,7 +141,7 @@ export default function Header() {
             {socials.instagram_url && /^https?:\/\//i.test(socials.instagram_url) && <a href={socials.instagram_url} target="_blank" rel="noopener noreferrer" aria-label="Crafteris on Instagram"><Instagram size={20} /></a>}
           </div>
           <Link
-            href="/whats-on"
+            href="/book"
             className={styles.bookNow}
             onClick={closeMenu}
           >
