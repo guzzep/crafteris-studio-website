@@ -247,6 +247,7 @@ export default function Page() {
 
           <section className={styles.card}>
             <h2>11. Health, safety and conduct</h2>
+            <p>Closed-toe footwear is mandatory throughout the studio because glass is used on the premises. Flip-flops, sandals and other open footwear are not permitted.</p>
 
             <p>
               Customers and participants must follow
