@@ -306,10 +306,11 @@ export default function Page() {
                 info@crafteris.com
               </a>
             </p>
+            <p>Telephone: <a href="tel:+35677981366">+356 7798 1366</a></p>
 
             <p>
-              Address: 1, Triq L-Ewwel Ta&apos; Mejju,
-              Birkirkara BKR 1901, Malta
+              Address: 314, Fleur-de-Lis Road,
+              Birkirkara, BKR 9067, Malta
             </p>
 
             <div className={styles.actions}>
