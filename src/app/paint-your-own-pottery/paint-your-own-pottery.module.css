@@ -47,3 +47,9 @@
 .occasionGrid h3 { font-size:23px; }
 .priceNote span { margin-top:6px; font-size:15px; }
 @media(max-width:600px) { .occasions { padding:40px 24px 0; } .occasionGrid { grid-template-columns:1fr; gap:14px; } }
+
+.examplePrices { margin:22px 0; }
+.examplePrices > div { display:flex; justify-content:space-between; align-items:baseline; gap:14px; padding:10px 0; border-bottom:1px solid #b7924a45; }
+.examplePrices dt { font-weight:600; }
+.examplePrices dd { margin:0; text-align:right; white-space:nowrap; }
+@media(max-width:600px) { .examplePrices > div { font-size:14px; } }
