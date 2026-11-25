@@ -557,12 +557,12 @@ export default async function WorkshopPage({
 
                     {remaining > 0 ? (
                       <Link
-                        href="/contact"
+                        href={`/book?activity=workshop&slug=${encodeURIComponent(workshop.slug)}&session=${encodeURIComponent(session.id)}`} 
                         className={
                           styles.sessionButton
                         }
                       >
-                        Enquire
+                        Book Now
                       </Link>
                     ) : (
                       <span
