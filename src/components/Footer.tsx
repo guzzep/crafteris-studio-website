@@ -302,7 +302,7 @@ export default function Footer() {
             </Link>
 
             <Link href="/policies">
-              Policies
+              Policies &amp; Studio Terms
             </Link>
           </div>
 
@@ -376,6 +376,8 @@ export default function Footer() {
             <Link href="/membership-terms">
               Membership Terms
             </Link>
+            <span>|</span><Link href="/membership-guide">Membership Guide</Link>
+            <span>|</span><Link href="/firing-terms">Firing &amp; Collection</Link>
 
             <span>|</span>
 
