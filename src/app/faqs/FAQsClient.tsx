@@ -1,4 +1,5 @@
 "use client";
+import { studioMapUrl } from "@/lib/studio-contact";
 
 import {
   useState,
@@ -64,7 +65,7 @@ const fallbackGroups: FAQGroup[] = [
         title:
           "What should I wear to a workshop?",
         text:
-          "Wear comfortable clothes that you do not mind getting a little messy. Clay, paint and studio materials can occasionally mark clothing.",
+          "Wear comfortable clothes that you do not mind getting a little messy. Clay, paint and studio materials can occasionally mark clothing. Closed-toe footwear is mandatory in the studio because we work with glass. Flip-flops, sandals and other open footwear are not permitted.",
       },
       {
         title:
@@ -89,7 +90,7 @@ const fallbackGroups: FAQGroup[] = [
         title:
           "How does Paint Your Own Pottery work?",
         text:
-          "You choose a pottery piece from the studio shelves, decorate it using the available colours and tools, then leave it with us. Crafteris takes care of the glazing and firing afterwards.",
+          "You choose a pottery piece from the studio shelves, decorate it using the available colours and tools, then leave it with us. Crafteris takes care of the glazing and firing afterwards. Sessions last two hours. A €10 per participant booking deposit is credited against the final purchase, with a €22 minimum spend per painter. PYOP does not qualify for member discounts or loyalty rewards.",
       },
       {
         title:
@@ -106,37 +107,35 @@ const fallbackGroups: FAQGroup[] = [
     ],
   },
   {
-    key:
-      "membership",
-    title:
-      "Membership",
-    items: [
-      {
-        title:
-          "Who is membership for?",
-        text:
-          "Membership is for people who want to return regularly and work more independently in the studio. It is especially useful once you already have enough confidence to continue personal projects.",
-      },
-      {
-        title:
-          "Are materials included in membership?",
-        text:
-          "No. Materials are charged separately depending on what you use. Relevant standard firings are included with the membership options currently shown on the website.",
-      },
-      {
-        title:
-          "Do I need to book studio time as a member?",
-        text:
-          "Yes. Studio access is still managed through bookings so that the space and equipment can be used safely and fairly.",
-      },
-      {
-        title:
-          "Can I cancel a membership session?",
-        text:
-          "Membership bookings should be cancelled at least 24 hours in advance where required. The exact membership terms will be shown before joining.",
-      },
-    ],
-  },
+  "key": "membership",
+  "title": "Membership",
+  "items": [
+    {
+      "title": "What membership options are available?",
+      "text": "Maker Light, Daytime and Plus offer monthly or six-month prepaid access. Flexible Maker 10 and 20 are three-month memberships. Home Maker offers six or twelve general studio hours over six or twelve months. Unlimited Maker is by enquiry and approval."
+    },
+    {
+      "title": "Do I have to visit every week?",
+      "text": "No. Weekly equivalents are not weekly limits. Use your available eligible balance flexibly. Monthly hours release after successful payments; prepaid Maker hours are available upfront."
+    },
+    {
+      "title": "Are materials and firing included?",
+      "text": "Studio access is separate. Regular Maker pottery processing is €18/kg including studio clay, standard glaze and both firings. Home Maker processing is €16/kg with clay purchased separately. Eligible retail purchases receive a 10% member discount."
+    },
+    {
+      "title": "How do loyalty hours work?",
+      "text": "Earn two general studio hours per €100 of eligible spending after discounts, including VAT. Unused qualifying spend carries forward. Rewards expire after 12 calendar months and require active eligible membership to use."
+    },
+    {
+      "title": "Can I cancel a member booking?",
+      "text": "Cancel or reschedule at least 24 hours before the start to retain booked hours. Late cancellations, late rescheduling and no-shows forfeit the original hours. Studio cancellations carry no member penalty."
+    },
+    {
+      "title": "Can Home Makers buy extra glazing hours?",
+      "text": "Yes: €8 for one hour, €35 for five or €60 for ten. Purchased glazing hours do not expire but require active eligible membership. They are glazing-only; general hours can also be used for glazing."
+    }
+  ]
+},
   {
     key: "groups",
     title:
@@ -184,7 +183,7 @@ const fallbackGroups: FAQGroup[] = [
         title:
           "Where is Crafteris located?",
         text:
-          "Crafteris is based in Malta. The final confirmed studio address and travel information will be shown on the Visit page before public launch.",
+          "Crafteris Studio – Home to GlassXpressions is located at 314, Fleur de Lys Road, Birkirkara, BKR 9067, Malta. Visit our Visit & Contact page for directions to the studio, opening hours and travel information.",
       },
       {
         title:
@@ -319,7 +318,7 @@ export default function FAQsClient({
           }
 
           const items =
-            Array.isArray(
+            (fallbackGroup.key === "membership" || fallbackGroup.key === "pyop" || fallbackGroup.key === "workshops_courses" || fallbackGroup.key === "bookings_visits") ? fallbackGroup.items : Array.isArray(
               section?.content
                 ?.items
             ) &&
@@ -578,6 +577,7 @@ export default function FAQsClient({
                                   {item.text ||
                                     ""}
                                 </p>
+                                {item.title === "Where is Crafteris located?" && <p><a href={studioMapUrl} target="_blank" rel="noopener noreferrer" style={{textDecoration:"underline",fontWeight:600}}>Get directions on Google Maps →</a></p>}
                               </div>
                             </div>
                           </div>

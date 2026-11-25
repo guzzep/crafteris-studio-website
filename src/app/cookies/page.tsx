@@ -265,19 +265,20 @@ export default function Page() {
               <br />
               Joseph Schembri
               <br />
-              1, Triq L-Ewwel Ta&apos; Mejju
+              314, Fleur de Lys Road
               <br />
-              Birkirkara BKR 1901
+              Birkirkara, BKR 9067
               <br />
               Malta
             </p>
 
             <p>
               Email:{" "}
-              <a href="mailto:info@crafterisstudio.com">
-                info@crafterisstudio.com
+              <a href="mailto:info@crafteris.com">
+                info@crafteris.com
               </a>
             </p>
+            <p>Telephone: <a href="tel:+35677981366">+356 7798 1366</a></p>
 
             <p className={styles.notice}>
               Effective date: 6 September 2026

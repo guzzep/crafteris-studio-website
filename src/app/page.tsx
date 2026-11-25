@@ -7,15 +7,9 @@ import { createClient } from "@/lib/supabase/client";
 import styles from "./page.module.css";
 
 const offerings = [
-  { title: "Paint Your Own Pottery", text: "Choose from 200+ bisque designs, paint your piece your way, and we glaze and fire it for you.", image: "/cards/paint-your-own-pottery.png", href: "/paint-your-own-pottery" },
-  { title: "Glass", text: "Discover fused glass and stained glass with GlassXpressions, at home in Crafteris.", image: "/workshops/fused-glass.png", href: "/glass" },
-  { title: "Pottery", text: "Get your hands into clay with hand building and wheel throwing.", image: "/programmes/wheel-throwing.png", href: "/pottery" },
-  { title: "Workshops", text: "Enjoy a creative session, try a technique and make something of your own.", image: "/cards/workshops.png", href: "/workshops" },
-  { title: "Studio Membership", text: "One studio membership. Time, space and facilities to keep creating and develop your projects.", image: "/membership-page/membership-hero.png", href: "/membership" },
-  { title: "Courses", text: "Build your skills through structured learning and guided projects.", image: "/cards/programmes-courses.png", href: "/programmes" },
-  { title: "Mosaic", text: "Explore colour, shape and pattern, one piece at a time.", image: "", href: "/mosaic" },
-  { title: "Team Building & Groups", text: "Bring colleagues, friends, schools or private groups together through making.", image: "/team-building/team-building.jpg", href: "/team-building" },
-  { title: "Shop", text: "200+ bisque designs, stained glass, mosaic, clay bodies, pottery glazes, colours, tools and supplies.", image: "/shop/studio-shelves.png", href: "/shop" },
+  { title: "Discover the crafts", text: "Paint your own pottery, explore fused and stained glass, shape clay or make a mosaic. Find the craft that speaks to you.", image: "/cards/paint-your-own-pottery.png", href: "/explore", label: "Explore the studio" },
+  { title: "Book a creative experience", text: "Enjoy a guided workshop, a pottery painting session or a course. Come on your own or share the experience with someone.", image: "/cards/workshops.png", href: "/whats-on", label: "See what’s on" },
+  { title: "Make it your studio", text: "One membership for glass, pottery and mosaic. Enjoy shared facilities, flexible access and a community of makers.", image: "/membership-page/membership-hero.png", href: "/membership", label: "Discover membership" },
 ];
 
 export default function Home() {
@@ -35,26 +29,35 @@ export default function Home() {
         <div className={styles.homeHeroCopy}>
           <p className={styles.eyebrow}>Your creative studio in Birkirkara, Malta</p>
           <h1>Make something worth keeping.</h1>
-          <p className={styles.heroLead}>Glass, pottery, mosaic and pottery painting—a creative studio in Birkirkara, Malta. Join a workshop or course, create independently, or find materials for your next project.</p>
+          <p className={styles.heroLead}>Discover glass, pottery, mosaic and pottery painting in one creative studio. Try something new, learn a skill or make creativity part of your everyday life.</p>
           <p className={styles.brandIntro}><strong>Home of GlassXpressions.</strong> The same glass studio you know, with more ways to create.</p>
           <img className={styles.glassLogo} src="/glassxpressions-current-logo.png" alt="GlassXpressions Creative Studio" />
-          <div className={styles.homeActions}><Link href="#offerings-heading">Explore the studio</Link><Link href="/workshops">Browse workshops</Link></div>
+          <div className={styles.homeActions}><Link href="/explore">Explore the studio</Link><Link href="/whats-on">Book an experience</Link></div>
         </div>
         <img className={styles.homeHeroPhoto} src={heroImage} alt="Colourful creative work at Crafteris" />
       </section>
       <section className={styles.offerings} aria-labelledby="offerings-heading">
         <p className={styles.eyebrow}>Explore Crafteris</p>
         <h2 id="offerings-heading">Find your way to create.</h2>
-        <p className={styles.sectionIntro}>Try something new, develop a skill, make together or find materials for your next project.</p>
+        <p className={styles.sectionIntro}>Your first creative visit, your next skill or a place to keep making. Start wherever feels right.</p>
         <div className={styles.offeringGrid}>{offerings.map(item => <Link className={`${styles.offeringCard} ${item.href === "/membership" ? styles.membershipHighlight : ""}`} href={item.href} key={item.title}>
-          {item.image ? <img src={item.image} alt={item.title} /> : <div className={styles.mosaicArtwork} role="img" aria-label="Colourful mosaic tile pattern" />}
-          <div className={styles.offeringCopy}><h3>{item.title}<span aria-hidden="true">↗</span></h3><p>{item.text}</p></div>
+          <img src={item.image} alt="" loading="lazy" />
+          <div className={styles.offeringCopy}><h3>{item.title}<span aria-hidden="true">↗</span></h3><p>{item.text}</p><span className={styles.cardLink}>{item.label} →</span></div>
         </Link>)}</div>
+      </section>
+      <section id="member-app" className={styles.memberApp} aria-labelledby="member-app-heading"><div><p className={styles.eyebrow}>Included with every active membership</p><h2 id="member-app-heading">Your studio. At your fingertips.</h2><p>Make the most of your creative time with the Crafteris Member App. Manage your membership, plan your visits and keep your creative projects together in one place.</p><div className={styles.homeActions}><Link href="/member-login">Member Login</Link><Link href="/membership#member-app">Discover the Member App →</Link></div></div><div className={styles.appFeatures}>{[["Book your studio time","Reserve eligible workspaces and pottery wheels."],["Know your balance","Check studio hours, glazing hours and loyalty rewards."],["Manage your visits","View, cancel and reschedule bookings."],["Your creative journal","Keep project notes, materials, glaze combinations and photos."]].map(([title,description])=><article key={title}><h3>{title}</h3><p>{description}</p></article>)}</div></section>
+      <section className={styles.groupFeature} aria-labelledby="group-heading">
+        <img src="/team-building/team-building.jpg" alt="A group enjoying a creative activity together" loading="lazy" />
+        <div><p className={styles.eyebrow}>Better together</p><h2 id="group-heading">Make memories together.</h2><p>Plan a creative team event, birthday, school visit or private celebration. We’ll help you choose an activity that suits your group.</p><Link href="/team-building">Explore group experiences →</Link></div>
       </section>
       <section className={styles.shopFeature} aria-labelledby="shop-heading">
         <p className={styles.eyebrow}>Materials for makers</p><h2 id="shop-heading">A world of colour on our shelves.</h2>
         <div className={styles.shopFacts}><p><strong>200+</strong>colours of stained glass</p><p><strong>180</strong>mosaic shapes and colours</p><p><strong>180+</strong>pottery glazes and colours</p></div>
         <p>Plus 200+ bisque designs to choose from, clay bodies, tools and supplies for your next creative project.</p><Link href="/shop">Explore the shop →</Link>
+      </section>
+      <section className={styles.visitFeature} aria-labelledby="visit-heading">
+        <p className={styles.eyebrow}>Your creative home in Malta</p><h2 id="visit-heading">Come and discover Crafteris.</h2><p>Find us in Birkirkara. Discover the studio, ask us about your first visit or find your next creative session.</p>
+        <div className={styles.homeActions}><Link href="/visit">Plan your visit</Link><Link href="/whats-on">See what&apos;s on</Link></div>
       </section>
     </main><Footer />
   </div>;

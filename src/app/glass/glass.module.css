@@ -42,3 +42,5 @@
 .related a { display:inline-block; margin-top:10px; }
 @media(max-width:900px) { .heroCopy { padding:35px 25px; } .routeGrid { grid-template-columns:1fr; } .pricing,.group { margin-left:24px; margin-right:24px; } .group { flex-direction:column; align-items:flex-start; } }
 @media(max-width:600px) { .hero,.techniques,.shop,.priceGrid { grid-template-columns:1fr; } .heroPhoto { min-height:0; height:300px; border-radius:0; } .techniques,.section { padding:40px 24px; } .pricing { padding:25px; } .shop { padding:0 24px 40px; gap:25px; } .shop img { height:280px; } }
+
+.techniqueLink { display:inline-block; margin-top:20px; font-weight:700; text-decoration:underline; }

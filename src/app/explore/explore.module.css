@@ -85,11 +85,7 @@
   overflow: hidden;
 }
 
-.optionCard:last-child {
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
+
 
 .optionImageWrapper {
   overflow: hidden;
@@ -102,10 +98,7 @@
   object-fit: cover;
 }
 
-.optionCard:last-child .optionImage {
-  height: 100%;
-  min-height: 330px;
-}
+
 
 .optionContent {
   padding: 28px;
@@ -349,13 +342,9 @@
     grid-template-columns: 1fr;
   }
 
-  .optionCard:last-child {
-    grid-column: auto;
-    display: block;
-  }
+  
 
-  .optionImage,
-  .optionCard:last-child .optionImage {
+  .optionImage {
     height: 250px;
     min-height: 0;
   }
@@ -393,3 +382,21 @@
     flex-direction: column;
   }
 }
+.optionImageWrapper { display: block; }
+.optionCard { display: flex; flex-direction: column; }
+.optionContent { flex: 1; display: flex; flex-direction: column; }
+.optionLink { margin-top: auto; }
+.groupFeature { max-width: 1200px; margin: 0 auto 70px; display: grid; grid-template-columns: 1fr 1fr; border: 1px solid rgba(183,146,74,.25); border-radius: 10px; overflow: hidden; background: white; }
+.groupFeature img { width: 100%; height: 100%; min-height: 280px; object-fit: cover; }
+.groupFeature > div { padding: 36px; align-self: center; }
+.groupFeature h2 { font-family: serif; font-size: 34px; margin-bottom: 14px; }
+.groupFeature p:not(.eyebrow) { line-height: 1.65; margin-bottom: 22px; }
+.waysSection { padding: 0 40px 80px; }
+.waysGrid { max-width: 1200px; margin: auto; display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 20px; }
+.waysGrid a { padding: 24px; border: 1px solid rgba(183,146,74,.25); border-radius: 10px; background: white; }
+.waysGrid h3 { font-family: serif; font-size: 24px; margin-bottom: 10px; }
+.waysGrid p { line-height: 1.6; }
+.waysGrid a:hover, .waysGrid a:focus-visible { border-color: var(--accent); }
+@media (max-width: 1280px) { .groupFeature { margin-left: 40px; margin-right: 40px; } }
+@media (max-width: 900px) { .waysGrid { grid-template-columns: repeat(2,minmax(0,1fr)); } .groupFeature { margin-left: 25px; margin-right: 25px; } }
+@media (max-width: 650px) { .groupFeature { grid-template-columns: 1fr; margin: 0 20px 60px; } .groupFeature img { height: 250px; min-height: 0; } .groupFeature > div { padding: 22px; } .waysSection { padding: 0 20px 60px; } .waysGrid { grid-template-columns: 1fr; } }

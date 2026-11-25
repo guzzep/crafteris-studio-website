@@ -286,7 +286,7 @@ export default async function ProgrammePage({
                   styles.primaryButton
                 }
               >
-                View programme dates
+                Choose course dates
                 <ArrowRight size={16} />
               </a>
             ) : (
@@ -465,6 +465,7 @@ export default async function ProgrammePage({
           )}
         </section>
 
+        {sessions.length > 0 && <section className={styles.finalCta}><div className={styles.finalInner}><Link className={styles.primaryButton} href={`/book?activity=course&slug=${encodeURIComponent(programme.slug)}`}>Enrol Now <ArrowRight size={16}/></Link><p><Link href="/booking-terms">Read workshop and course booking terms</Link></p></div></section>}
         {/* INFO */}
         <section
           className={styles.infoSection}

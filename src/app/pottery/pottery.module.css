@@ -82,3 +82,8 @@
 .homeMakerFacts span { font-size:14px; line-height:1.5; }
 @media(max-width:900px) { .homeMaker { margin-left:24px; margin-right:24px; } }
 @media(max-width:600px) { .homeMaker { padding:25px; } .homeMakerFacts { grid-template-columns:1fr; } }
+
+.techniqueLink { display:inline-block; margin-top:20px; font-weight:700; text-decoration:underline; }
+.includes { margin-top:20px; padding-top:18px; border-top:1px solid #b7924a55; }
+.includes ul { display:grid; grid-template-columns:1fr 1fr; gap:10px 20px; margin:14px 0 0; padding-left:20px; line-height:1.5; }
+@media(max-width:600px) { .includes ul { grid-template-columns:1fr; } }

@@ -1,3 +1,4 @@
+import { studioContact, studioMapUrl } from "@/lib/studio-contact";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
@@ -64,9 +65,6 @@ type SiteSettings = {
   opening_hours: OpeningHoursSettings | null;
 };
 
-const fallbackHours: ContentItem[] = [
-  { title: "Planning a visit?", text: "Contact us to confirm current opening hours." },
-];
 
 const fallbackTravel: ContentItem[] = [
   {
@@ -238,58 +236,11 @@ export default async function VisitPage() {
 
 
 
-  const cmsOpeningHourItems =
-    getItems(
-      openingHours,
-      fallbackHours
-    );
-
-  const settingsHours =
-    settings?.opening_hours;
-
-  const configuredHours: ContentItem[] = [
-    {
-      title: "Monday",
-      text: settingsHours?.monday ?? "",
-    },
-    {
-      title: "Tuesday",
-      text: settingsHours?.tuesday ?? "",
-    },
-    {
-      title: "Wednesday",
-      text: settingsHours?.wednesday ?? "",
-    },
-    {
-      title: "Thursday",
-      text: settingsHours?.thursday ?? "",
-    },
-    {
-      title: "Friday",
-      text: settingsHours?.friday ?? "",
-    },
-    {
-      title: "Saturday",
-      text: settingsHours?.saturday ?? "",
-    },
-    {
-      title: "Sunday",
-      text: settingsHours?.sunday ?? "",
-    },
+  const openingHourItems: ContentItem[] = [
+    { title: "Monday–Friday", text: "09:00–20:00" },
+    { title: "Saturday", text: "09:00–17:00" },
+    { title: "Sunday", text: "Closed" },
   ];
-
-  const hasSettingsHours =
-    configuredHours.some(
-      (item) =>
-        Boolean(
-          item.text?.trim()
-        )
-    );
-
-  const openingHourItems =
-    hasSettingsHours
-      ? configuredHours
-      : cmsOpeningHourItems;
 
   const travelItems =
     getItems(
@@ -300,17 +251,11 @@ export default async function VisitPage() {
   const cmsAddress =
     planVisit?.content?.items?.[0];
 
-  const studioAddress =
-    settings?.address?.trim() ||
-    cmsAddress?.text ||
-    "Triq L-Ewwel Ta Mejju, Birkirkara, Malta";
-
-  const directionsUrl = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent("GlassXpressions " + studioAddress);
+  const studioAddress = studioContact.address;
+  const directionsUrl = studioMapUrl;
 
   const openingHoursNote =
-    settingsHours?.note?.trim() ||
-    openingHours?.content?.note ||
-    "Check opening hours before making a special journey.";
+    "Planned opening hours from 1 January 2027. Check with us before making a special journey.";
 
   const studioParagraphs =
     (
@@ -374,7 +319,7 @@ export default async function VisitPage() {
         <section className={styles.visitEssentials} aria-label="Visit essentials" style={{order: getSectionOrder("hero") + 1}}>
           <div><h2>Plan your visit</h2><p>{studioAddress}</p><a href={directionsUrl} target="_blank" rel="noopener noreferrer">Open map & directions →</a></div>
           <div><h3>Before you set off</h3><p>Check opening hours for your intended visit. PYOP walk-ins are welcome subject to availability; book ahead to secure a place.</p><Link href="/paint-your-own-pottery">Plan pottery painting →</Link></div>
-          <div><h3>Need a little help?</h3><p>Ask about parking, step-free access or any other requirements before travelling so we can help you plan.</p><Link href="/contact">Contact the studio →</Link>{settings?.phone && <p><a href={"tel:" + settings.phone.replace(/[^+0-9]/g, "")}>{settings.phone}</a></p>}</div>
+          <div><h3>Need a little help?</h3><p>Ask about parking, step-free access or any other requirements before travelling so we can help you plan.</p><Link href="/contact">Contact the studio →</Link><p><a href={studioContact.phoneHref}>{studioContact.phone}</a></p></div>
         </section>
         {/* HERO */}
 
@@ -562,9 +507,7 @@ export default async function VisitPage() {
                   </p>
 
                   <h3>
-                    {cmsAddress?.title ||
-                      settings?.site_name ||
-                      "Crafteris Studio"}
+                    {studioContact.name}
                   </h3>
 
                   <p>
@@ -861,6 +804,7 @@ export default async function VisitPage() {
                     "Come ready to make a little mess."}
                 </h2>
 
+                <p><strong>Closed-toe footwear is mandatory. Flip-flops, sandals and other open footwear are not permitted because we work with glass.</strong></p>
                 {studioParagraphs.map(
                   (
                     paragraph,

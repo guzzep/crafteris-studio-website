@@ -1,4 +1,6 @@
 "use client";
+import { studioContact, studioMapUrl } from "@/lib/studio-contact";
+
 
 import {
   useEffect,
@@ -104,19 +106,10 @@ export default function Footer() {
     };
   }, [supabase]);
 
-  const siteName =
-    settings.site_name ||
-    "Crafteris";
-
-  const email =
-    settings.email || "";
-
-  const phone =
-    settings.phone || "";
-
-  const address =
-    settings.address || "";
-
+  const siteName = studioContact.name;
+  const email = studioContact.email;
+  const phone = studioContact.phone;
+  const address = studioContact.address;
   const instagram =
     settings.instagram_url || "https://www.instagram.com/glassxpressions/";
 
@@ -190,15 +183,7 @@ export default function Footer() {
                 )}
 
                 {address && (
-                  <div>
-                    <MapPin
-                      size={15}
-                    />
-
-                    <span>
-                      {address}
-                    </span>
-                  </div>
+                  <a href={studioMapUrl} target="_blank" rel="noopener noreferrer"><MapPin size={15}/><span>{address}</span></a>
                 )}
               </div>
             )}
@@ -317,7 +302,7 @@ export default function Footer() {
             </Link>
 
             <Link href="/policies">
-              Policies
+              Policies &amp; Studio Terms
             </Link>
           </div>
 
@@ -391,6 +376,8 @@ export default function Footer() {
             <Link href="/membership-terms">
               Membership Terms
             </Link>
+            <span>|</span><Link href="/membership-guide">Membership Guide</Link>
+            <span>|</span><Link href="/firing-terms">Firing &amp; Collection</Link>
 
             <span>|</span>
 
