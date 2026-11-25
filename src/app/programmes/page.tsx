@@ -691,21 +691,7 @@ export default async function ProgrammesPage() {
                             )}
                           </span>
 
-                          <Link
-                            href={`/programmes/${programme.slug}`}
-                            className={
-                              styles.viewProgramme
-                            }
-                          >
-                            Explore
-                            programme
-
-                            <ArrowRight
-                              size={
-                                15
-                              }
-                            />
-                          </Link>
+                          <div className={styles.cardActions}><Link className={styles.exploreButton} href={`/programmes/${programme.slug}`}>Explore Course</Link><Link className={styles.bookButton} href={`/book?activity=course&slug=${encodeURIComponent(programme.slug)}`}>Enrol Now</Link></div>
                         </div>
                       </div>
                     </article>
