@@ -49,150 +49,11 @@ export default function Page() {
             </p>
           </section>
 
-          <section className={styles.card}>
-            <h2>
-              2. Membership types and what they provide
-            </h2>
-
-            <h3>Flexible prepaid memberships</h3>
-
-            <ul>
-              <li>
-                10-hour membership pack — normally valid
-                for 3 months from its agreed start date.
-              </li>
-              <li>
-                20-hour membership pack — normally valid
-                for 3 months from its agreed start date.
-              </li>
-            </ul>
-
-            <h3>Fixed-term memberships</h3>
-
-            <ul>
-              <li>
-                Maker Light — a 6-month membership.
-              </li>
-              <li>
-                Maker Plus — a 6-month membership.
-              </li>
-            </ul>
-
-            <p>
-              Membership hours cover member studio
-              access only unless a particular plan
-              expressly states otherwise.
-            </p>
-          </section>
-
-          <section className={styles.card}>
-            <h2>3. Start date, validity and expiry</h2>
-
-            <p>
-              Membership validity begins on the purchase
-              date unless Crafteris Studio agrees a
-              different start date.
-            </p>
-
-            <p>
-              Flexible 10-hour and 20-hour memberships
-              are normally valid for 3 months. Maker
-              Light and Maker Plus are normally valid
-              for 6 months.
-            </p>
-
-            <p>
-              Unused hours normally expire when the
-              applicable membership period ends.
-            </p>
-          </section>
-
-          <section className={styles.card}>
-            <h2>
-              4. Membership hours, bookings and studio
-              time
-            </h2>
-
-            <p>
-              Membership hours are personal to the
-              registered member, have no cash value and
-              may not normally be sold, shared,
-              transferred or exchanged for cash.
-            </p>
-
-            <p>
-              Studio time is subject to opening hours,
-              booking availability, Studio capacity,
-              staffing arrangements and any equipment-
-              or area-specific rules.
-            </p>
-
-            <h3>
-              Cancelling or rescheduling studio time
-            </h3>
-
-            <p>
-              A member may cancel or reschedule a
-              studio-time booking up to 24 hours before
-              the booked start time.
-            </p>
-
-            <p>
-              Late cancellations and no-shows will
-              normally result in the booked hours being
-              deducted.
-            </p>
-          </section>
-
-          <section className={styles.card}>
-            <h2>
-              5. Payments, refunds, withdrawal and
-              renewal
-            </h2>
-
-            <p>
-              Membership fees are payable according to
-              the payment arrangement shown at purchase.
-            </p>
-
-            <p>
-              Where applicable law gives a consumer a
-              statutory withdrawal period for an online
-              membership purchase, those rights remain
-              unaffected by these Terms.
-            </p>
-
-            <p>
-              After any applicable statutory withdrawal
-              period has expired, memberships are
-              normally non-refundable.
-            </p>
-
-            <p>
-              Memberships do not automatically renew
-              unless an auto-renewal option is expressly
-              offered and accepted by the member.
-            </p>
-          </section>
-
-          <section className={styles.card}>
-            <h2>
-              6. Member pricing and additional charges
-            </h2>
-
-            <p>
-              All active membership types qualify for
-              the member pricing or benefits shown for
-              the relevant membership.
-            </p>
-
-            <p>
-              Membership hours do not normally cover
-              workshops, courses, private tuition or
-              special events.
-            </p>
-          </section>
-
+          <section className={styles.card}><h2>2. Membership types and entitlements</h2><p>Maker Light (€44 monthly or €220 prepaid for six months) and Maker Light Daytime (€35 monthly or €175 prepaid) provide 52 hours per six months. Maker Plus (€75 monthly or €375 prepaid) provides 104 hours. Monthly Light and Daytime release 8 hours 40 minutes after each successful payment; Plus releases 17 hours 20 minutes. Prepaid plans release the full allocation upfront. Weekly equivalents are not weekly limits.</p><p>Flexible Maker 10 (€65) and 20 (€120) provide 10 and 20 hours respectively, each valid for three months. Benefits remain active throughout the term even if included hours are exhausted. Home Maker (€60/6 months or €100/12 months) includes 6 or 12 general studio hours respectively and excludes pottery wheel access. Unlimited Maker (€120 monthly or €1,200 annually) requires studio approval and is subject to availability and reasonable fair use.</p><p>All prices include applicable VAT. Memberships are cross-craft, subject to activity permissions, safety and competency.</p></section>
+          <section className={styles.card}><h2>3. Validity, expiry and renewal</h2><p>Monthly Maker hours accumulate while active and expire on subscription termination. Prepaid Maker Light, Daytime and Plus included hours carry forward on renewal before expiry, on the final day or within 14 days after expiry. Early renewal starts after the existing term; renewal after expiry starts on the actual renewal date. After 14 days unused included hours expire. Booking access is not available during a lapse.</p><p>Flexible Maker hours expire after three months. Home Maker included hours are valid during the membership term. Dedicated purchased glazing hours do not expire, but require active eligible membership. Loyalty hours expire 12 calendar months after award and are retained during a lapse until their original expiry. Supplementary purchased studio hours follow their separate product validity.</p><p>Eligible hours with earliest expiry are consumed first. When expiry is equivalent, dedicated glazing hours take priority for glazing. Non-expiring hours are preserved when earlier-expiring eligible hours are available.</p></section>
+          <section className={styles.card}><h2>4. Membership hours, bookings and studio time</h2><p>Hours are personal, have no cash value and may not normally be transferred. All bookings depend on sufficient eligible hours, active membership, resource availability and activity permissions. Opening hours: Monday–Friday 09:00–20:00; Saturday 09:00–17:00; Sunday closed. Daytime sessions must finish by 16:00 Monday–Friday.</p><p>Online booking opens 30 days ahead and closes one hour before the session. Booking starts and eligible extensions use 30-minute increments. There is no fixed daily or future booking limit. Cancellation or rescheduling at least 24 hours before the start preserves booked hours. Late cancellations, late rescheduling and no-shows forfeit original booked hours; any replacement booking needs eligible hours. Studio cancellations carry no member penalty. Bookings made less than 24 hours before the start require acknowledgement of these conditions.</p></section>
+          <section className={styles.card}><h2>5. Payments, upgrades, cancellation and renewal</h2><p>Monthly Maker plans have an initial six-payment commitment, then roll monthly. Prepaid Maker plans require renewal. Failed payments suspend booking access without releasing new hours; balances are preserved until payment succeeds, subject to other restrictions.</p><p>Prepaid upgrades are prorated for the remaining term and preserve unused hours without restarting the term. Monthly upgrades take effect at the next payment. Downgrades take effect at renewal or the commitment boundary. Monthly cancellation during the initial commitment is effective at its end; afterwards, at the end of the paid billing period. Exceptional approved suspension stops future payments and bookings, preserves applicable balances and resumes the remaining commitment without charging for suspended months.</p><p>Statutory withdrawal and consumer rights remain unaffected. After any applicable statutory withdrawal period, memberships are normally non-refundable, subject to mandatory rights.</p></section>
+          <section className={styles.card}><h2>6. Member pricing and loyalty rewards</h2><p>All active memberships receive 10% off eligible materials and retail products and two general studio hours per €100 of eligible VAT-inclusive spend actually paid after discounts. Spending carries forward between purchases; refunds reverse corresponding spend and rewards. Loyalty hours do not override activity restrictions. Member fees, hour packages, workshops, courses, pottery painting, firing and processing are excluded from the discount and rewards. Special member service rates receive no further discount.</p><p>Regular, Flexible and Unlimited Maker pottery processing costs €18/kg including studio clay, standard glaze, both firings and handling. Home Maker processing costs €16/kg with clay purchased separately. Both are calculated on dry pre-bisque weight without a minimum. Clay purchases do not grant glazing hours. Home Maker dedicated glazing hours cost €8 for one, €35 for five or €60 for ten; general hours can also be used for glazing.</p><p>PAYG is €10/hour without member benefits for customers who have no active membership. Studio access does not include workshops, courses or PYOP.</p><p><Link href="/membership">View membership plans and benefits</Link></p></section>
           <section className={styles.card}>
             <h2>
               7. Member accounts, guests and visitors
@@ -403,8 +264,7 @@ export default function Page() {
             </h2>
 
             <p>
-              Members may use Crafteris Studio to create
-              work for personal or commercial purposes.
+              Members may create personal or commercial work, subject to plan eligibility, availability and fair use. Unlimited Maker is not intended for continuous commercial production monopolising shared resources.
             </p>
 
             <p>
@@ -442,8 +302,8 @@ export default function Page() {
 
             <p>
               Email:{" "}
-              <a href="mailto:info@crafterisstudio.com">
-                info@crafterisstudio.com
+              <a href="mailto:info@crafteris.com">
+                info@crafteris.com
               </a>
             </p>
 
@@ -477,7 +337,7 @@ export default function Page() {
             </p>
 
             <p className={styles.notice}>
-              Effective date: 6 September 2026
+              Effective date: 1 January 2027
             </p>
           </section>
         </div>
