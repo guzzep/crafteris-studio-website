@@ -804,6 +804,7 @@ export default async function VisitPage() {
                     "Come ready to make a little mess."}
                 </h2>
 
+                <p><strong>Closed-toe footwear is mandatory. Flip-flops, sandals and other open footwear are not permitted because we work with glass.</strong></p>
                 {studioParagraphs.map(
                   (
                     paragraph,
