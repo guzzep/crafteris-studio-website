@@ -35,3 +35,5 @@
 .empty { padding:25px; text-align:center; }
 @media(max-width:1000px) { .grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .group { margin:0 25px; flex-direction:column; align-items:flex-start; } }
 @media(max-width:600px) { .grid,.other { grid-template-columns:1fr; } .collection { padding:0 22px 40px; } .intro { padding-top:35px; } .filters { gap:8px; } .filters button { padding:10px 16px; } .photoLink img,.mosaic { height:250px; } }
+
+.cardActions{display:grid;grid-template-columns:1fr 1fr;gap:10px;width:100%;margin-top:20px;}.cardActions>a,.comingSoon{display:flex;align-items:center;justify-content:center;text-align:center;min-height:44px;padding:10px 8px;border-radius:5px;font-size:14px;font-weight:700;line-height:1.35;text-decoration:none}.exploreButton{border:1px solid #14233a;color:#14233a;background:transparent}.bookButton{border:1px solid #14233a;background:#14233a;color:#fff}.exploreButton:hover{background:#b7924a12}.bookButton:hover{background:#283c56}.comingSoon{background:#f1eee7;color:#595959}.cardActions>a:focus-visible{outline:3px solid #b7924a;outline-offset:3px}@media(max-width:350px){.cardActions{grid-template-columns:1fr}}
