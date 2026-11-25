@@ -140,6 +140,7 @@ export default function Header() {
             {socials.facebook_url && /^https?:\/\//i.test(socials.facebook_url) && <a href={socials.facebook_url} target="_blank" rel="noopener noreferrer" aria-label="Crafteris on Facebook"><Facebook size={20} /></a>}
             {socials.instagram_url && /^https?:\/\//i.test(socials.instagram_url) && <a href={socials.instagram_url} target="_blank" rel="noopener noreferrer" aria-label="Crafteris on Instagram"><Instagram size={20} /></a>}
           </div>
+          <Link href="/member-login" className={styles.memberLogin} onClick={closeMenu}>Member Login</Link>
           <Link
             href="/book"
             className={styles.bookNow}
