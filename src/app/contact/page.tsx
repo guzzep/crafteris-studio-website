@@ -1,4 +1,6 @@
 "use client";
+import { studioContact, studioMapUrl } from "@/lib/studio-contact";
+
 
 import {
 
@@ -150,33 +152,7 @@ const MAX_LINKS_IN_MESSAGE = 3;
 const LAST_SUBMISSION_KEY =
   "crafteris_contact_last_submission";
 
-const fallbackContactDetails: ContentItem[] = [
 
-  {
-
-    title: "Email",
-
-    text: "Contact the studio",
-
-  },
-
-  {
-
-    title: "Studio",
-
-    text: "Triq L-Ewwel Ta Mejju, Birkirkara, Malta",
-
-  },
-
-  {
-
-    title: "Visits",
-
-    text: "By session or arrangement",
-
-  },
-
-];
 
 const fallbackHelpItems: ContentItem[] = [
 
@@ -465,37 +441,10 @@ export default function ContactPage() {
 
     );
 
-  const cmsContactDetails =
-    getItems(
-      contact,
-      fallbackContactDetails
-    );
-
   const contactDetails: ContentItem[] = [
-    {
-      title:
-        cmsContactDetails[0]?.title ||
-        "Email",
-      text:
-        settings?.email ||
-        cmsContactDetails[0]?.text ||
-        "Contact the studio",
-    },
-    {
-      title: "Phone",
-      text:
-        settings?.phone ||
-        "Contact the studio",
-    },
-    {
-      title:
-        cmsContactDetails[1]?.title ||
-        "Studio",
-      text:
-        settings?.address ||
-        cmsContactDetails[1]?.text ||
-        "Triq L-Ewwel Ta Mejju, Birkirkara, Malta",
-    },
+    { title: "Email", text: studioContact.email },
+    { title: "Phone", text: studioContact.phone },
+    { title: "Studio", text: studioContact.address },
   ];
 
   const helpItems =
@@ -1108,7 +1057,7 @@ export default function ContactPage() {
 
                           <strong>
 
-                            {index === 0 && item.text?.includes("@") ? <a href={"mailto:" + item.text}>{item.text}</a> : index === 1 && item.text && /[0-9]/.test(item.text) ? <a href={"tel:" + item.text.replace(/[^+0-9]/g, "")}>{item.text}</a> : index === 2 ? <a href={"https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent("GlassXpressions " + item.text)} target="_blank" rel="noopener noreferrer">{item.text} ↗</a> : item.text || ""}
+                            {index === 0 && item.text?.includes("@") ? <a href={"mailto:" + item.text}>{item.text}</a> : index === 1 && item.text && /[0-9]/.test(item.text) ? <a href={"tel:" + item.text.replace(/[^+0-9]/g, "")}>{item.text}</a> : index === 2 ? <a href={studioMapUrl} target="_blank" rel="noopener noreferrer">{item.text} ↗</a> : item.text || ""}
 
                           </strong>
 
