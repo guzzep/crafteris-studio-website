@@ -3,7 +3,6 @@
 import {
   useEffect,
   useMemo,
-  useRef,
   useState,
 } from "react";
 
@@ -22,18 +21,6 @@ export default function Header() {
 
   const [menuOpen, setMenuOpen] =
     useState(false);
-
-  const [exploreOpen, setExploreOpen] = useState(false);
-  const exploreRef = useRef<HTMLDivElement>(null);
-  const exploreButton = useRef<HTMLButtonElement>(null);
-
-  useEffect(() => {
-    function dismiss(event: PointerEvent) {
-      if (!exploreRef.current?.contains(event.target as Node)) setExploreOpen(false);
-    }
-    document.addEventListener("pointerdown", dismiss);
-    return () => document.removeEventListener("pointerdown", dismiss);
-  }, []);
 
   const [siteName, setSiteName] =
     useState("Crafteris");
@@ -87,7 +74,6 @@ export default function Header() {
 
   function closeMenu() {
     setMenuOpen(false);
-    setExploreOpen(false);
   }
 
   return (
@@ -111,23 +97,7 @@ export default function Header() {
               : ""
           }`}
         >
-          <div className={styles.exploreDropdown} ref={exploreRef}
-            onKeyDown={(event) => { if (event.key === "Escape") { setExploreOpen(false); exploreButton.current?.focus(); } }}
-            onBlur={(event) => { if (!event.currentTarget.contains(event.relatedTarget as Node | null)) setExploreOpen(false); }}>
-            <button type="button" className={styles.exploreToggle} ref={exploreButton}
-              aria-expanded={exploreOpen} aria-controls="explore-links"
-              onClick={() => setExploreOpen(current => !current)}>
-              Explore <span aria-hidden="true">{exploreOpen ? "▴" : "▾"}</span>
-            </button>
-            <div id="explore-links" className={styles.exploreLinks} hidden={!exploreOpen}>
-              <Link href="/explore" onClick={closeMenu}>Explore the studio</Link>
-              <Link href="/paint-your-own-pottery" onClick={closeMenu}>Paint Your Own Pottery</Link>
-              <Link href="/glass" onClick={closeMenu}>Glass</Link>
-              <Link href="/pottery" onClick={closeMenu}>Pottery</Link>
-              <Link href="/mosaic" onClick={closeMenu}>Mosaic</Link>
-              <Link href="/team-building" onClick={closeMenu}>Team Building &amp; Groups</Link>
-            </div>
-          </div>
+          <Link href="/explore" onClick={closeMenu}>Explore</Link>
 
           <Link
             href="/workshops"
