@@ -1,4 +1,5 @@
 "use client";
+import { studioMapUrl } from "@/lib/studio-contact";
 
 import {
   useState,
@@ -576,6 +577,7 @@ export default function FAQsClient({
                                   {item.text ||
                                     ""}
                                 </p>
+                                {item.title === "Where is Crafteris located?" && <p><a href={studioMapUrl} target="_blank" rel="noopener noreferrer" style={{textDecoration:"underline",fontWeight:600}}>Get directions on Google Maps →</a></p>}
                               </div>
                             </div>
                           </div>
