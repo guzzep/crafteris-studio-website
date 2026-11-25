@@ -5,4 +5,4 @@ export const studioContact = {
   phone: "+356 7798 1366",
   phoneHref: "tel:+35677981366",
 } as const;
-export const studioMapUrl = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(studioContact.address);
+export const studioMapUrl = "https://www.google.com/maps/search/?api=1&query=35.893429%2C14.470350";
