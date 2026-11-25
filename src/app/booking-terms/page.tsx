@@ -374,7 +374,7 @@ export default function Page() {
               <br />
               Joseph Schembri
               <br />
-              314, Fleur-de-Lis Road
+              314, Fleur de Lys Road
               <br />
               Birkirkara, BKR 9067
               <br />
