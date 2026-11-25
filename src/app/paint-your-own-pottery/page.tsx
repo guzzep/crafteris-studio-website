@@ -12,6 +12,8 @@ const steps = [
   ["04", "Collect", "Your pottery is usually ready within 1–2 weeks. We’ll let you know when it’s ready to collect."],
 ];
 const questions = [
+  ["How much is the booking deposit?", "€10 per participant, credited against the final purchase. For example, a €28 piece leaves €18 to pay after the deposit."],
+  ["Do membership discounts or loyalty rewards apply?", "No. PYOP is a separate experience. Blank bisque purchased as retail is eligible for standard member benefits."],
   ["How does the minimum spend work?", "Pieces start from €5, with a minimum spend of €22 per person painting. Choose one piece or several: each painter’s selection must total at least €22. The minimum applies individually and cannot be shared between painters."],
   ["What is included?", "Your chosen pottery, colours, decorating tools, glazing and firing are included in the price. Your painting session lasts two hours."],
   ["Do I need experience?", "No pottery or painting experience is needed. Start with a simple pattern, experiment with colour or ask us for guidance."],
@@ -27,7 +29,7 @@ export default async function PaintYourOwnPottery() {
     <section className={styles.hero}>
       <div className={styles.heroContent}><p className={styles.eyebrow}>Paint Your Own Pottery · Birkirkara, Malta</p><h1>Pick a piece.<br />Make it yours.</h1>
         <p className={styles.lead}>Enjoy two creative hours with friends, family or just yourself. Choose from <strong>200+ ready-to-paint designs</strong>, pick your colours and make something uniquely yours. No experience needed.</p>
-        <div className={styles.priceNote}><strong>€22 minimum spend per painter</strong><span>Pieces from €5. Your pottery, colours, tools, glazing and firing are included.</span></div>
+        <div className={styles.priceNote}><strong>€22 minimum spend per painter</strong><span>Pieces from €5. Your pottery, colours, tools, glazing and firing are included.</span><span>€10 booking deposit per participant, deducted from your final bill.</span></div>
         <div className={styles.actions}><Link href="/contact?subject=Pottery%20painting%20booking" className={styles.primary}>Enquire about a session</Link><Link href="#how-it-works">How it works ↓</Link></div>
       </div><img className={styles.heroImage} src={data?.image_url || "/pick-a-piece/paint-pottery.png"} alt="Decorating pottery with a personal painted design" />
     </section>
