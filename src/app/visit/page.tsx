@@ -1,3 +1,4 @@
+import { studioContact, studioMapUrl } from "@/lib/studio-contact";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
@@ -250,12 +251,8 @@ export default async function VisitPage() {
   const cmsAddress =
     planVisit?.content?.items?.[0];
 
-  const studioAddress =
-    settings?.address?.trim() ||
-    cmsAddress?.text ||
-    "Triq L-Ewwel Ta Mejju, Birkirkara, Malta";
-
-  const directionsUrl = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent("GlassXpressions " + studioAddress);
+  const studioAddress = studioContact.address;
+  const directionsUrl = studioMapUrl;
 
   const openingHoursNote =
     "Planned opening hours from 1 January 2027. Check with us before making a special journey.";
@@ -322,7 +319,7 @@ export default async function VisitPage() {
         <section className={styles.visitEssentials} aria-label="Visit essentials" style={{order: getSectionOrder("hero") + 1}}>
           <div><h2>Plan your visit</h2><p>{studioAddress}</p><a href={directionsUrl} target="_blank" rel="noopener noreferrer">Open map & directions →</a></div>
           <div><h3>Before you set off</h3><p>Check opening hours for your intended visit. PYOP walk-ins are welcome subject to availability; book ahead to secure a place.</p><Link href="/paint-your-own-pottery">Plan pottery painting →</Link></div>
-          <div><h3>Need a little help?</h3><p>Ask about parking, step-free access or any other requirements before travelling so we can help you plan.</p><Link href="/contact">Contact the studio →</Link>{settings?.phone && <p><a href={"tel:" + settings.phone.replace(/[^+0-9]/g, "")}>{settings.phone}</a></p>}</div>
+          <div><h3>Need a little help?</h3><p>Ask about parking, step-free access or any other requirements before travelling so we can help you plan.</p><Link href="/contact">Contact the studio →</Link><p><a href={studioContact.phoneHref}>{studioContact.phone}</a></p></div>
         </section>
         {/* HERO */}
 
@@ -510,9 +507,7 @@ export default async function VisitPage() {
                   </p>
 
                   <h3>
-                    {cmsAddress?.title ||
-                      settings?.site_name ||
-                      "Crafteris Studio"}
+                    {studioContact.name}
                   </h3>
 
                   <p>
