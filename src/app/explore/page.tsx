@@ -1,12 +1,10 @@
+import { pageSeo } from "@/lib/seo";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import styles from "./explore.module.css";
 
-export const metadata = {
-  title: "Explore Glass, Pottery & Mosaic | Crafteris Studio",
-  description: "Discover pottery painting, fused and stained glass, hand building, wheel throwing and mosaic at Crafteris Studio in Birkirkara, Malta.",
-};
+export const metadata = pageSeo("/explore", "Explore Pottery, Glass & Mosaic in Malta", "Discover pottery painting, glass fusing, stained glass, handbuilding, wheel throwing and mosaic at Crafteris Studio.", "/cards/paint-your-own-pottery.png");
 
 const crafts = [
   { title: "Paint Your Own Pottery", meta: "Relax, paint & enjoy", text: "Choose a ready-to-paint piece, decorate it your way and leave the glazing and firing to us. No experience needed.", image: "/pick-a-piece/paint-pottery.png", href: "/paint-your-own-pottery", label: "Explore pottery painting" },

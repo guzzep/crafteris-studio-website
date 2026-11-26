@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { pageSeo } from "@/lib/seo";
 import type { ReactNode } from "react";
-export const metadata: Metadata = { alternates: { canonical: "/visit" }, title: "Visit Our Creative Studio in Birkirkara, Malta", description: "Plan your visit to Crafteris Studio in Birkirkara, Malta. Find directions, studio information and contact details." };
-export default function Layout({ children }: { children: ReactNode }) { return children; }
+export const metadata = pageSeo("/visit", "Visit Our Creative Studio in Birkirkara, Malta", "Find Crafteris Studio in Birkirkara, Malta. Plan your visit, get directions and contact the studio.", "/visit/visit-hero.png");
+export default function Layout({children}: {children: ReactNode}) { return children; }

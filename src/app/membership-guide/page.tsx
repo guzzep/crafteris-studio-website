@@ -1,9 +1,10 @@
+import { pageSeo } from "@/lib/seo";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import { studioContact } from "@/lib/studio-contact";
 import styles from "../support.module.css";
-export const metadata={title:"Membership Guide | Crafteris Studio"};
+export const metadata = pageSeo("/membership-guide", "Studio Membership Guide", "Learn how studio access, making and membership work at Crafteris Studio.", "/membership-page/membership-hero.png");
 const sections=[
   [
     "One studio. Many ways to create.",

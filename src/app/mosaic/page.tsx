@@ -1,8 +1,9 @@
+import { pageSeo } from "@/lib/seo";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import styles from "./mosaic.module.css";
-export const metadata = { title: "Mosaic Workshops, Materials & Supplies | Crafteris", description: "Explore 180 mosaic shapes and colours, bases and creative project ideas at Crafteris, home to GlassXpressions. Mosaic pieces from €4 per 100g." };
+export const metadata = pageSeo("/mosaic", "Mosaic Workshops & Supplies in Malta", "Discover mosaic workshops, colourful glass pieces, bases and creative project ideas at Crafteris Studio in Birkirkara.", "/mosaic/mosaic-worktable.webp");
 export default function Page() { return <><Header /><main className={styles.main}>
 <section className={styles.hero}><div><p className={styles.eyebrow}>A little piece. Endless possibilities.</p><h1>Make it mosaic.</h1><p>Discover the joy of creating with colour, shape and pattern. Try a guided mosaic workshop, work on your own design in the studio or choose materials for a project at home.</p><div className={styles.actions}><Link href="/workshops?category=mosaic">View mosaic workshops</Link><Link href="/shop?category=mosaic">Explore the shop</Link><Link href="/membership">Explore studio membership</Link></div></div><figure><img src="/mosaic/mosaic-worktable.webp" alt="Mosaic fish project surrounded by colourful pieces, shaped bases and tools" /></figure></section>
 <section className={styles.section} aria-labelledby="ways-heading"><p className={styles.eyebrow}>Find your way to create</p><h2 id="ways-heading">Three ways to enjoy mosaic.</h2><div className={styles.waysGrid}>

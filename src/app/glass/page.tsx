@@ -1,9 +1,10 @@
+import { pageSeo } from "@/lib/seo";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import styles from "./glass.module.css";
 
-export const metadata = { title: "Fused & Stained Glass | Crafteris · Home of GlassXpressions", description: "Discover fused and stained glass in Birkirkara, Malta. Workshops, courses and independent studio making, with clear glass and firing prices." };
+export const metadata = pageSeo("/glass", "Fused & Stained Glass Workshops in Malta", "Explore fused glass, Tiffany stained glass, courses and independent making at Crafteris Studio, home to GlassXpressions.", "/materials/glass.png");
 const routes = [
   ["Workshops", "Try glass making in a guided creative session. Each listing explains the project, price and what is included.", "/workshops?category=glass"],
   ["Courses", "Develop your skills through structured learning, from handling glass to completing your own designs.", "/programmes"],

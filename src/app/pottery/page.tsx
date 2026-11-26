@@ -1,8 +1,9 @@
+import { pageSeo } from "@/lib/seo";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import styles from "./pottery.module.css";
-export const metadata = { title: "Pottery · Hand Building & Wheel Throwing | Crafteris", description: "Explore pottery at Crafteris in Birkirkara, Malta. Hand building, wheel throwing and Home Maker Membership, with regular Maker pottery processing at €18/kg and Home Maker processing at €16/kg. Studio access separate." };
+export const metadata = pageSeo("/pottery", "Pottery Classes & Wheel Throwing in Malta", "Explore handbuilding, wheel throwing and pottery studio access at Crafteris in Birkirkara, Malta.", "/materials/pottery.png");
 const ways = [
   ["Workshops", "Try working with clay in a guided creative session. See each listing for its project, price and inclusions.", "/workshops"],
   ["Courses", "Develop your skills through structured practice, from shaping clay to finishing your own pieces.", "/programmes"],

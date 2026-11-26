@@ -1,3 +1,4 @@
+import { pageSeo } from "@/lib/seo";
 import type { Metadata } from "next";
 import { workshopCatalogue } from "@/lib/workshop-catalogue";
 import CatalogueWorkshopDetail from "@/components/CatalogueWorkshopDetail";
@@ -200,27 +201,12 @@ async function getWorkshop(slug: string) {
   };
 }
 
-export async function generateMetadata({
-  params,
-}: PageProps): Promise<Metadata> {
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-
   const result = await getWorkshop(slug);
-
-  if (!result) {
-    const imported = workshopCatalogue.find(item => item.slug === slug);
-    return { title: imported ? `${imported.title} | Crafteris` : "Workshop | Crafteris", description: imported?.short_description || undefined };
-  }
-
-  const { workshop } = result;
-
-  return {
-    title: `${workshop.title} | Crafteris`,
-    description:
-      workshop.short_description ||
-      workshop.description ||
-      `Discover ${workshop.title} at Crafteris.`,
-  };
+  const item = result?.workshop ?? workshopCatalogue.find(item => item.slug === slug);
+  if (!item) return { title: "Workshop not found", robots: { index: false, follow: false } };
+  return pageSeo("/workshops/" + encodeURIComponent(slug), item.title, (item.short_description || item.description || "Discover this creative workshop at Crafteris Studio in Malta.").slice(0, 160), item.image_url || "/workshops/workshops-hero.png");
 }
 
 export default async function WorkshopPage({

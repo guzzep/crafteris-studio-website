@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
@@ -12,4 +13,5 @@ const data: Record<string,{name:string;category:string;price:string;description:
  "ceramic-vase":{name:"Studio Ceramic Vase",category:"Pottery",price:"€38",description:"A handmade ceramic vase created as a one-of-a-kind studio piece."},
  "glass-decoration":{name:"Glass Hanging Decoration",category:"Glass",price:"€22",description:"A decorative hanging glass piece for adding colour and light to a space."},
 };
+export const metadata: Metadata = { robots: { index: false, follow: false }, alternates: { canonical: "/shop" } };
 export default async function ProductPage({params}:{params:Promise<{slug:string}>}){const {slug}=await params;const item=data[slug];if(!item)notFound();return <><Header/><main className={styles.page}><section className={styles.hero}><div className={styles.heroInner}><p className={styles.eyebrow}>{item.category}</p><h1>{item.name}</h1><p>{item.description}</p></div></section><div className={styles.content}><section className={styles.card}><h2>{item.price}</h2><p>Shop inventory and checkout are not connected yet. Product availability will later come from the same source of truth used by the Crafteris shop and POS.</p><div className={styles.actions}><Link href="/contact" className={styles.primary}>Ask about this piece</Link><Link href="/shop" className={styles.secondary}>Back to shop</Link></div></section></div></main><Footer/></>}

@@ -1,3 +1,4 @@
+import { pageSeo } from "@/lib/seo";
 import type { Metadata } from "next";
 
 import Link from "next/link";
@@ -167,29 +168,12 @@ async function getProgramme(slug: string) {
   };
 }
 
-export async function generateMetadata({
-  params,
-}: PageProps): Promise<Metadata> {
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-
-  const result =
-    await getProgramme(slug);
-
-  if (!result) {
-    return {
-      title: "Programme | Crafteris",
-    };
-  }
-
-  return {
-    title: `${result.programme.title} | Crafteris`,
-
-    description:
-      result.programme
-        .short_description ||
-      result.programme.description ||
-      `Discover ${result.programme.title} at Crafteris Studio.`,
-  };
+  const result = await getProgramme(slug);
+  if (!result) return { title: "Course not found", robots: { index: false, follow: false } };
+  const item = result.programme;
+  return pageSeo("/programmes/" + encodeURIComponent(slug), item.title, (item.short_description || item.description || "Discover this creative course at Crafteris Studio in Malta.").slice(0, 160), item.image_url || "/programmes/programmes-hero.png");
 }
 
 export default async function ProgrammePage({

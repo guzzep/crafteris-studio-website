@@ -1,9 +1,10 @@
+import { pageSeo } from "@/lib/seo";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import styles from "../support.module.css";
-export const metadata={title:"Shop | Crafteris Studio"};
+export const metadata = pageSeo("/shop", "Pottery, Glass & Craft Supplies in Malta", "Explore glass, clay, glazes, mosaic materials and blank ceramic bisque from Crafteris Studio.", "/shop/shop-hero.png");
 const categories = {glass:"Glass & supplies",pottery:"Clay, glazes & pottery tools",mosaic:"Mosaic materials",bisque:"Blank ceramic bisque"} as const;
 export default async function ShopPage({searchParams}:{searchParams:Promise<{category?:string;product?:string}>}){
  const params=await searchParams;
