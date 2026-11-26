@@ -13,11 +13,16 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: {
-    default: "Crafteris | Creative Studio Malta",
-    template: "%s | Crafteris",
+  metadataBase: new URL("https://crafteris.studio"),
+  title: { default: "Crafteris Studio | Pottery, Glass & Creative Workshops Malta", template: "%s | Crafteris" },
+  description: "Discover pottery painting, pottery classes, fused and stained glass, mosaic, creative workshops and studio memberships in Birkirkara, Malta.",
+  robots: { index: process.env.CRAFTERIS_INDEXABLE === "true", follow: process.env.CRAFTERIS_INDEXABLE === "true" },
+  openGraph: {
+    type: "website", siteName: "Crafteris Studio", locale: "en_MT",
+    title: "Crafteris Studio | Pottery, Glass & Creative Workshops Malta", description: "Discover pottery painting, pottery classes, fused and stained glass, mosaic, creative workshops and studio memberships in Birkirkara, Malta.",
+    images: [{ url: "/cards/workshops.png", alt: "Creative workshops at Crafteris Studio" }],
   },
-  description: "Pottery, glass, workshops, courses and creative studio experiences in Malta.",
+  twitter: { card: "summary_large_image", title: "Crafteris Studio | Pottery, Glass & Creative Workshops Malta", description: "Discover pottery painting, pottery classes, fused and stained glass, mosaic, creative workshops and studio memberships in Birkirkara, Malta.", images: ["/cards/workshops.png"] },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

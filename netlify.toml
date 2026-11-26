@@ -1,0 +1,7 @@
+# Indexing is opt-in for the production deployment only.
+[context.production.environment]
+  CRAFTERIS_INDEXABLE = "true"
+[context.branch-deploy.environment]
+  CRAFTERIS_INDEXABLE = "false"
+[context.deploy-preview.environment]
+  CRAFTERIS_INDEXABLE = "false"
