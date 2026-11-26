@@ -10,15 +10,32 @@ import Link from "next/link";
 import styles from "./CookieBanner.module.css";
 
 const CONSENT_KEY =
-  "crafteris_cookie_consent_v1";
+  "crafteris_cookie_consent_v2";
 
 const OPEN_SETTINGS_EVENT =
   "crafteris-open-cookie-settings";
 
 type CookieConsent = {
+  version: 2;
   analytics: boolean;
   savedAt: string;
 };
+
+function readConsent(): CookieConsent | null {
+  try {
+    const raw = window.localStorage.getItem(CONSENT_KEY);
+    if (!raw) return null;
+    const value = JSON.parse(raw) as CookieConsent;
+    const saved = new Date(value.savedAt);
+    const expiry = new Date(saved);
+    expiry.setMonth(expiry.getMonth() + 6);
+    if (value.version !== 2 || typeof value.analytics !== "boolean" || !Number.isFinite(saved.getTime()) || saved.getTime() > Date.now() || expiry.getTime() <= Date.now()) {
+      window.localStorage.removeItem(CONSENT_KEY);
+      return null;
+    }
+    return value;
+  } catch { return null; }
+}
 
 export function openCookieSettings() {
   if (typeof window === "undefined") {
@@ -52,25 +69,7 @@ export default function CookieBanner() {
   ] = useState(false);
 
   useEffect(() => {
-    let storedConsent:
-      | CookieConsent
-      | null = null;
-
-    try {
-      const stored =
-        window.localStorage.getItem(
-          CONSENT_KEY
-        );
-
-      if (stored) {
-        storedConsent =
-          JSON.parse(
-            stored
-          ) as CookieConsent;
-      }
-    } catch {
-      storedConsent = null;
-    }
+    const storedConsent = readConsent();
 
     if (storedConsent) {
       setAnalyticsEnabled(
@@ -87,29 +86,7 @@ export default function CookieBanner() {
     setReady(true);
 
     function handleOpenSettings() {
-      try {
-        const stored =
-          window.localStorage.getItem(
-            CONSENT_KEY
-          );
-
-        if (stored) {
-          const parsed =
-            JSON.parse(
-              stored
-            ) as CookieConsent;
-
-          setAnalyticsEnabled(
-            Boolean(
-              parsed.analytics
-            )
-          );
-        }
-      } catch {
-        // Keep current preference if
-        // localStorage cannot be read.
-      }
-
+      setAnalyticsEnabled(readConsent()?.analytics ?? false);
       setSettingsOpen(true);
     }
 
@@ -131,6 +108,7 @@ export default function CookieBanner() {
   ) {
     const consent: CookieConsent =
       {
+        version: 2,
         analytics,
         savedAt:
           new Date().toISOString(),
@@ -206,11 +184,7 @@ export default function CookieBanner() {
               We use essential
               cookies so you can use
               the Crafteris website
-              securely. With your
-              permission, we also use
-              analytics cookies to
-              understand how visitors
-              use the site.{" "}
+              securely. Optional analytics are not currently configured. You can manage your preferences below.{" "}
 
               <Link href="/cookies">
                 Cookie Policy
@@ -362,11 +336,7 @@ export default function CookieBanner() {
                   </strong>
 
                   <p>
-                    Help us understand
-                    how visitors use
-                    the website. Only
-                    loaded if you allow
-                    them.
+                    Optional analytics are not currently configured. If introduced, they will require a new consent choice.
                   </p>
                 </div>
 
@@ -378,6 +348,7 @@ export default function CookieBanner() {
                       : ""
                   }`}
                   role="switch"
+                  aria-label="Allow optional analytics cookies"
                   aria-checked={
                     analyticsEnabled
                   }

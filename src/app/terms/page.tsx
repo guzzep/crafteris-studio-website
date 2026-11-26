@@ -40,8 +40,7 @@ export default function Page() {
             </p>
 
             <p>
-              A booking is confirmed once payment or
-              booking confirmation has been received.
+              A booking is confirmed once the required details and payment, where applicable, have been accepted and confirmation has been issued.
             </p>
           </section>
 
@@ -68,9 +67,7 @@ export default function Page() {
             </p>
 
             <p>
-              Late cancellations may not be refundable,
-              especially where materials, studio time
-              or staff have already been reserved.
+              The specific cancellation conditions for your service apply. See our <Link href="/booking-terms">Workshop Booking Terms</Link>, <Link href="/membership-terms">Membership Terms</Link> and <Link href="/cancellation-refunds">Cancellation &amp; Refunds policy</Link>. Mandatory consumer rights take precedence.
             </p>
           </section>
 
@@ -168,7 +165,7 @@ export default function Page() {
             <p>
               Prices, workshop details, membership
               options and availability may change
-              without prior notice.
+              for future bookings. Confirmed bookings and existing memberships are governed by their accepted terms and applicable law.
             </p>
 
             <p>
@@ -188,13 +185,14 @@ export default function Page() {
             </p>
 
             <p>
-              Customers participate in practical
-              creative activities at their own risk
-              and must follow all instructions provided
-              by studio staff.
+              Practical creative activities have inherent risks. Participants must follow staff instructions. Crafteris remains responsible for exercising reasonable care and skill. Nothing in these terms excludes liability or remedies that cannot lawfully be excluded.
             </p>
           </section>
 
+          <section className={styles.card}>
+            <h2>Consumer rights and complaints</h2>
+            <p>Where a statutory withdrawal right applies, it is separate from our standard cancellation policy. Specific-date leisure services may be exempt. Contact us for assistance or consult the <a href="https://services.mccaa.org.mt/home/complaint">Malta Competition and Consumer Affairs Authority</a>. Mandatory consumer rights remain unaffected.</p>
+          </section>
           <section className={styles.card}>
             <h2>Questions?</h2>
 

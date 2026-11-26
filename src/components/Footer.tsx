@@ -22,7 +22,7 @@ import {
 
 import { Facebook, Instagram } from "./SocialIcons";
 
-import CookieBanner from "./CookieBanner";
+import CookieBanner, { openCookieSettings } from "./CookieBanner";
 
 import styles from "./Footer.module.css";
 
@@ -384,6 +384,8 @@ export default function Footer() {
             <Link href="/cookies">
               Cookie Policy
             </Link>
+            <span>|</span>
+            <button type="button" className={styles.cookieSettings} onClick={openCookieSettings}>Cookie Settings</button>
 
             <span>|</span>
 

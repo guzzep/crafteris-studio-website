@@ -51,6 +51,8 @@ export default function Page() {
           <section className={styles.card}>
             <h2>2. Information we collect</h2>
 
+            <h3>Website enquiries and visits</h3>
+            <p>When you contact us, we use your name, email address, optional phone number, enquiry category and message to respond. Required fields are needed to process your enquiry; without them we may be unable to reply. Hosting and security services may process technical request details such as IP addresses and browser information. If another person books on your behalf, we may receive necessary participant details from that person.</p>
             <h3>When you make a booking</h3>
 
             <p>We may collect:</p>
@@ -278,6 +280,7 @@ export default function Page() {
             </p>
 
             <h3>Legitimate interests</h3>
+            <p>Our interests include responding to general enquiries, securing systems, preventing fraud, maintaining appropriate records and resolving disputes.</p>
 
             <p>
               We may process information where this is
@@ -378,12 +381,8 @@ export default function Page() {
             <p>These may include providers of:</p>
 
             <ul>
-              <li>
-                Website and application hosting
-              </li>
-              <li>
-                Database and IT infrastructure
-              </li>
+              <li>Website hosting (Netlify)</li>
+              <li>Database, authentication and storage (Supabase)</li>
               <li>
                 Payment processing, including Stripe
               </li>
@@ -418,7 +417,7 @@ export default function Page() {
               Where data-protection law requires
               additional safeguards for such transfers,
               we will rely on an appropriate lawful
-              transfer mechanism.
+              transfer mechanism, such as an applicable adequacy decision or standard contractual clauses. Contact us for information about the safeguards used and how to obtain a copy.
             </p>
           </section>
 
@@ -434,6 +433,9 @@ export default function Page() {
               for any applicable legal requirements.
             </p>
 
+            <p>
+              Enquiry records are retained for as long as needed to respond and resolve related matters; booking, membership and payment records are retained according to contractual, dispute-resolution, accounting and statutory requirements. Marketing preferences are retained while relevant, including records needed to honour opt-outs.
+            </p>
             <p>
               When personal information is no longer
               required, it will be deleted, anonymised
@@ -509,6 +511,7 @@ export default function Page() {
               or ask a question about this Privacy
               Policy, contact:
             </p>
+            <p>We normally respond to rights requests within one month. Where permitted by law, complex requests may take longer; we will tell you within the first month if an extension is needed.</p>
 
             <p>
               <strong>Joseph Schembri</strong>
@@ -546,7 +549,7 @@ export default function Page() {
               complaint with Malta&apos;s supervisory
               authority, the Office of the Information
               and Data Protection Commissioner (IDPC),
-              Malta.
+              Malta. You may contact the <a href="https://idpc.org.mt/file-a-complaint/">IDPC directly</a> without first contacting us.
             </p>
           </section>
 
@@ -568,7 +571,7 @@ export default function Page() {
             </p>
 
             <p className={styles.notice}>
-              Effective date: 6 September 2026
+              Last updated: 26 November 2026
             </p>
           </section>
         </div>

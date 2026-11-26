@@ -74,9 +74,7 @@ export default function Page() {
             </p>
 
             <p>
-              Crafteris Studio plans to use Google
-              Analytics to understand how visitors use
-              the website and booking experience.
+              Google Analytics is not currently configured in the website code. If optional analytics are introduced, this policy will be updated and a new consent choice requested before activation.
             </p>
 
             <p>
@@ -105,8 +103,7 @@ export default function Page() {
             </p>
 
             <p>
-              Google Analytics is not loaded until
-              analytics consent has been given.
+              Optional analytics will not be activated without valid consent.
             </p>
           </section>
 
@@ -174,9 +171,7 @@ export default function Page() {
 
             <p>
               You can change or withdraw your cookie
-              preferences through the Cookie Preferences
-              controls made available on the Crafteris
-              Studio website.
+              preferences using the Cookie Settings button in the footer of the website.
             </p>
 
             <p>
@@ -213,13 +208,11 @@ export default function Page() {
             <h2>10. Live cookie table</h2>
 
             <p>
-              The live cookie configuration should be
-              verified after implementation and updated
-              whenever the website&apos;s cookie
-              configuration changes materially.
+              The website uses browser storage to remember cookie preferences. Authentication and payment services may use necessary technologies when those services are accessed.
             </p>
 
             <h3>Necessary technologies</h3>
+            <p>crafteris_cookie_consent_v2 — local storage; remembers the preference, policy version and date of choice. The preference expires after six months.</p>
 
             <p>
               Provider: Crafteris Studio / hosting /
@@ -281,7 +274,7 @@ export default function Page() {
             <p>Telephone: <a href="tel:+35677981366">+356 7798 1366</a></p>
 
             <p className={styles.notice}>
-              Effective date: 6 September 2026
+              Last updated: 26 November 2026
             </p>
           </section>
         </div>

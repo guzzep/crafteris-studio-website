@@ -88,10 +88,9 @@
 }
 
 .acceptButton {
-  border: 1px solid #0b438d;
-
-  background: #0b438d;
-  color: #ffffff;
+  border: 1px solid #bfd0ea;
+  background: #eef4fd;
+  color: #0b3975;
 }
 
 .acceptButton:hover {

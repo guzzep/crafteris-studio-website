@@ -1732,9 +1732,8 @@ export default function ContactPage() {
 
                 </div>
 
-                <button
-
-                  type="submit"
+                <p>We use your details to respond to your enquiry. Please read our <Link href="/privacy">Privacy Policy</Link>. Avoid including unnecessary sensitive information.</p>
+                <button type="submit"
 
                   className={
 
