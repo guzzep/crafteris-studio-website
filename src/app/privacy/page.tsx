@@ -387,7 +387,7 @@ export default function Page() {
                 Payment processing, including Stripe
               </li>
               <li>
-                Email and customer communications
+                Email and customer communications, including Resend for enquiry notifications
               </li>
               <li>
                 Security and fraud prevention

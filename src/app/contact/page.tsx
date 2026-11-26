@@ -690,39 +690,20 @@ export default function ContactPage() {
 
     setSending(true);
 
-    const {
-      error: insertError,
-    } = await supabase
-      .from(
-        "contact_enquiries"
-      )
-      .insert({
-        names,
-        email,
-        phone:
-          phone || null,
-        reason:
-          form.reason.trim() ||
-          "General enquiry",
-        group_size:
-          groupSize,
-        message,
-        is_read: false,
+    try {
+      const response = await fetch("/api/studio-enquiry", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ names, email, phone, reason: form.reason, group_size: groupSize, message, website: form.website }),
       });
-
-    if (insertError) {
-      console.error(
-        "Contact enquiry error:",
-        insertError.message,
-        insertError.code,
-        insertError.details,
-        insertError.hint
-      );
-
-      setError(
-        "We couldn't send your message. Please try again."
-      );
-
+      if (!response.ok) {
+        const result = await response.json().catch(() => ({}));
+        setError(result.error || "We couldn't send your message. Please try again.");
+        setSending(false);
+        return;
+      }
+    } catch {
+      setError("We couldn't confirm your message was received. Please contact the studio if you need help.");
       setSending(false);
       return;
     }
