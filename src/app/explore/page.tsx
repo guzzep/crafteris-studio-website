@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { pageSeo } from "@/lib/seo";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -34,7 +35,7 @@ export default function ExplorePage() {
         <div className={styles.optionContent}><p className={styles.bestFor}>{craft.meta}</p><h3>{craft.title}</h3><p className={styles.optionDescription}>{craft.text}</p><Link href={craft.href} className={styles.optionLink}>{craft.label}<span aria-hidden="true">→</span></Link></div>
       </article>)}</div>
     </section>
-    <section className={styles.groupFeature}><img src="/team-building/team-building.jpg" alt="A group creating together" loading="lazy" /><div><p className={styles.eyebrow}>Better together</p><h2>Team building &amp; private groups</h2><p>Bring colleagues, friends, families or schools together for a creative experience. We can help you choose a project for your occasion.</p><Link className={styles.optionLink} href="/team-building">Explore group experiences <span aria-hidden="true">→</span></Link></div></section>
+    <section className={styles.groupFeature}><Image width={1200} height={800} sizes="(max-width: 700px) 100vw, 600px" src="/team-building/team-building.jpg" alt="A group creating together" /><div><p className={styles.eyebrow}>Better together</p><h2>Team building &amp; private groups</h2><p>Bring colleagues, friends, families or schools together for a creative experience. We can help you choose a project for your occasion.</p><Link className={styles.optionLink} href="/team-building">Explore group experiences <span aria-hidden="true">→</span></Link></div></section>
     <section className={styles.waysSection} aria-labelledby="ways-heading"><div className={styles.sectionHeading}><p className={styles.eyebrow}>Your next creative step</p><h2 id="ways-heading">Make it your way.</h2></div><div className={styles.waysGrid}>{ways.map(way => <Link key={way.href} href={way.href}><h3>{way.title} <span aria-hidden="true">↗</span></h3><p>{way.text}</p></Link>)}</div></section>
     <section className={styles.finalCta}><div><p className={styles.eyebrow}>Ready to create?</p><h2>Find your next experience.</h2><p>See upcoming sessions or get in touch to plan your visit.</p><div className={styles.finalActions}><Link className={styles.primaryButton} href="/whats-on">See what&apos;s on</Link><Link className={styles.secondaryButton} href="/visit">Visit the studio →</Link></div></div></section>
   </main><Footer /></>;
