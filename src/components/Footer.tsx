@@ -260,11 +260,11 @@ export default function Footer() {
             </Link>
 
             <Link href="/team-building">
-              Team Building
+              Groups &amp; Events
             </Link>
 
             <Link href="/visit">
-              Visit &amp; Contact
+              Visit
             </Link>
           </div>
 
@@ -285,7 +285,7 @@ export default function Footer() {
               Gallery
             </Link>
 
-            <Link href="/gift-vouchers">
+            <Link href="/shop?category=gift-vouchers">
               Gift Vouchers
             </Link>
 

@@ -278,3 +278,5 @@
 }
 .cookieSettings { background: none; border: 0; padding: 0; color: inherit; font: inherit; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
 .cookieSettings:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+
+@media (max-width:650px) { .footer { padding:32px 20px 20px; } .footerInner { grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px 16px; } .footerBrand { grid-column:1 / -1; } .footerBrand h2 { font-size:24px; } .footerColumn { gap:10px; } .footerBottom { margin-top:28px; } .footerLegal { gap:10px; } }

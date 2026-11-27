@@ -85,7 +85,7 @@ export default function Header() {
           onClick={closeMenu}
         >
           <span>{siteName}</span>
-          <span className={styles.brandTagline}>Home of GlassXpressions</span>
+          <span className={styles.brandTagline}>Home to GlassXpressions</span>
         </Link>
 
         <nav
@@ -120,6 +120,8 @@ export default function Header() {
             Membership
           </Link>
 
+          <Link href="/team-building" onClick={closeMenu}>Groups &amp; Events</Link>
+
           <Link
             href="/shop"
             onClick={closeMenu}
@@ -131,8 +133,10 @@ export default function Header() {
             href="/visit"
             onClick={closeMenu}
           >
-            Visit &amp; Contact
+            Visit
           </Link>
+          <Link href="/contact" onClick={closeMenu}>Contact</Link>
+          <Link href="/faqs" className={styles.mobileOnly} onClick={closeMenu}>FAQs</Link>
         </nav>
 
         <div className={styles.headerActions}>

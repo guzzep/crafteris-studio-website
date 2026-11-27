@@ -182,3 +182,8 @@
 }
 
 .memberLogin{white-space:nowrap;font-weight:600;text-decoration:none;color:var(--mainText);border:1px solid #b7924a80;border-radius:5px;padding:10px 13px}.memberLogin:hover{background:#b7924a12}.memberLogin:focus-visible{outline:3px solid var(--accent);outline-offset:3px}@media(min-width:1201px){.nav{gap:17px}.logo{font-size:32px}.headerActions{gap:8px}}@media(min-width:1201px) and (max-width:1450px){.headerActions .socialLinks{display:none}}@media(max-width:600px){.headerActions .socialLinks{display:none}.memberLogin{font-size:13px;padding:9px 11px}.headerActions{gap:8px}}
+
+.mobileOnly { display:none; }
+@media (max-width: 1200px) { .nav .mobileOnly { display:block; } }
+@media (min-width:1201px) { .nav { gap:12px; font-size:14px; } .headerActions .socialLinks { display:none; } }
+@media (max-width:600px) { .headerInner { gap:8px; } }
