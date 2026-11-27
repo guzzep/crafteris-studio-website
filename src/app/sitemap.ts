@@ -4,7 +4,7 @@ import { workshopCatalogue } from "@/lib/workshop-catalogue";
 export const dynamic = "force-dynamic";
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   if (process.env.CRAFTERIS_INDEXABLE !== "true") return [];
-  const paths = new Set<string>(["","about","explore","pottery","paint-your-own-pottery","glass","mosaic","workshops","programmes","membership","home-maker","team-building","creative-birthday-parties","school-art-workshops","collaborative-corporate-artwork","shop","gift-vouchers","gallery","visit","contact","faqs","whats-on","policies","privacy","terms","booking-terms","membership-terms","cancellation-refunds","cookies","accessibility","disclaimer","firing-terms","membership-guide"]);
+  const paths = new Set<string>(["","about","explore","pottery","paint-your-own-pottery","glass","mosaic","workshops","programmes","membership","home-maker","team-building","creative-birthday-parties","school-art-workshops","collaborative-corporate-artwork","shop","pottery-supplies","glass-art-supplies","mosaic-supplies","creative-hen-parties","gift-vouchers","gallery","visit","contact","faqs","whats-on","policies","privacy","terms","booking-terms","membership-terms","cancellation-refunds","cookies","accessibility","disclaimer","firing-terms","membership-guide"]);
   for (const item of workshopCatalogue) if (item.status === "published" && !item.pending && !item.seasonal) paths.add("workshops/" + encodeURIComponent(item.slug));
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
   const key = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
