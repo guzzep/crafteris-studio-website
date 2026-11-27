@@ -3,8 +3,8 @@ import { randomUUID } from "node:crypto";
 
 // Native Netlify rate limit: applies across function instances.
 export const config = {
-  path: "/api/studio-enquiry",
-  rateLimit: { windowLimit: 3, windowSize: 180, aggregateBy: ["ip", "domain"] },
+  path: "/.netlify/functions/studio-enquiry",
+  rateLimit: { action: "rate_limit", windowLimit: 3, windowSize: 180, aggregateBy: ["ip", "domain"] },
 };
 
 const inbox = "info@crafteris.com";

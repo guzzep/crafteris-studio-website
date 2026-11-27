@@ -1,3 +1,6 @@
+[functions]
+  directory = "netlify/functions"
+
 # Indexing is opt-in for the production deployment only.
 [context.production.environment]
   CRAFTERIS_INDEXABLE = "true"

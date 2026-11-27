@@ -691,13 +691,13 @@ export default function ContactPage() {
     setSending(true);
 
     try {
-      const response = await fetch("/api/studio-enquiry", {
+      const response = await fetch("/.netlify/functions/studio-enquiry", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ names, email, phone, reason: form.reason, group_size: groupSize, message, website: form.website }),
       });
-      if (!response.ok) {
-        const result = await response.json().catch(() => ({}));
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok || result.ok !== true) {
         setError(result.error || "We couldn't send your message. Please try again.");
         setSending(false);
         return;
