@@ -313,6 +313,18 @@ export default function ContactPage() {
     useState("");
 
   useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const reason = params.get("reason");
+    const subject = params.get("subject")?.trim().slice(0, 160);
+    const allowed = ["General enquiry","Booking help","Workshop","Programme","Membership","Home Maker membership","Private group","Team building","School or organisation","Gift voucher","Shop","Shop and materials","Firing and kiln hire","Supplier or press"];
+    setForm(current => ({
+      ...current,
+      reason: reason && allowed.includes(reason) ? reason : current.reason,
+      message: subject && !current.message ? "I would like to enquire about " + subject + ".\n\n" : current.message,
+    }));
+  }, []);
+
+  useEffect(() => {
 
     let active = true;
 
