@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import { createClient } from "@/lib/supabase/server";
 import styles from "./paint-your-own-pottery.module.css";
 
-export const metadata = pageSeo("/paint-your-own-pottery", "Paint Your Own Pottery in Malta", "Choose ready-to-paint ceramics in Birkirkara. Enjoy a two-hour pottery painting session with colours, glazing and firing included.", "/pick-a-piece/paint-pottery.png");
+export const metadata = pageSeo("/paint-your-own-pottery", "Pottery Painting in Malta – Paint Your Own Pottery", "Paint your own pottery in Birkirkara, Malta. Choose ready-to-paint ceramics for a two-hour creative session with colours, glazing and firing included.", "/pick-a-piece/paint-pottery.png");
 const steps = [
   ["01", "Choose", "Explore 200+ ready-to-paint designs. Pick one piece or several, with a minimum spend of €22 for each painter."],
   ["02", "Paint", "Choose your colours and decorate your pottery. Use the studio’s tools and ask us for guidance along the way."],

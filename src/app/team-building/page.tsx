@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import styles from "./team-building.module.css";
-export const metadata = pageSeo("/team-building", "Creative Team Building & Group Activities in Malta", "Explore pottery painting, glass, handbuilding and mosaic experiences for corporate teams, birthdays, schools and private groups.", "/team-building/team-building.jpg");
+export const metadata = pageSeo("/team-building", "Creative Team Building Activities in Malta", "Plan creative corporate team building, birthday parties, school activities and private group workshops in Malta with pottery painting, glass and mosaic.", "/team-building/team-building.jpg");
 const experiences = [
   { title: "Paint Your Own Pottery", image: "/workshops/pottery-painting.png", alt: "Pottery painting materials and decorated ceramics", text: "Choose from 200+ bisque designs and paint something personal. A relaxed way to chat, unwind and create together.", detail: "A colourful, sociable session", href: "/paint-your-own-pottery", link: "Explore pottery painting" },
   { title: "Fused Glass", image: "/workshops/fused-glass.png", alt: "Colourful fused glass projects", text: "Arrange colourful glass to create a decorative piece, a gift or something for your home. We guide the making and fire your pieces afterwards.", detail: "Colour, pattern and a little kiln magic", href: "/glass", link: "Explore glass" },

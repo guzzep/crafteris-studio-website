@@ -3,7 +3,7 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import styles from "./membership.module.css";
-export const metadata = pageSeo("/membership", "Creative Studio & Pottery Membership in Malta", "Join a shared creative studio for pottery, glass and mosaic in Birkirkara. Explore flexible studio access and Maker memberships.", "/membership-page/membership-hero.png");
+export const metadata = pageSeo("/membership", "Pottery & Creative Studio Memberships in Malta", "Join a shared pottery, glass and mosaic studio in Birkirkara, Malta. Explore pottery wheel access, flexible Maker plans and Home Maker memberships.", "/membership-page/membership-hero.png");
 const plans = [
   {name:"Maker Light", price:44, hours:2, rate:"5.08", upfront:220, intro:"A regular place for creativity in your week.", access:"During studio opening hours, subject to booking availability."},
   {name:"Maker Light Daytime", price:35, hours:2, rate:"4.04", upfront:175, intro:"Creative time while your weekdays are your own.", access:"Monday–Friday, sessions ending by 16:00. No evening or Saturday access."},

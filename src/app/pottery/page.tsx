@@ -3,7 +3,7 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import styles from "./pottery.module.css";
-export const metadata = pageSeo("/pottery", "Pottery Classes & Wheel Throwing in Malta", "Explore handbuilding, wheel throwing and pottery studio access at Crafteris in Birkirkara, Malta.", "/materials/pottery.png");
+export const metadata = pageSeo("/pottery", "Pottery Classes & Wheel Throwing in Malta", "Explore pottery classes, handbuilding, wheel throwing, ceramics studio access and pottery firing services at Crafteris in Birkirkara, Malta.", "/materials/pottery.png");
 const ways = [
   ["Workshops", "Try working with clay in a guided creative session. See each listing for its project, price and inclusions.", "/workshops"],
   ["Courses", "Develop your skills through structured practice, from shaping clay to finishing your own pieces.", "/programmes"],
