@@ -31,7 +31,7 @@ export default function ExplorePage() {
     <section className={styles.optionsSection} aria-labelledby="crafts-heading">
       <div className={styles.sectionHeading}><h2 id="crafts-heading">What would you like to make?</h2><p>Choose a craft to discover the experiences, materials and ways to get started.</p></div>
       <div className={styles.optionsGrid}>{crafts.map(craft => <article key={craft.href} className={styles.optionCard}>
-        <Link href={craft.href} className={styles.optionImageWrapper} aria-label={craft.label}><img src={craft.image} alt={craft.title} className={styles.optionImage} loading="lazy" /></Link>
+        <Link href={craft.href} className={styles.optionImageWrapper} aria-label={craft.label}><Image src={craft.image} alt={craft.title} className={styles.optionImage} width={800} height={600} sizes="(max-width: 700px) 100vw, 50vw" /></Link>
         <div className={styles.optionContent}><p className={styles.bestFor}>{craft.meta}</p><h3>{craft.title}</h3><p className={styles.optionDescription}>{craft.text}</p><Link href={craft.href} className={styles.optionLink}>{craft.label}<span aria-hidden="true">→</span></Link></div>
       </article>)}</div>
     </section>

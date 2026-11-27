@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -34,20 +35,20 @@ export default function Home() {
           <img className={styles.glassLogo} src="/glassxpressions-current-logo.png" alt="GlassXpressions Creative Studio" />
           <div className={styles.homeActions}><Link href="/explore">Explore the studio</Link><Link href="/whats-on">Book an experience</Link></div>
         </div>
-        <img className={styles.homeHeroPhoto} src={heroImage} alt="Colourful creative work at Crafteris" />
+        {heroImage.startsWith("/") && !heroImage.startsWith("//") ? <Image className={styles.homeHeroPhoto} src={heroImage} alt="Colourful creative work at Crafteris" width={1200} height={800} sizes="(max-width: 600px) 100vw, 55vw" priority /> : <img className={styles.homeHeroPhoto} src={heroImage} alt="Colourful creative work at Crafteris" fetchPriority="high" />}
       </section>
       <section className={styles.offerings} aria-labelledby="offerings-heading">
         <p className={styles.eyebrow}>Explore Crafteris</p>
         <h2 id="offerings-heading">Find your way to create.</h2>
         <p className={styles.sectionIntro}>Your first creative visit, your next skill or a place to keep making. Start wherever feels right.</p>
         <div className={styles.offeringGrid}>{offerings.map(item => <Link className={`${styles.offeringCard} ${item.href === "/membership" ? styles.membershipHighlight : ""}`} href={item.href} key={item.title}>
-          <img src={item.image} alt="" loading="lazy" />
+          <Image src={item.image} alt="" width={800} height={600} sizes="(max-width: 600px) 100vw, 33vw" />
           <div className={styles.offeringCopy}><h3>{item.title}<span aria-hidden="true">↗</span></h3><p>{item.text}</p><span className={styles.cardLink}>{item.label} →</span></div>
         </Link>)}</div>
       </section>
       <section id="member-app" className={styles.memberApp} aria-labelledby="member-app-heading"><div><p className={styles.eyebrow}>Included with every active membership</p><h2 id="member-app-heading">Your studio. At your fingertips.</h2><p>Make the most of your creative time with the Crafteris Member App. Manage your membership, plan your visits and keep your creative projects together in one place.</p><div className={styles.homeActions}><Link href="/member-login">Member Login</Link><Link href="/membership#member-app">Discover the Member App →</Link></div></div><div className={styles.appFeatures}>{[["Book your studio time","Reserve eligible workspaces and pottery wheels."],["Know your balance","Check studio hours, glazing hours and loyalty rewards."],["Manage your visits","View, cancel and reschedule bookings."],["Your creative journal","Keep project notes, materials, glaze combinations and photos."]].map(([title,description])=><article key={title}><h3>{title}</h3><p>{description}</p></article>)}</div></section>
       <section className={styles.groupFeature} aria-labelledby="group-heading">
-        <img src="/team-building/team-building.jpg" alt="A group enjoying a creative activity together" loading="lazy" />
+        <Image src="/team-building/team-building.jpg" alt="A group enjoying a creative activity together" width={1200} height={800} sizes="(max-width: 600px) 100vw, 50vw" />
         <div><p className={styles.eyebrow}>Better together</p><h2 id="group-heading">Make memories together.</h2><p>Plan a creative team event, birthday, school visit or private celebration. We’ll help you choose an activity that suits your group.</p><Link href="/team-building">Explore group experiences →</Link></div>
       </section>
       <section className={styles.shopFeature} aria-labelledby="shop-heading">
