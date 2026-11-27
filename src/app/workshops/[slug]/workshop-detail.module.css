@@ -603,3 +603,4 @@
     padding: 70px 22px;
   }
 }
+@media(max-width:750px){.heroContent{padding:30px 22px}.backLink{margin-bottom:18px}.heroImage,.heroPlaceholder{height:280px}.aboutSection{padding:42px 22px;gap:20px}.sectionDivider{margin-bottom:35px}.sessionsSection,.infoSection{padding-bottom:45px}.finalInner{padding:42px 22px}}

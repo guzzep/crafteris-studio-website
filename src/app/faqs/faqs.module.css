@@ -317,3 +317,4 @@
     flex-direction: column;
   }
 }
+@media(max-width:650px){.hero{padding:42px 20px 28px}.quickLinksSection{padding-bottom:30px}.faqSection{padding-bottom:40px}.faqGroup{gap:16px;padding:28px 0}.faqQuestion{padding:16px 0;gap:14px}.helpInner{padding:42px 20px}.hero h1{font-size:36px}}

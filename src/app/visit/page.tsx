@@ -248,21 +248,20 @@ export default async function VisitPage() {
       fallbackTravel
     );
 
-  const cmsAddress =
-    planVisit?.content?.items?.[0];
 
   const studioAddress = studioContact.address;
   const directionsUrl = studioMapUrl;
 
   const openingHoursNote =
-    "Planned opening hours from 1 January 2027. Check with us before making a special journey.";
+    "Provisional opening hours for our new studio. Please contact us before travelling.";
 
   const studioParagraphs =
     (
       studio?.body ||
       "Creative work can get messy. Wear comfortable clothing and something you won't mind getting a little clay, paint or studio dust on.\n\nIf your booking requires anything specific, you'll receive the details before your session."
     )
-      .split("\n\n")
+      .replace(/\\n/g, "\n")
+      .split(/\n\s*\n/)
       .filter(Boolean);
 
   const defaultSectionOrder = [
@@ -319,7 +318,7 @@ export default async function VisitPage() {
         <section className={styles.visitEssentials} aria-label="Visit essentials" style={{order: getSectionOrder("hero") + 1}}>
           <div><h2>Plan your visit</h2><p>{studioAddress}</p><a href={directionsUrl} target="_blank" rel="noopener noreferrer">Open map & directions →</a></div>
           <div><h3>Before you set off</h3><p>Check opening hours for your intended visit. PYOP walk-ins are welcome subject to availability; book ahead to secure a place.</p><Link href="/paint-your-own-pottery">Plan pottery painting →</Link></div>
-          <div><h3>Need a little help?</h3><p>Ask about parking, step-free access or any other requirements before travelling so we can help you plan.</p><Link href="/contact">Contact the studio →</Link><p><a href={studioContact.phoneHref}>{studioContact.phone}</a></p></div>
+          <div><h3>Need a little help?</h3><p>Ask about parking, step-free access or any other requirements before travelling so we can help you plan.</p><Link href="/contact" className={styles.contactCta}>Contact the studio →</Link><p><a href={studioContact.phoneHref}>{studioContact.phone}</a></p></div>
         </section>
         {/* HERO */}
 
@@ -519,8 +518,7 @@ export default async function VisitPage() {
                       styles.addressNote
                     }
                   >
-                    {cmsAddress?.meta ||
-                      "Home to GlassXpressions. Use the map link for directions, or contact us before travelling."}
+                    Home to GlassXpressions. Use the map link for directions, or contact us before travelling.
                   </p>
                 </div>
 

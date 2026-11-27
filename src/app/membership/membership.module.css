@@ -62,3 +62,5 @@
 .homeMaker h3 { margin-top:24px; }
 @media(max-width:1000px) { .homeMaker { margin-left:25px; margin-right:25px; } }
 @media(max-width:600px) { .homeMaker { padding:25px; } .homeMakerFacts { grid-template-columns:1fr; } }
+
+@media(max-width:600px){.heroCopy{padding:28px 22px}.hero h1{font-size:36px;margin-bottom:16px}.heroPhoto{height:250px}.introduction,.plans,.flexible,.materials,.rules{padding:30px 22px}.crafts,.planGrid,.packGrid,.materialGrid{margin-top:20px;gap:14px}.planCard{padding:20px}.price{margin-top:12px}.price strong{font-size:40px}.access{margin:12px 0;padding:12px 0}.offer{padding:12px 0}.homeMaker{margin-bottom:28px;padding:20px}.homeMakerFacts{gap:10px;margin:16px 0}.homeMakerFacts div{padding:12px}.join{padding-bottom:40px}}

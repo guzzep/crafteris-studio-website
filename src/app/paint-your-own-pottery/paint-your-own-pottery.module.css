@@ -53,3 +53,5 @@
 .examplePrices dt { font-weight:600; }
 .examplePrices dd { margin:0; text-align:right; white-space:nowrap; }
 @media(max-width:600px) { .examplePrices > div { font-size:14px; } }
+
+@media(max-width:600px){.heroContent{padding:28px 22px}.hero h1{font-size:36px;margin-bottom:16px}.heroImage{height:250px}.section{padding:32px 22px}.steps{gap:18px}.quickFacts{gap:14px;padding:18px}.occasions{padding-top:30px}.occasionGrid article{padding:18px}.final{padding:38px 22px}.choice img,.creativity img{height:240px}}
