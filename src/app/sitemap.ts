@@ -14,7 +14,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       for (const table of ["workshops", "programmes"] as const) {
         const {data, error} = await supabase.from(table).select("slug").eq("status", "published");
         if (error) { console.error("Sitemap query failed", table, error.message); continue; }
-        for (const item of data ?? []) if (typeof item.slug === "string" && item.slug) paths.add(table + "/" + encodeURIComponent(item.slug));
+        for (const item of data ?? []) if (typeof item.slug === "string" && item.slug) {
+          const local = table === "workshops" ? workshopCatalogue.find(w => w.slug === item.slug) : undefined;
+          if (local && (local.pending || local.seasonal)) continue;
+          paths.add(table + "/" + encodeURIComponent(item.slug));
+        }
       }
     } catch (error) { console.error("Sitemap catalogue unavailable", error); }
   }

@@ -5,7 +5,7 @@ import {redirect} from "next/navigation";
 import styles from "../support.module.css";
 import {customerDestination} from "@/lib/customer-destination";
 export const dynamic = "force-dynamic";
-export const metadata={title:"Book your creative experience | Crafteris Studio"};
+export const metadata={title:"Book your creative experience | Crafteris Studio",robots:{index:false,follow:true}};
 const activities=[
 {key:"pyop",title:"Paint Your Own Pottery",description:"Choose a two-hour painting session. €10 deposit per painter; €22 minimum spend.",href:"/paint-your-own-pottery",env:"CRAFTERIS_PYOP_BOOKING_URL"},
 {key:"workshop",title:"Public workshops",description:"Choose a project and an available workshop date.",href:"/workshops",env:"CRAFTERIS_WORKSHOP_BOOKING_URL"},
